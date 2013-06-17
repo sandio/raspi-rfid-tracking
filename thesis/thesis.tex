@@ -1,0 +1,68 @@
+\documentclass[msc, cs, deptreport, singlespacing, twoside]{infthesis}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black, bookmarks]{hyperref}
+ 
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{
+	language=Java,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	numbers=left,
+	frame=single,
+	numberstyle=\tiny\color{black},
+	stepnumber=1,
+	numbersep=10pt,
+	tabsize=2,
+	showspaces=false,
+	showstringspaces=false
+}
+
+
+\title{Radio Frequency Localisation/Tracking of RFID Tags in a Raspberry-Pi Sensor Network}
+\author{Aleksandar Krastev}
+
+\abstract{
+To Do
+}
+
+\begin{document}
+\begin{preliminary}
+\maketitle
+\begin{acknowledgements}
+To Do
+\end{acknowledgements}
+\standarddeclaration
+\tableofcontents
+\end{preliminary}
+
+\include{introduction}
+\include{background}
+\include{methodology}
+\include{design}
+\include{implementation}
+\include{evaluation}
+\include{discussion}
+\include{future.work}
+\include{conclusion}
+
+\appendix
+\include{appendix1}
+
+\bibliographystyle{apalike}
+\bibliography{../library}
+
+\end{document}

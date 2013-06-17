@@ -1,0 +1,24 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+\section{Motivation}
+
+\section{Goal}
+
+\section{Contributions}
+
+\section{Thesis Outline}
+
+% The thesis is organised into seven chapters including this chapter. The organisation is as follows:
+
+% \begin{itemize}
+% \item \textbf{Chapter \ref{ch:background}} gives a background perspective of the concepts and terminologies used throughout this thesis. The anatomy and physiology of the human retina, Gestalt psychology, and the silicon retina are some of the concepts which are discussed.
+% \item \textbf{Chapter \ref{ch:related_work}} provides a quick overview of the prior work, which is correlated in some way with the current project. It also explains how the related work helped in designing and implementing the system created by this project. 
+% \item \textbf{Chapter \ref{ch:design}} discusses the motivation for the design of the system. It describes issues with the input data from the dynamic vision sensor and how these influenced specific design decisions. Then it gives an insight of how different part of the system work together.
+% \item \textbf{Chapter \ref{ch:implementation}} presents a detailed explanations of how the implementation of the system was realised. It gives an insight into the various development stages the implementation has gone through before reaching its final design. It also explains specific details about how different algorithms work.
+% \item \textbf{Chapter \ref{ch:results}} presents the methodologies and setup for conducting a number of experiments to test how well different levels of the system performed. It also evaluates the results from those experiments. A discussion of strength and weaknesses of the system is also provided. Possible improvements are suggested as well.
+% \item \textbf{Chapter \ref{ch:conclusion}} finally concludes the thesis by presenting the contributions, discussing the difficulties encountered during the project, and suggesting future work.
+% \end{itemize}
+
+\section{Summary}
+

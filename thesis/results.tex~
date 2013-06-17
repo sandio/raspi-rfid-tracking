@@ -1,0 +1,268 @@
+\chapter{Results and Evaluation}
+\label{ch:results}
+
+This chapter presents the methodologies and setup of conducted experiments. It also evaluates the results from these experiments. Section \ref{sec:results1} describes experiments with stimuli to evaluate the performance of the orientation labeler. It also provides an evaluation of the algorithm and discusses its strengths and weaknesses. Then section \ref{sec:results2}  presents how well the clustering and segmentation worked. It also provides an critical evaluation of this filter, stating the shortcomings of the algorithm and how they can be alleviated.
+
+\section{Orientation labeler}
+\label{sec:results1}
+
+This section tests how well the orientation labeler performs. Two main types of experiments were done. Firstly, this filter is tested with straight lines with different orientations. Then simple artificial stimuli are presented to the camera to analyse the number of correctly assigned pixel orientations.
+
+\subsection{Experiments with straight lines}
+
+The following experiments use straight black lines of different thickness shown on a white background. This was realised by printing the stimuli on sheets of paper. They were presented in front of the camera at six different orientations (\emph{0$^\circ$, 22.5$^\circ$, 45$^\circ$, 90$^\circ$, 112.5$^\circ$, 135$^\circ$}). Exact angles were hard to reproduce, but a close approximation was sufficient to run the experiments. The four principal orientations (\emph{0$^\circ$, 45$^\circ$, 90$^\circ$,135$^\circ$})  described earlier, were chosen to show performance at angles, where the algorithm is expected to perform well. The other two orientations are there to see what happens when edges are shown at angles that are not considered by the orientation labeler.
+
+Four different thicknesses for lines were used ($1mm$, $2mm$, $3mm$, $4mm$). The lines all have the same length of $7.5cm$ and were shown to the camera from about $25cm$. The visual stimuli was staying around the same location from the start till the end of every experiment phase. Light movements were generated to better capture the structure of the lines. They came naturally with holding the piece of paper in front of the camera. The experiments were conducted during the day in a lab environment illuminated by fairly strong fluorescent lights.
+
+A custom output from the filter was created. It separates events according to their orientation and prints out a total number for each type. Data from runs of the experiments was collected every 330 $milliseconds$ for 3 $seconds$ (jAER has controls for showing live input at a certain rate). This creates 9 time slices, where information about orientations is output by the filter. On the graphs, the mean for all slices was used to create a data point for a particular orientation.
+
+The size of the receptive field was determined by the parameters chosen. \emph{Length} of 3 and \emph{width} of 1 were used. This constructs a receptive field as the one shown on Figure \ref{fig:rf-large}. The timing threshold, which determines the number of events correlated to the current event, was set to 180 $milliseconds$. This value is a good compromise. If it is too low, then only a few events will be let through. If too big, however, the visual scene comes cluttered with events, which is compromising the performance of the orientation labeler.
+
+\subsubsection{Horizontal lines}
+\label{subsubsec:horizontal_lines}
+
+In this experiment, four different lines of the above specified thicknesses were presented to the camera at a horizontal direction for around 3 $seconds$. The number of events belonging to each class was recorded, averaged, and plotted on Figure \ref{fig:horizontal}. On the \emph{x} axis the different line thicknesses in millimeters were marked. On the \emph{y} axis one can see the number of events belonging to a certain orientation. The connected data points show the trend of increasing spiking activity proportional to the thickness of lines.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/horizontal}
+\caption{Plot of number of events against thickness of lines. A horizontal line was observed by the camera.}
+\label{fig:horizontal}
+\end{figure}
+
+The results from the plot show that the highest number of events have a horizontal (0$^\circ$) orientation. The next biggest values were produced in the perpendicular orientation. Small amounts of noise for events in both diagonal directions were recorded for thicker lines. Spikes with vertical orientations were mostly occurring at both ends of the lines. An explanation for that is events at the end points received less support from their neighbours in a horizontal direction (because there are not any on one side), therefore were classified as having a vertical orientation. A snapshot showing what the filter outputs is while running those experiments can be seen of Figure \ref{fig:screen_horizontal} in Appendix \ref{sec:lines}. 
+
+\subsubsection{Lines at 45$^\circ$}
+
+The next experiment is executed by rotating the lines by 45$^\circ$ in a counter-clockwise direction. The setup is the same and the axes represent the same measures. On the plot (Figure \ref{fig:offdiagonal}), one can observe that events with orientations of 45$^\circ$ are dominant in all four thicknesses. Here only a few events were assigned its perpendicular orientation. Therefore, they can be classified as noise. Events with vertical and horizontal orientations were spiking along the length of the lines. This can be attributed to the fact that when lines were moved a little they changed their orientations by a few degrees. This resulted in some pixels being classified with the closest orientations on both sides, namely vertical and horizontal. What the output from the orientation labeler looks like can be seen on Figure \ref{fig:screen_offdiagonal} in Appendix \ref{sec:lines}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/offdiagonal}
+\caption{Plot of number of events against thickness of lines. A line at 45$^\circ$ was presented to the camera.}
+\label{fig:offdiagonal}
+\end{figure}
+
+\subsubsection{Vertical lines}
+
+The following tests were conducted by showing the camera lines facing straight up (90$^\circ$). Results can be seen on Figure \ref{fig:vertical}. Pixels with a vertical orientation outnumber the other classes of orientations. Similar behaviour, as discussed in section \ref{subsubsec:horizontal_lines}, is observed here. Events with horizontal orientation occur rarely at both ends of the lines for bigger line thicknesses. However, the difference in numbers between vertical and horizontal pixels quickly separates them apart and winning vertical orientation is apparent. A snapshot of taken during testing is available on Figure \ref{fig:screen_horizontal} in Appendix \ref{sec:lines}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/vertical}
+\caption{Plot of number of events against thickness of lines. A vertical line was observed by the camera.}
+\label{fig:vertical}
+\end{figure}
+
+\subsubsection{Lines at 135$^\circ$}
+
+Last of the four principal orientations were lines in a diagonal direction (135$^\circ$). The plot can be observed on Figure \ref{fig:diagonal}. At this particular experiment a lower spiking activity was observed, but the distribution on the plot is clear. Events, which have the same orientation as the one lines presented to the camera have are the biggest in numbers, regardless of the width of the stimuli. A little noise activity was observed, more of which can be attributed to events with horizontal orientations. They were occurring along the length of the lines. This can be explained with the error of the angle at which stimuli were processed by the camera. As in previous cases, a picture of what the output looks like can be seen on Figure \ref{fig:screen_diagonal} in Appendix \ref{sec:lines}.
+
+These series of tests concluded the experimentation with the four principal directions, which the orientation labeler considers in its default operation. However, two further experiments were accomplished to account for lines at orientations, which lie between the pairs of orientations looked at so far. The idea here is to see if this produces a drop in its performance.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/diagonal}
+\caption{Plot of number of events against thickness of lines. A line at 135$^\circ$ was observed by the camera.}
+\label{fig:diagonal}
+\end{figure}
+
+\subsubsection{Lines at 22.5$^\circ$}
+\label{subsubsec:22-5}
+
+The first of the special case experiments considers a line at an angle of around 22.5$^\circ$. It lies between the \emph{x} axis and 45$^\circ$. The orientation labeler classifies them separately and does that well as seen in previous sections. Here, however, one might expect a worse performance. To stimulate spiking activity, stronger line movements were generated. On this plot, the distribution of events is displayed (Figure \ref{fig:22-5}). Orientations of the closest angles considered have been spiking the most compared to the others. Horizontal and diagonal events (at an angle of 45$^\circ$) share close number of occurrences on the visual scene. This is due to the fact that the orientation labeler had been calculating their orientations and fails to capture events at this particular angle (22.5$^\circ$). This is not a very big issue, because it can be observed on Figure \ref{fig:screen_22-5}  in Appendix \ref{sec:lines} that those similar orientations capture already most of the orientation data carried by this line segment.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/22-5}
+\caption{Plot of number of events against thickness of lines. A line at around 22.5$^\circ$ was presented to the camera.}
+\label{fig:22-5}
+\end{figure}
+
+\subsubsection{Lines at 112.5$^\circ$}
+\label{subsubsec:112-5}
+
+A similar experiment was conducted by placing stimuli at an orientation between 90$^\circ$ and 135$^\circ$. An angle of around 112.5$^\circ$ was simulated. Results can be seen on Figure \ref{fig:112-5}. Interpreting the results here is similar to the ones explained above. Only difference is that here the two highest numbers of events are shared by pixels with orientations of 90$^\circ$ and 135$^\circ$. Figure \ref{fig:screen_112-5} in Appendix \ref{sec:lines} aids for the understanding of how processing of the camera input looks like.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/112-5}
+\caption{Plot of number of events against thickness of lines. A line at around 112.5$^\circ$ was observed by the camera.}
+\label{fig:112-5}
+\end{figure}
+
+\subsection{Experiments with simple objects}
+\label{subsec:simple_objects}
+
+This section presents how experiments with three types of objects were conducted. It also explains the results gained. The experimental setup is firstly described. Then an analysis of the plotted results gives an insight into how well the orientation labeler performs. The experiments conducted used the first and second layers of processing developed for this project. This includes the filter assigning orientations to events, which was tested with lines above. And the next level of processing, which simply allows for accumulation of events, by recording and increasing their numbers. It was decided to use both layers of processing, because more events are needed to capture the salient information about objects. Light movements helped fill missing data about edges that do not appear at first, as discussed in section \ref{subsec:invisible_edges}.
+
+Shapes were shown to the camera for 3 $seconds$ at 330 $milliseconds$, which is the same methodology used when experimenting with lines. The distance of the visual stimuli from the DVS was also the same as described above - about 25$cm$. Illumination of the visual scene was similar, although light was coming from artificial light sources situated at a bigger distance from the silicon retina chip. However, this is not a problem at all, due to wide dynamic range of the chip. 
+
+Three different types of objects were selected. They were all solid black presented on a white background. The first one is a square. Very good results might be expected there, because experiments with lines facing the horizontal and vertical directions performed well. The next type of objects is a equilateral triangle, whose sides have an equal length and all three internal angles are also congruent to each other and are each 60$^\circ$. This shape provides an opportunity to test  with angles that are not classified well by the orientation labeler. The final object class is a circle. It is considerably challenging to assign orientations to events that are part of curve. Results can be seen in the sections to follow.
+
+Every object class has six different sizes for its objects. For convenience those were marked along the \emph{x} axis of the plots only as indexes from one to six. The lengths of the sides of triangles and squares as well as the radiuses of circles can be seen on Table \ref{table:sizes}.
+
+The parameters of the orientation labeler used here are exactly the same as the ones used in experimenting with different line segments. For the accumulation of events the maximum number of events that can be recorded was around 400. The maximum time for which events are let through before being sent up the hierarchy was chosen to be 290 $milliseconds$. This was done to fill the 330 $millisecond$ time slices, at the end of which the output is visualised in jAER.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | m{2cm} || m{3cm} || m{3cm}  || m{3cm} | }
+		\hline
+		\hline
+		\textbf{Size} & \textbf{Square} & \textbf{Triangle} & \textbf{Circle} \\ \hline
+		1	&	1cm	&	1.25cm	&	0.5cm	\\ \hline
+		2	&	1.25cm	&	1.5cm	&	0.625cm	\\ \hline
+		3	&	1.5cm	&	1.75cm	&	0.75cm	\\ \hline
+		4	&	1.75cm	&	2cm	&	0.875cm	\\ \hline
+		5	&	2cm	&	2.25cm	&	1cm	\\ \hline
+		6	&	2.25cm	&	2cm	&	1.25cm	\\
+		\hline
+		\hline
+	\end{tabular}
+\caption{Table showing the different lengths of object edges for each class used in the experiments.}
+\label{table:sizes}
+\end{table}
+
+\subsubsection{Squares}
+
+This series of experiments started with a presenting six black squares with different sizes. Judging by the performance of classification of pixels to orientations observed when experimenting with lines, results should produce high spiking activity of horizontal and vertical events. The plot can be seen on Figure \ref{fig:square}. On the \emph{x} axis the different sizes of squares were plotted; on the \emph{y} axis are the number of events belonging to each orientation. It is important to note that when presented with a small square, the camera did not manage to output enough spiking events, due to its limited resolution. As a result, when objects are shown from a distance, it is not apparent from the plot that horizontal and vertical spikes have the biggest numbers. This was observed in the other experiments as well. Nevertheless, increasing the size of the squares resulted in an improvement of the number of events coming from the camera. Consequently, the orientation labeler's performance of rightly classified pixels  was increased, because events can find their most correlated neighbours easier.
+
+There is a relatively small number of events having a diagonal orientation compared to the numbers of the other two classes. Diagonally oriented spikes were mainly observed at the corners of the black squares. This can be seen of Figure \ref{fig:screen_square} in Appendix \ref{sec:objects}. For instance, some events at the upper right corner of the square have been classified as having an angle of 135$^\circ$. A reason for that happening can be explained with receptive fields of the pixels at this corner. When oriented at 135$^\circ$ they receive more support from neighbouring events, because their receptive fields are filled with other spikes, some of which will have a strong correlation with the events currently processed. However, the number of such events was small compared to the winning orientations, therefore can be treated as noise.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/square}
+\caption{Plot of number of events against different sizes of squares. Events are grouped by their orientations and drawn in different colour.}
+\label{fig:square}
+\end{figure}
+
+\subsubsection{Triangles}
+
+Next, a number of black triangles of different size were shown to the camera. They are a special case of triangles, whose sides and internal angles are equal. This provided a good experimental setup to test the overall performance of the orientation labeler. The triangles were presented to the DVS in such a way that one of the sides is always in a horizontal direction. A snapshot of how the experiment looked like on a computer can be seen on Figure \ref{fig:screen_triangle} in Appendix \ref{sec:objects}.
+
+The plot, which is on Figure \ref{fig:triangle} is harder to analyse. As seen before, for smaller sizes of stimuli, it is still hard to distinguish clearly how the number of events are distributed. As objects get bigger a number of things become more obvious. First of all, events, of horizontal orientation, have scored the highest on the graph. This can be explained with the position of one of the edges of a triangle. Experiments, as mentioned above, were conducted by holding the object with one of its sides facing the horizontal direction. As a result, most of the pixels belonging to this edge were classified with a correct orientation.
+
+Then, it is left to analyse how the other two edges at angles of 60$^\circ$ and 120$^\circ$ were processed. The algorithm does not have a class for those particular angles. As a result, pixels along those sides have mixed orientation values. However, one can reason about the event numbers distribution. An important note here, is that those two edges meet each other at the top of the triangles. Consequently, a lot of spikes have been assigned a vertical orientation, as the edges progress to the top. Nevertheless, there are a considerable number of events that have either of the diagonal orientations. Such events were observed along the length of the tilted edges. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/triangle}
+\caption{Plot of number of events against different sizes of triangles. Events are grouped by their orientations and drawn in different colour.}
+\label{fig:triangle}
+\end{figure}
+
+\subsubsection{Circles}
+\label{subsubsec:circles}
+
+Finally, a series of experiments were ran with circles. They are an interesting type of objects, because their contour events are part of a curve. As the size of a circle grows, the angle of its arc becomes bigger. Therefore, one could expect for larger sizes, curved edges to be treated as if they were straight line segments. A snapshot of a circle that have been processed by the camera and then a host PC can be found on Figure \ref{fig:screen_circle} in Appendix \ref{sec:objects}. The plotted results can be seen on Figure \ref{fig:circle}. The outcome is challenging to analyse without looking at the snapshot. However, if both figures are seen, then one could find a correlation between them. The orientation labeler uses a horizontally elongated receptive field for pixels, which seems to detect horizontal and vertical directions better than the diagonal ones. Small-sized object that do not fill much of the camera's field of view are still hard to analyse, due to the current limitations of the silicon retina chip. For bigger sizes, the high number of vertical and horizontal events is shared. Events at 45 and 135 degrees still have a considerable number. All four orientations form eight edges along the contour of circles. Every orientation accounts for two contour segments opposite to each other. Effectively, a circle resembles an octagon (a polygon that has eight sides).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7 \textwidth]{media/results/circle}
+\caption{Plot of number of events against different sizes of circles. Events are grouped by their orientations and drawn in different colour.}
+\label{fig:circle}
+\end{figure}
+
+\subsection{Critical evaluation and discussion}
+\label{subsec:eval1}
+
+This section presents an evaluation of the overall performance of the orientation labelling filter. Experiments with straight lines at the four orientations considered by the filter were overall successful. Most of the events part of the line segments were correctly identified. Their angles corresponded to the angle at which the lines were presented. Small amount of noise were observed, but this can be easily neglected since the next processing layer (the clustering filter) discards events that are too few in numbers.
+
+Cases with lines at orientations, that are not taken into account by the algorithm, are different. As seen in sections \ref{subsubsec:22-5} and \ref{subsubsec:112-5}, events being part of the line contours receive orientations from the classes which are nearest in orientation to the ones tested. In the current implementation, this information is not utilised well by the upper layer of visual processing, thus it does not produce reliable results. This is an identified drawback of the clustering algorithm, which the next processing step. As a result, it was only tested with orientations, which the labelling filter considers. 
+
+However, events, which are part of the same line, but have different orientations, carry valuable information about the line properties. If for example, a line at 22.5$^\circ$ is presented, as seen in section \ref{subsubsec:22-5}, then it will most probably have a mixed and balanced number of events with a horizontal and diagonal orientations. Logically, in such a case it can be inferred that this is an edge lying between 0 and 45 degrees.
+
+The same behaviour applies for objects. As seen in section \ref{subsec:simple_objects}, stimuli that have straight lines or curvatures as part of their structure will have their contour events correctly identified, if these fit the angles considered by the orientation labelling filter. This can be seen as the main limitation of this filter.
+
+\subsubsection{Analysis of the problem}
+
+Fortunately, this shortcoming is due to the logic followed at the final step of the classification process. Section \ref{subsec:relying_on_timestamps} explained in detail how the final implementation works. After the receptive fields for every orientation are constructed, the algorithm scans for neighbours that have the highest temporal correlation with the central event. Receptive fields, which have a rectangular shape and are fairly wide (\emph{length} of three and \emph{width} of one) will cover the whole visual scene of the spike in all directions. However, when the best neighbour is found of all four orientations, the receptive field it belongs determines the orientation of the current pixel. I.e. if the vector between the two temporally correlated pixels describes the precise angles between them, then setting one of only four orientations sacrifices important information. This was realised while developing this filter. Nevertheless, in order for the upper layer, which clusters events according to their orientations, to work properly, they have to be classified as part of a finite set.
+
+Losing precise orientation information about events has two drawbacks. Firstly, visualising spikes, which are close to each other, makes it difficult to analyse the output from jAER. Secondly, contours of objects are often curved. Considering only four orientations cannot capture salient properties of such objects, e.g. experiments with circles in section \ref{subsubsec:circles}.
+
+\subsubsection{A possible improvement}
+
+An improvement of this processing layer is possible. As discussed above, when the precise angle between the current pixel and its most correlated neighbour is calculated, it should be stored in the event. As before, the receptive field, which the neighbour is part of, should be recorded as well. However, this time it will serve as a collection for events that have orientations in the range the receptive field spans to. This way events will be classified to a particular direction range, but will still keep precise information about their angles. Consequently, they can be better visualised to aid the analysis of results. Finally, they can be further grouped into smaller ranges and clustered, if necessary.
+
+
+\section{Clustering and segmentation}
+\label{sec:results2}
+
+This section briefly describes a few experiments with lines and objects used when testing how well the orientation labeler performed. The main shortcoming of the orientation labeler was explained in section \ref{subsec:eval1}. In certain cases, it reflected all processing layers up the hierarchy. In particular, when lines or objects were shown to the camera at an angle not covered  by the orientation labelling filter, then the clustering and segmentation algorithm could not produce satisfying results. However, a few tests with lines and simple object were ran to aid for the better understanding of what output this processing layer produces. Its strength and weaknesses will be identified in section \ref{subsec:eval2}, as well as some possible improvements will be suggested.
+
+\subsection{Experiments with straight lines}
+
+The following experiments are using a single black line on a white background. It has a thickness of $4mm$, length of $7.5cm$. It is presented to the camera at about $25cm$. The experimental setup here resembles the one done when testing the orientation labeller with black lines. During the experiments the line was moved around the same point to stimulate spiking activity from the camera.
+
+The input comes from the layers below this one. Event receive their orientation according to the operation of the orientation labelling filter. Then they accumulate for some time before arriving here. This was done to try to seize more valuable information about line structure and properties from the visual scene.
+
+The parameters for the clustering algorithm are three in total, as described in section \ref{subsec:separating_and_clustering_events}. The first one is the distance between cluster centres. If the Euclidean distance between the two cluster centroids is smaller than this value, then the clusters are merged. This is a very important parameter, because when introducing just a single line to the camera, two clusters form, which are of the same orientation. To account for edges, which are the only ones having a particular orientation, the clusters and end points are merged together. A value of 150 pixels worked well for the lines used in this experiment. It was chosen by adjusting it through the GUI in real time until the required result was accomplished.
+
+The next parameter is the number of iterations of the \emph{k-means} clustering algorithm. Four iterations proved to produce results that found the cluster centroids fast. A number above that will output similar results, but will slow the execution of the programme. Therefore, the aforementioned value is a good compromise.
+
+Finally, a simple filtering parameter specifies the minimum number of events required before running the clustering algorithm. Events output by previous layers that are few in number will not receive sufficient support to form clusters and as a consequence will be discarded. This prevents from visualising and computing unnecessary clusters. A secure value of 144 was chosen to make sure no noisy events will be output in jAER.
+
+The experiments consist of presenting a black line to the silicon retina at the four principal orientations. Different angles could not be precisely achieved, but satisfactory results were produced, nevertheless. Figure \ref{fig:line_clusters} shows the results from running the tests with the parameters discussed above.
+
+\begin{figure}[h]
+\centering
+\subfloat[A black line segment shown at around 0$^\circ$]{\includegraphics[width=0.35 \textwidth]{media/results/screen-clusters/horizontal}}
+\quad
+\subfloat[A black line segment shown at around 45$^\circ$]{\includegraphics[width=0.35 \textwidth]{media/results/screen-clusters/offdiagonal}}
+\quad
+\subfloat[A black line segment shown at around 90$^\circ$]{\includegraphics[width=0.35 \textwidth]{media/results/screen-clusters/vertical}}
+\quad
+\subfloat[A black line segment shown at around 135$^\circ$]{\includegraphics[width=0.35 \textwidth]{media/results/screen-clusters/diagonal}}
+\caption{Four snapshots taken from jAER, each showing the clustering algorithm ran on black line segments at the four principal orientations. Coloured points at both ends show end points of the line segment identified by the algorithm. Central white point and line through it illustrate the cluster centers and its orientation.}
+\label{fig:line_clusters}
+\end{figure}
+
+\subsubsection{Interpretation and analysis}
+
+This section presents a condensed analysis of the results from showing four line segments to the camera. Output from the clustering and segmentation algorithms, as seen from Figure \ref{fig:line_clusters}, has reduced the number of events that come from lower layers of processing, but has attached more meaning to the spikes left. Coloured pixels show the end points identified by the filter at this certain time. Also one can see a white dot with a line going through it. The white pixel marks the position of the cluster centre, which is calculated by averaging the positions of all events belonging to this cluster. The white edge shows the orientation of the cluster, which was carried by events, which are part of it. 
+
+
+\subsection{Experiments with simple objects}
+
+This section presents how experiments with objects were conducted. The types of objects and filter parameters are firstly described. A brief explanation of the results is also provided. Three types of objects were selected to evaluate the performance of this filter. The first two are a rectangle and a diamond (rhombus with a 45$^\circ$ angle). It is important to note that the rectangle was hollow and was only contoured by its sides. The diamond was a solid black object on a white background. The third type was a black circle. It was chosen, because it has interesting properties, which are not captured well by this filter. Its contour is a curved line, but the clustering algorithm is looking for straight line segments.
+
+The parameters chosen here are different from the ones set when experimenting with straight lines. Firstly, and most importantly the distance to merge two clusters is decreased. This was done to let clusters belonging to opposite sides of the objects stay apart from each other. A value of 30 pixels seemed appropriate in this case. Secondly, the minimum number of events required to group them together was lowered to 20 events, thus allowing more line segments to be identified.
+
+\begin{figure}[h]
+\centering
+\subfloat[Here a black square is shown to the DVS. All of its sides can be clearly seen as segmented edges.]{\includegraphics[width=0.4 \textwidth]{media/results/screen-clusters/square}}
+\quad
+\subfloat[A black diamond is presented in front of the silicon retina. Edges at both diagonal directions were correctly clustered.]{\includegraphics[width=0.4 \textwidth]{media/results/screen-clusters/diamond}}
+\quad
+\subfloat[A black circle moving in front of the camera. Its structure can be clearly identified. Line segments aid for the easier perceiving.]{\includegraphics[width=0.4 \textwidth]{media/results/screen-clusters/circle}}
+\caption{Three snapshots taken from jAER, each showing the clustering algorithm performing on three different objects. Coloured points show the boundaries of objects as well as end points of individual line segments. White pixels and lines going through it describe where the cluster centres lie, but also how they are oriented.}
+\label{fig:object_clusters}
+\end{figure}
+
+\subsubsection{Interpretation and analysis}
+
+The results from testing with the three types of tests can be seen on Figure \ref{fig:object_clusters}. The hollow rectangle was clearly visible from the camera. Although, its structure was composed of straight lines, they produced a good spiking activity in the silicon retina, allowing for a reliable line segmentation. The end points of every edge match nicely with its neighbouring edges.
+
+The next test was conducted by moving a black diamond in front of the DVS around the same spot. Four clusters with diagonal directions were identified. Each two are parallel to each other. The end points of the clusters have reasonable positions and the positions of the corners of the shape are easily distinguishable.
+
+Finally, a black circle on a white sheet of paper was used in conducting the last experiment. The filter grouped together orientation events output from the labelling filter, as described in section \ref{subsubsec:circles}. All four directions had events that were representing them on the visual scene. For every direction, they were clustered into two groups, which were parallel and facing each other. End points of every cluster somewhat overlap with its neighbouring edges, but this is probably due to the shape of the object.
+
+\subsection{Critical evaluation and discussion}
+\label{subsec:eval2}
+
+The results described above do not cover cases, where the algorithm does not perform very well. There a two main conditions, which determine the output of the algorithm. The first one are the filter parameters. Here there were chosen through testing to produce good results. They require a human intervention to be adjusted to fit the requirements of the visual scene. For example, if the distance before clusters are merged was a small number of pixels, then two separate clusters will form. They will lie on the same edge. This is not a serious problem, because they still carry the important information about the edge, but the number of events is not reduced to an optimal level. In another case, if noisy events appear along the edge, they might create a cluster. Again this is not a big issue, because the cluster centroid will most probably lie on the line, and therefore can filtered later without compromising data about the object.
+
+A considerable problem are the number of clusters per orientation. In the current implementation, a maximum of two clusters can be formed for every of the principal directions.This can compromise performance in cases where objects have more than two parallel contours.
+
+The other set of conditions that determine how well this algorithm performs are how objects appear to the camera. For instance, if a line is presented to the camera at an angle not considered by the labeler located in a lower level of the hierarchy of the system, then this will result in a mixed types of events forming the contour of an edge. Unpredictable results might occur then. Either some of the events will be filtered away, because they are too few in numbers. Consequently, some information about the edge's length will be lost. Or they will form clusters facing directions, which are different from the angle of the edge. However, this is the lesser "evil", because in upper layers those orientations might be averaged to find a probable angle for the edge.
+
+To summarise, there are a number of shortcomings of this processing stage. First of all, it requires a human intervention to set the right parameters for the algorithm to produce the required results. Secondly, there is a limit on the number of clusters per orientation. Finally, when stimulated with edges at angles that do not fall at the four principal ones, then unpredictable results occur.
+
+\subsubsection{A possible improvement}
+
+To address some of the issues discussed above, a number of suggestions are given. Firstly, the default number of clusters might be increased. The filter's operation can be changed so that it spawns and merges clusters that are close to each other. Clusters with a few events might not be visualised until they receive a considerable number of events. If small clusters do not get new members for a certain time, the whole cluster can be discarded. To account for lines at various orientations, the filter can merge clusters of different orientations, instead doing so only for groups of the same orientation.
+
+\section{Summary}
+
+This chapter presented the experiment results and the critical analysis of the results. Section \ref{sec:results1} described experiments with line segments shown at different orientations to the DVS. It also described tests with a number of simple objects. The results were evaluated and this gave an insight into the strengths and weaknesses of the orientation labeler. Some suggestions for improvement were also described. Section \ref{sec:results2} follows a similar structure to evaluate the clustering and line segmentation filter. It starts by a number of experiments with lines. After that a few objects with different characteristics were run through all processing layers. Finally, a discussion provides analysis of the results, identifies weaknesses and proposes improvements. The next chapter presents the difficulties encountered, the future work and finally, the conclusion of the thesis.
+
