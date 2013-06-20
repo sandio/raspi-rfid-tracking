@@ -1,7 +1,5 @@
 The third Raspberry Pi (pi2) can be accessed remotely typing in the terminal:
-ssh -p 2222 pi@89.241.175.125
-
-My home network IP is dynamic so it will change everytime I restart my router so the above IP will be updated as my router IP changes.
+ssh -p 2222 pi@pi.rfidbasic.com
 
 The password for the accounts 'pi' and 'root' on all 3 RasPis is:
 rfid2013michael
@@ -11,7 +9,7 @@ ssh pi@pi0
 ssh pi@pi1
 
 There is a webserver running on pi2. You can check it on the Web at:
-http://89.241.175.125:81
+http://pi.rfidbasic.com:81
 
 Again the IP of this webpage will be changing according to the IP of my router. The website is password protected to restrict project information only to us:
 username: michael
