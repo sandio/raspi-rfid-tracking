@@ -58,7 +58,12 @@
   Pages                    = {1--5},
 
   __markedentry            = {[sandio:5]},
-  File                     = {RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF;A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF}
+  Abstract                 = {RFID is an automatic identification technology that enables tracking of people and objects. Both identity and location are generally key information for indoor services. An obvious and interesting method to obtain these two types of data is to localize RFID tags attached to devices or objects or carried by people. However, signals in indoor environments are generally harshly impaired and tags have very limited capabilities which pose many challenges for positioning them. In this work, we propose a classification and survey the current state-of-art of RFID localization by first presenting this technology and positioning principles. Then, we explain and classify RFID localization techniques. Finally, we discuss future trends in this domain.},
+  File                     = {RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF;A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF},
+  Review                   = {Contains similar introduction to RFID technology. Explains the role of the server (RasPi in our case) connected to the readers that runs a localisation algorithm and provides the middleware for communication between servers. Contains a good classification of indoor localisation algorithms - distance estimation, scene analysis, and proximity. A brief but clear explanation of lateration with a useful figure. Contains a classification of range measurements techniques starting with Received Signal Strength (RSS) that will be used in this project. "The attenuation (gradual loss) of emitted signal strength is a function of the distance between the emitter and the receiver." A classification of different RFID localisation schemes is proposed. The first one is SpotON where multiple readers collect RSS measurements in order to approximate distance from the tag. Then lateration is performed to localise the tag. Landmarc is another approach that uses reference tags that are regularly deployed on the covered area. The idea here is to select the k nearest reference tags that are closest to the unknown tag using differences in RSS measurements. Having identified the k nearest reference tags their coordinates are used to localise the unknown tag. VIRE extends the methods used in Landmarc by defining a proximity map that every reader records. This proximity map consists of a 2D grid of reference tags where the centre of a cell is a tag. The difference in the RSS measurements between reference and unknown tag helps label cells in the proximity map so that it can be constructed. The union of individual proximity maps gives a global proximity map for the unknown tag.
+Simplex is a method that requires different transmission power levels. I am not sure if our equipment has this feature.
+A Kalman filtering method is briefly explained but have to read the original paper because it is hard to understand from a one paragraph description of the method.
+Scout is a probabilistic localisation technique that uses a probabilistic RSS model to estimate distances from a tag to readers. Predicted beliefs are calculated and corrected using reference tags until a good model is constructed.}
 }
 
 @Article{Cangialosi2007,
@@ -72,6 +77,19 @@
 
   File                     = {Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:RFID/Applications/Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:PDF},
   Publisher                = {IEEE}
+}
+
+@InProceedings{Esler1999,
+  Title                    = {{N}ext century challenges: data-centric networking for invisible computing: the {P}ortolano project at the {U}niversity of {W}ashington},
+  Author                   = {Esler, Mike and Hightower, Jeffrey and Anderson, Tom and Borriello, Gaetano},
+  Booktitle                = {Proceedings of the 5th annual ACM/IEEE international conference on Mobile computing and networking},
+  Year                     = {1999},
+  Organization             = {ACM},
+  Pages                    = {256--262},
+
+  __markedentry            = {[sandio:6]},
+  File                     = {Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:RFID/Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:PDF},
+  Url                      = {http://dl.acm.org/citation.cfm?id=313553}
 }
 
 @Book{Finkenzeller2010,
@@ -175,6 +193,7 @@
   Volume                   = {1},
 
   __markedentry            = {[sandio:3]},
+  Abstract                 = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.},
   File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF}
 }
 
@@ -240,8 +259,10 @@
   Year                     = {2005},
   Pages                    = {1144--1153},
 
+  Abstract                 = {Existing approaches for sensor networks suffer from a number of critical drawbacks. First, homogeneous deployments have been commonly as- sumed, but in practice multiple deployments of sensor nets and heterogeneity of sensor networks are a serious problem. Second, existing approaches are very application-dependent and engineering-oriented. Third, there has been little standard available for WSNs. These drawbacks have significantly limited the further development of sensor networks. To overcome these critical drawbacks, we propose an extensive framework: Semantic Sensor Net (SSN). In brief, a semantic sensor net is a heterogeneous sensor network which enables dynamic tagging of semantic information to sensory data to allow more efficient and sys- tematic monitoring and handling of the environmental dynamics to provide de- manded services.},
   File                     = {Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:RFID/Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:PDF},
-  Publisher                = {Springer}
+  Publisher                = {Springer},
+  Review                   = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.}
 }
 
 @Article{Ni2004,
@@ -326,7 +347,8 @@
 
   __markedentry            = {[sandio:5]},
   File                     = {An.introduction.to.RFID.technology-640-Want2006.pdf:RFID/An.introduction.to.RFID.technology-640-Want2006.pdf:PDF},
-  Publisher                = {IEEE}
+  Publisher                = {IEEE},
+  Review                   = {It is good introductory article that clearly explains different classifications of RFID. It has helpful graphics for the distinction between near and far field RFID communication.}
 }
 
 @Article{Weinstein2005,
@@ -394,8 +416,8 @@
 1 ExplicitGroup:Constrained-based approach\;0\;Bouet2008a\;;
 1 ExplicitGroup:RFID books\;0\;Bolic2010\;Finkenzeller2010\;Hunt2007\;
 Rida2010\;Symonds2009\;Zhang2009\;;
-1 ExplicitGroup:Jeffrey Hightower\;0\;Fox2003\;Hightower2000\;Hightowe
-r2001\;Hightower2001a\;Hightower2001b\;Hightower2001c\;Hightower2002\;
-;
+1 ExplicitGroup:Jeffrey Hightower\;0\;Esler1999\;Fox2003\;Hightower200
+0\;Hightower2001\;Hightower2001a\;Hightower2001b\;Hightower2001c\;High
+tower2002\;;
 }
 

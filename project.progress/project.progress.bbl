@@ -1,10 +1,26 @@
 \begin{thebibliography}{}
 
-\bibitem[Stelzer et~al., 2004]{Stelzer2004}
-Stelzer, A., Pourvoyeur, K., and Fischer, A. (2004).
-\newblock {C}oncept and application of {LPM}-a novel 3-{D} local position
-  measurement system.
-\newblock {\em Microwave Theory and Techniques, IEEE Transactions on},
-  52(12):2664--2669.
+\bibitem[Bouet and dos Santos, 2008]{Bouet2008}
+Bouet, M. and dos Santos, A.~L. (2008).
+\newblock {RFID} tags: {P}ositioning principles and localization techniques.
+\newblock In {\em Wireless Days, 2008. WD'08. 1st IFIP}, pages 1--5. IEEE.
+
+\bibitem[Hightower et~al., 2000]{Hightower2000}
+Hightower, J., Want, R., and Borriello, G. (2000).
+\newblock {S}pot{ON}: {A}n indoor 3{D} location sensing technology based on
+  {RF} signal strength.
+\newblock {\em UW CSE 00-02-02, University of Washington, Department of
+  Computer Science and Engineering, Seattle, WA}, 1.
+
+\bibitem[Ni et~al., 2005]{Ni2005}
+Ni, L., Zhu, Y., Ma, J., Li, M., Luo, Q., Liu, Y., Cheung, S., and Yang, Q.
+  (2005).
+\newblock {S}emantic sensor net: {A}n extensible framework.
+\newblock {\em Networking and Mobile Computing}, pages 1144--1153.
+
+\bibitem[Want, 2006]{Want2006}
+Want, R. (2006).
+\newblock {A}n introduction to {RFID} technology.
+\newblock {\em Pervasive Computing, IEEE}, 5(1):25--33.
 
 \end{thebibliography}
