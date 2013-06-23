@@ -12,11 +12,23 @@ Hightower, J., Want, R., and Borriello, G. (2000).
 \newblock {\em UW CSE 00-02-02, University of Washington, Department of
   Computer Science and Engineering, Seattle, WA}, 1.
 
+\bibitem[Khan and Antiwal, 2009]{Khan2009}
+Khan, M.~A. and Antiwal, V.~K. (2009).
+\newblock {L}ocation estimation technique using extended 3-{D} {LANDMARC}
+  algorithm for passive {RFID} tag.
+\newblock In {\em Advance Computing Conference, 2009. IACC 2009. IEEE
+  International}, pages 249--253. IEEE.
+
 \bibitem[Ni et~al., 2005]{Ni2005}
 Ni, L., Zhu, Y., Ma, J., Li, M., Luo, Q., Liu, Y., Cheung, S., and Yang, Q.
   (2005).
 \newblock {S}emantic sensor net: {A}n extensible framework.
 \newblock {\em Networking and Mobile Computing}, pages 1144--1153.
+
+\bibitem[Ni et~al., 2004]{Ni2004}
+Ni, L.~M., Liu, Y., Lau, Y.~C., and Patil, A.~P. (2004).
+\newblock {LANDMARC}: indoor location sensing using active {RFID}.
+\newblock {\em Wireless networks}, 10(6):701--710.
 
 \bibitem[Want, 2006]{Want2006}
 Want, R. (2006).

@@ -1,6 +1,32 @@
 % This file was created with JabRef 2.10b.
-% Encoding: ISO8859_1
+% Encoding: UTF8
 
+
+@InProceedings{Aydin2007,
+  Title                    = {study of an {RFID} based moving object tracking system},
+  Author                   = {Aydin, E and Oktem, R and Dincer, Zeynep and Akbulut, IK},
+  Booktitle                = {RFID Eurasia, 2007 1st Annual},
+  Year                     = {2007},
+  Organization             = {IEEE},
+  Pages                    = {1--5},
+
+  File                     = {Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:RFID/Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4368102}
+}
+
+@InProceedings{AyoubKhan2008,
+  Title                    = {{V}irtual {R}oute {T}racking in {Z}ig{B}ee ({IEEE} 802.15. 4) enabled {RFID} interrogator mesh network},
+  Author                   = {Ayoub Khan, M and Ojha, Sanjay},
+  Booktitle                = {Information Technology, 2008. ITSim 2008. International Symposium on},
+  Year                     = {2008},
+  Organization             = {IEEE},
+  Pages                    = {1--7},
+  Volume                   = {4},
+
+  __markedentry            = {[sandio:6]},
+  File                     = {Virtual.Route.Tracking.in.ZigBee.Enabled.RFID.Interrogator.Mesh.Network-AyoubKhan2008.pdf:RFID/Virtual.Route.Tracking.in.ZigBee.Enabled.RFID.Interrogator.Mesh.Network-AyoubKhan2008.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4631904}
+}
 
 @Article{Bechteler2003,
   Title                    = {2-{D} localization and identification based on {SAW} {ID}-tags at 2.5 {GH}z},
@@ -60,10 +86,8 @@
   __markedentry            = {[sandio:5]},
   Abstract                 = {RFID is an automatic identification technology that enables tracking of people and objects. Both identity and location are generally key information for indoor services. An obvious and interesting method to obtain these two types of data is to localize RFID tags attached to devices or objects or carried by people. However, signals in indoor environments are generally harshly impaired and tags have very limited capabilities which pose many challenges for positioning them. In this work, we propose a classification and survey the current state-of-art of RFID localization by first presenting this technology and positioning principles. Then, we explain and classify RFID localization techniques. Finally, we discuss future trends in this domain.},
   File                     = {RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF;A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF},
-  Review                   = {Contains similar introduction to RFID technology. Explains the role of the server (RasPi in our case) connected to the readers that runs a localisation algorithm and provides the middleware for communication between servers. Contains a good classification of indoor localisation algorithms - distance estimation, scene analysis, and proximity. A brief but clear explanation of lateration with a useful figure. Contains a classification of range measurements techniques starting with Received Signal Strength (RSS) that will be used in this project. "The attenuation (gradual loss) of emitted signal strength is a function of the distance between the emitter and the receiver." A classification of different RFID localisation schemes is proposed. The first one is SpotON where multiple readers collect RSS measurements in order to approximate distance from the tag. Then lateration is performed to localise the tag. Landmarc is another approach that uses reference tags that are regularly deployed on the covered area. The idea here is to select the k nearest reference tags that are closest to the unknown tag using differences in RSS measurements. Having identified the k nearest reference tags their coordinates are used to localise the unknown tag. VIRE extends the methods used in Landmarc by defining a proximity map that every reader records. This proximity map consists of a 2D grid of reference tags where the centre of a cell is a tag. The difference in the RSS measurements between reference and unknown tag helps label cells in the proximity map so that it can be constructed. The union of individual proximity maps gives a global proximity map for the unknown tag.
-Simplex is a method that requires different transmission power levels. I am not sure if our equipment has this feature.
-A Kalman filtering method is briefly explained but have to read the original paper because it is hard to understand from a one paragraph description of the method.
-Scout is a probabilistic localisation technique that uses a probabilistic RSS model to estimate distances from a tag to readers. Predicted beliefs are calculated and corrected using reference tags until a good model is constructed.}
+  Keywords                 = {rank5, relevant, prio1},
+  Review                   = {Contains similar introduction to RFID technology. Explains the role of the server (RasPi in our case) connected to the readers that runs a localisation algorithm and provides the middleware for communication between servers. Contains a good classification of indoor localisation algorithms - distance estimation, scene analysis, and proximity. A brief but clear explanation of lateration with a useful figure. Contains a classification of range measurements techniques starting with Received Signal Strength (RSS) that will be used in this project. "The attenuation (gradual loss) of emitted signal strength is a function of the distance between the emitter and the receiver." A classification of different RFID localisation schemes is proposed. The first one is SpotON where multiple readers collect RSS measurements in order to approximate distance from the tag. Then lateration is performed to localise the tag. Landmarc is another approach that uses reference tags that are regularly deployed on the covered area. The idea here is to select the k nearest reference tags that are closest to the unknown tag using differences in RSS measurements. Having identified the k nearest reference tags their coordinates are used to localise the unknown tag. VIRE extends the methods used in Landmarc by defining a proximity map that every reader records. This proximity map consists of a 2D grid of reference tags where the centre of a cell is a tag. The difference in the RSS measurements between reference and unknown tag helps label cells in the proximity map so that it can be constructed. The union of individual proximity maps gives a global proximity map for the unknown tag. Simplex is a method that requires different transmission power levels. I am not sure if our equipment has this feature. A Kalman filtering method is briefly explained but have to read the original paper because it is hard to understand from a one paragraph description of the method. Scout is a probabilistic localisation technique that uses a probabilistic RSS model to estimate distances from a tag to readers. Predicted beliefs are calculated and corrected using reference tags until a good model is constructed.}
 }
 
 @Article{Cangialosi2007,
@@ -79,6 +103,15 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Publisher                = {IEEE}
 }
 
+@InProceedings{Cheung2006,
+  Title                    = {{A} combinatorial methodology for {RFID} benchmarking},
+  Author                   = {Cheung, SC and Chan, WK and Lee, Penny MK and Ni, Lionel M and Ng, Peter},
+  Booktitle                = {Proceedings of the 3rd RFID Academic Convocation (in conjunction with the China International RFID Technology Development Conference and Exposition), Shanghai, China},
+  Year                     = {2006},
+
+  File                     = {A.Combinatorial.Methodology.for.RFID.Benchmarking-6-Cheung2006.pdf:RFID/A.Combinatorial.Methodology.for.RFID.Benchmarking-6-Cheung2006.pdf:PDF}
+}
+
 @InProceedings{Esler1999,
   Title                    = {{N}ext century challenges: data-centric networking for invisible computing: the {P}ortolano project at the {U}niversity of {W}ashington},
   Author                   = {Esler, Mike and Hightower, Jeffrey and Anderson, Tom and Borriello, Gaetano},
@@ -87,7 +120,6 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Organization             = {ACM},
   Pages                    = {256--262},
 
-  __markedentry            = {[sandio:6]},
   File                     = {Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:RFID/Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:PDF},
   Url                      = {http://dl.acm.org/citation.cfm?id=313553}
 }
@@ -194,7 +226,20 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
 
   __markedentry            = {[sandio:3]},
   Abstract                 = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.},
-  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF}
+  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF},
+  Keywords                 = {rank4, relevant, prio1}
+}
+
+@InProceedings{Hillbrand2007,
+  Title                    = {{S}hipment localization kit: {A}n automated approach for tracking and tracing general cargo},
+  Author                   = {Hillbrand, Christian and Robert, Schoech},
+  Booktitle                = {Management of Mobile Business, 2007. ICMB 2007. International Conference on the},
+  Year                     = {2007},
+  Organization             = {IEEE},
+  Pages                    = {46--46},
+
+  File                     = {Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:RFID/Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4278589}
 }
 
 @InProceedings{Huang2006,
@@ -218,6 +263,19 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   File                     = {RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:RFID/Books/RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:PDF}
 }
 
+@InProceedings{Khan2009,
+  Title                    = {{L}ocation estimation technique using extended 3-{D} {LANDMARC} algorithm for passive {RFID} tag},
+  Author                   = {Khan, M Ayoub and Antiwal, Videep Kumar},
+  Booktitle                = {Advance Computing Conference, 2009. IACC 2009. IEEE International},
+  Year                     = {2009},
+  Organization             = {IEEE},
+  Pages                    = {249--253},
+
+  File                     = {Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:RFID/Localisation.and.tracking/Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:PDF},
+  Keywords                 = {rank3, relevant, prio2},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4809016}
+}
+
 @Article{Landt2005,
   Title                    = {{T}he history of {RFID}},
   Author                   = {Landt, Jeremy},
@@ -237,6 +295,33 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Year                     = {2001},
 
   File                     = {Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:RFID/Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:PDF}
+}
+
+@Article{Liu2007,
+  Title                    = {{S}urvey of wireless indoor positioning techniques and systems},
+  Author                   = {Liu, Hui and Darabi, Houshang and Banerjee, Pat and Liu, Jing},
+  Journal                  = {Systems, Man, and Cybernetics, Part C: Applications and Reviews, IEEE Transactions on},
+  Year                     = {2007},
+  Number                   = {6},
+  Pages                    = {1067--1080},
+  Volume                   = {37},
+
+  File                     = {Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:RFID/Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:PDF},
+  Publisher                = {IEEE},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4343996}
+}
+
+@InProceedings{Manapure2004,
+  Title                    = {{A} comparative study of radio frequency-based indoor location sensing systems},
+  Author                   = {Manapure, Shomit S and Darabi, Houshang and Patel, Vishal and Banerjee, Prashant},
+  Booktitle                = {Networking, Sensing and Control, 2004 IEEE International Conference on},
+  Year                     = {2004},
+  Organization             = {IEEE},
+  Pages                    = {1265--1270},
+  Volume                   = {2},
+
+  File                     = {A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:RFID/A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1297129}
 }
 
 @Article{Nath2006,
@@ -260,6 +345,7 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Pages                    = {1144--1153},
 
   Abstract                 = {Existing approaches for sensor networks suffer from a number of critical drawbacks. First, homogeneous deployments have been commonly as- sumed, but in practice multiple deployments of sensor nets and heterogeneity of sensor networks are a serious problem. Second, existing approaches are very application-dependent and engineering-oriented. Third, there has been little standard available for WSNs. These drawbacks have significantly limited the further development of sensor networks. To overcome these critical drawbacks, we propose an extensive framework: Semantic Sensor Net (SSN). In brief, a semantic sensor net is a heterogeneous sensor network which enables dynamic tagging of semantic information to sensory data to allow more efficient and sys- tematic monitoring and handling of the environmental dynamics to provide de- manded services.},
+  Comment                  = {read},
   File                     = {Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:RFID/Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:PDF},
   Publisher                = {Springer},
   Review                   = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.}
@@ -275,7 +361,9 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Volume                   = {10},
 
   __markedentry            = {[sandio:2]},
+  Abstract                 = {Growing convergence among mobile computing devices and embedded technology sparks the development and deployment of “context-aware” applications, where location is the most essential context. In this paper we present LANDMARC, a location sensing prototype system that uses Radio Frequency Identification (RFID) technology for locating objects inside buildings. The major advantage of LANDMARC is that it improves the overall accuracy of locating objects by utilizing the concept of reference tags. Based on experimental analysis, we demonstrate that active RFID is a viable and cost-effective candidate for indoor location sensing. Although RFID is not designed for indoor location sensing, we point out three major features that should be added to make RFID technologies competitive in this new and growing market.},
   File                     = {LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:RFID/Localisation.and.tracking/LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:PDF},
+  Keywords                 = {rank5, relevant, prio1},
   Publisher                = {Springer}
 }
 
@@ -286,6 +374,20 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Year                     = {2010},
 
   File                     = {RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:RFID/Books/RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:PDF}
+}
+
+@InProceedings{Sanpechuda2008,
+  Title                    = {{A} review of {RFID} localization: {A}pplications and techniques},
+  Author                   = {Sanpechuda, T and Kovavisaruch, L},
+  Booktitle                = {Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology, 2008. ECTI-CON 2008. 5th International Conference on},
+  Year                     = {2008},
+  Organization             = {IEEE},
+  Pages                    = {769--772},
+  Volume                   = {2},
+
+  __markedentry            = {[sandio:]},
+  File                     = {A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:RFID/A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4600544}
 }
 
 @Article{Stelzer2004,
@@ -347,6 +449,7 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
 
   __markedentry            = {[sandio:5]},
   File                     = {An.introduction.to.RFID.technology-640-Want2006.pdf:RFID/An.introduction.to.RFID.technology-640-Want2006.pdf:PDF},
+  Keywords                 = {rank5, relevant, prio3},
   Publisher                = {IEEE},
   Review                   = {It is good introductory article that clearly explains different classifications of RFID. It has helpful graphics for the distinction between near and far field RFID communication.}
 }
@@ -364,6 +467,18 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Publisher                = {IEEE}
 }
 
+@InProceedings{Zhang2007a,
+  Title                    = {{A}n {RF}-based system for tracking transceiver-free objects},
+  Author                   = {Zhang, Dian and Ma, Jian and Chen, Quanbin and Ni, Lionel M},
+  Booktitle                = {Pervasive Computing and Communications, 2007. PerCom'07. Fifth Annual IEEE International Conference on},
+  Year                     = {2007},
+  Organization             = {IEEE},
+  Pages                    = {135--144},
+
+  File                     = {An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/Localisation.and.tracking/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4144758}
+}
+
 @Article{Zhang2007,
   Title                    = {{L}ocalization and tracking of passive {RFID} tags based on direction estimation},
   Author                   = {Zhang, Yimin and Amin, Moeness G and Kaushik, Shashank},
@@ -372,7 +487,7 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
   Volume                   = {2007},
 
   __markedentry            = {[sandio:3]},
-  File                     = {Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:RFID/Localisation.and.tracking/Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:PDF},
+  File                     = {Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:RFID/Localisation.and.tracking/Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:PDF;An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/Localisation.and.tracking/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
   Publisher                = {Hindawi Publishing Corporation}
 }
 
@@ -412,12 +527,95 @@ Scout is a probabilistic localisation technique that uses a probabilistic RSS mo
 1 ExplicitGroup:Lateration with distance estimation\;0\;Bechteler2003\
 ;Hightower2000\;Stelzer2004\;Zhang2007\;;
 1 ExplicitGroup:Scene analysis with extra reference tags\;0\;Bekkali20
-07\;Huang2006\;Ni2004\;Wang2007\;Zhao2007\;;
+07\;Huang2006\;Khan2009\;Ni2004\;Wang2007\;Zhao2007\;;
 1 ExplicitGroup:Constrained-based approach\;0\;Bouet2008a\;;
 1 ExplicitGroup:RFID books\;0\;Bolic2010\;Finkenzeller2010\;Hunt2007\;
 Rida2010\;Symonds2009\;Zhang2009\;;
 1 ExplicitGroup:Jeffrey Hightower\;0\;Esler1999\;Fox2003\;Hightower200
 0\;Hightower2001\;Hightower2001a\;Hightower2001b\;Hightower2001c\;High
 tower2002\;;
+1 ExplicitGroup:Automatically created groups\;2\;;
+2 KeywordGroup:Akbulut\;0\;author\;Akbulut\;0\;0\;;
+2 KeywordGroup:Amin\;0\;author\;Amin\;0\;0\;;
+2 KeywordGroup:Anderson\;0\;author\;Anderson\;0\;0\;;
+2 KeywordGroup:Antiwal\;0\;author\;Antiwal\;0\;0\;;
+2 KeywordGroup:Aydin\;0\;author\;Aydin\;0\;0\;;
+2 KeywordGroup:Ayoade\;0\;author\;Ayoade\;0\;0\;;
+2 KeywordGroup:Ayoub Khan\;0\;author\;Ayoub Khan\;0\;0\;;
+2 KeywordGroup:Banerjee\;0\;author\;Banerjee\;0\;0\;;
+2 KeywordGroup:Bechteler\;0\;author\;Bechteler\;0\;0\;;
+2 KeywordGroup:Bekkali\;0\;author\;Bekkali\;0\;0\;;
+2 KeywordGroup:Bolic\;0\;author\;Bolic\;0\;0\;;
+2 KeywordGroup:Borriello\;0\;author\;Borriello\;0\;0\;;
+2 KeywordGroup:Bouet\;0\;author\;Bouet\;0\;0\;;
+2 KeywordGroup:Brumitt\;0\;author\;Brumitt\;0\;0\;;
+2 KeywordGroup:Cangialosi\;0\;author\;Cangialosi\;0\;0\;;
+2 KeywordGroup:Chan\;0\;author\;Chan\;0\;0\;;
+2 KeywordGroup:Chatterjee\;0\;author\;Chatterjee\;0\;0\;;
+2 KeywordGroup:Chen\;0\;author\;Chen\;0\;0\;;
+2 KeywordGroup:Cheung\;0\;author\;Cheung\;0\;0\;;
+2 KeywordGroup:Darabi\;0\;author\;Darabi\;0\;0\;;
+2 KeywordGroup:Das\;0\;author\;Das\;0\;0\;;
+2 KeywordGroup:Dincer\;0\;author\;Dincer\;0\;0\;;
+2 KeywordGroup:Esler\;0\;author\;Esler\;0\;0\;;
+2 KeywordGroup:Finkenzeller\;0\;author\;Finkenzeller\;0\;0\;;
+2 KeywordGroup:Fischer\;0\;author\;Fischer\;0\;0\;;
+2 KeywordGroup:Fox\;0\;author\;Fox\;0\;0\;;
+2 KeywordGroup:Ganz\;0\;author\;Ganz\;0\;0\;;
+2 KeywordGroup:Hassan\;0\;author\;Hassan\;0\;0\;;
+2 KeywordGroup:Hightower\;0\;author\;Hightower\;0\;0\;;
+2 KeywordGroup:Hillbrand\;0\;author\;Hillbrand\;0\;0\;;
+2 KeywordGroup:Huang\;0\;author\;Huang\;0\;0\;;
+2 KeywordGroup:Hunt\;0\;author\;Hunt\;0\;0\;;
+2 KeywordGroup:Janaswamy\;0\;author\;Janaswamy\;0\;0\;;
+2 KeywordGroup:Kaushik\;0\;author\;Kaushik\;0\;0\;;
+2 KeywordGroup:Khan\;0\;author\;Khan\;0\;0\;;
+2 KeywordGroup:Kovavisaruch\;0\;author\;Kovavisaruch\;0\;0\;;
+2 KeywordGroup:Landt\;0\;author\;Landt\;0\;0\;;
+2 KeywordGroup:Lau\;0\;author\;Lau\;0\;0\;;
+2 KeywordGroup:Lee\;0\;author\;Lee\;0\;0\;;
+2 KeywordGroup:Li\;0\;author\;Li\;0\;0\;;
+2 KeywordGroup:Liao\;0\;author\;Liao\;0\;0\;;
+2 KeywordGroup:Liu\;0\;author\;Liu\;0\;0\;;
+2 KeywordGroup:Luo\;0\;author\;Luo\;0\;0\;;
+2 KeywordGroup:Ma\;0\;author\;Ma\;0\;0\;;
+2 KeywordGroup:Manapure\;0\;author\;Manapure\;0\;0\;;
+2 KeywordGroup:Matsumoto\;0\;author\;Matsumoto\;0\;0\;;
+2 KeywordGroup:Monaly\;0\;author\;Monaly\;0\;0\;;
+2 KeywordGroup:Nath\;0\;author\;Nath\;0\;0\;;
+2 KeywordGroup:Ng\;0\;author\;Ng\;0\;0\;;
+2 KeywordGroup:Ni\;0\;author\;Ni\;0\;0\;;
+2 KeywordGroup:Ojha\;0\;author\;Ojha\;0\;0\;;
+2 KeywordGroup:Oktem\;0\;author\;Oktem\;0\;0\;;
+2 KeywordGroup:Parry\;0\;author\;Parry\;0\;0\;;
+2 KeywordGroup:Patel\;0\;author\;Patel\;0\;0\;;
+2 KeywordGroup:Patil\;0\;author\;Patil\;0\;0\;;
+2 KeywordGroup:Pourvoyeur\;0\;author\;Pourvoyeur\;0\;0\;;
+2 KeywordGroup:Puglia\;0\;author\;Puglia\;0\;0\;;
+2 KeywordGroup:Pujolle\;0\;author\;Pujolle\;0\;0\;;
+2 KeywordGroup:Reynolds\;0\;author\;Reynolds\;0\;0\;;
+2 KeywordGroup:Rida\;0\;author\;Rida\;0\;0\;;
+2 KeywordGroup:Robert\;0\;author\;Robert\;0\;0\;;
+2 KeywordGroup:Sanpechuda\;0\;author\;Sanpechuda\;0\;0\;;
+2 KeywordGroup:Sanson\;0\;author\;Sanson\;0\;0\;;
+2 KeywordGroup:Santos\;0\;author\;Santos\;0\;0\;;
+2 KeywordGroup:Schulz\;0\;author\;Schulz\;0\;0\;;
+2 KeywordGroup:Simplot-Ryl\;0\;author\;Simplot-Ryl\;0\;0\;;
+2 KeywordGroup:Stelzer\;0\;author\;Stelzer\;0\;0\;;
+2 KeywordGroup:Stojmenovic\;0\;author\;Stojmenovic\;0\;0\;;
+2 KeywordGroup:Symonds\;0\;author\;Symonds\;0\;0\;;
+2 KeywordGroup:Tentzeris\;0\;author\;Tentzeris\;0\;0\;;
+2 KeywordGroup:Tzeng\;0\;author\;Tzeng\;0\;0\;;
+2 KeywordGroup:Vaidya\;0\;author\;Vaidya\;0\;0\;;
+2 KeywordGroup:Vakili\;0\;author\;Vakili\;0\;0\;;
+2 KeywordGroup:Wang\;0\;author\;Wang\;0\;0\;;
+2 KeywordGroup:Want\;0\;author\;Want\;0\;0\;;
+2 KeywordGroup:Weinstein\;0\;author\;Weinstein\;0\;0\;;
+2 KeywordGroup:Wu\;0\;author\;Wu\;0\;0\;;
+2 KeywordGroup:Yang\;0\;author\;Yang\;0\;0\;;
+2 KeywordGroup:Yenigun\;0\;author\;Yenigun\;0\;0\;;
+2 KeywordGroup:Zhang\;0\;author\;Zhang\;0\;0\;;
+2 KeywordGroup:Zhao\;0\;author\;Zhao\;0\;0\;;
+2 KeywordGroup:Zhu\;0\;author\;Zhu\;0\;0\;;
 }
 
