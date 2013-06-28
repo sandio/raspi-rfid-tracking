@@ -1,17 +1,19 @@
 from serial_connection import SerialConnection
+from network_connection import NetworkServer, NetworkClient
 
 class Main:
 	"""A class for establishing connections"""
 	
-	def start_serial_con(self, port): 
-		serial_con = SerialConnection(port)
-		serial_con.open_port()
-		serial_con.flush_input()
-		serial_con.read_data()
+	def start_serial_conn(self, port): 
+		self.serial_conn = SerialConnection(port)
+		self.serial_conn.open()
+		self.serial_conn.flush_input()
+		self.serial_conn.read()
 
-	def stop_serial_con(self):
-		serial_con.flush_input()
-		serial_con.close_port()
+	def stop_serial_conn(self):
+		self.serial_conn.flush_input()
+		self.serial_conn.close()
 
 main = Main()
-main.start_serial_con('/dev/ttyUSB0')
+#main.start_serial_conn('/dev/ttyUSB0')
+

@@ -7,21 +7,21 @@ class SerialConnection:
 		self.ser = serial.Serial()
 		self.ser.port = port
 	
-	def open_port(self):
+	def open(self):
 		self.ser.open()
 		return self.ser.isOpen()
 
-	def close_port(self):
+	def close(self):
 		self.ser.close()
 		return self.ser.isOpen()
 
 	def flush_input(self):
 		while self.ser.inWaiting() > 14:
 			self.ser.flushInput()
-			sleep(0.4)
+			sleep(0.3)
 			print self.ser.inWaiting()
 	
-	def read_data(self):
+	def read(self):
 		try:
 			buf = ''
 			while True:
@@ -32,4 +32,4 @@ class SerialConnection:
 					print buf
 					buf = ''
 		except KeyboardInterrupt:
-			self.close_port()
+			self.close()
