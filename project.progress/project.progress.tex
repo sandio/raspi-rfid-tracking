@@ -167,7 +167,16 @@ echo $data;
 \section{June 28, Friday}
 
 \begin{itemize}
-	\item 
+	\item Now two of the Pis can send their tag ID and RSS measurements to the third Pi. It collects the other readings and they are ready for processing and running the localisation algorithm when I develop it.
+	\item I wrote a database handler for a sqlite3 database. The handler connects to a database, clears the table, and readings from the pi2 (the one with the web server) are inserted into the table. The following fields are used: the number of the reading, the tag ID and the RSS reading.
+	\item The main file of the project now starts a database handler, a network server thread accepting readings over the network, and starts reading its own reader data and inserting it to the database. The last step is a test to be able to access the database on the other side using PHP so that the readings could be viewed on the web site.
+\end{itemize}
+
+\section{June 29, Saturday}
+
+\begin{itemize}
+	\item Today I wrote a PHP script to open the database and display the table records into a table on the website with the most recent once appearing at the top of the table. The website refreshes every 3 seconds, which is roughly the period of arrival of new measurements from the RFID reader.
+	\item I am going to merge all my code now so that the changes I made here and there could be all together on GitHub.
 \end{itemize}
 
 \newpage

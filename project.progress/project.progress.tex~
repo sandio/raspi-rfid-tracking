@@ -158,6 +158,15 @@ echo $data;
 \section{June 27, Thursday}
 
 \begin{itemize}
+	\item I wrote network server and client programmes. The server accepts connections on after opening a network streaming socket and listening on it. Every incoming connection is handled by a dynamically spawn separate thread that reads a stream of incoming data without closing this client socket. In that way, many clients can connect to this server. The project assumes that two clients (Raspberry Pis) will connect to transmit data but for scalability issues and in case when a client connection drops threads are spawned dynamically. I implemented non-blocking sockets meaning that if there isn't something to read on the socket it will timeout and try again. Instead blocking sockets will indefinitely wait for bytes to read/write. If there are some problems on the socket the thread handling it will terminate. In case of a keyboard interrupt the programme tries to terminate cleanly. More specifically, all threads will stop to receive data, the main thread waits for all them to finish before closing the server socket and terminating.
+	
+	The client side of this part of the system connects to the server socket. Then it sends test data to the server. It is pretty simple but the next step is to extend it to send actual readings to the server.
+	\item I tested the setup on one Raspberry Pi acting as both a server and a client. It could successfully send and receive test messages. Then I run the client side on 2 RasPis and the third acted as a server. The server could successfully receive data from both clients and print the messages. If the server terminates the clients receive a 'Broken Pipe' error, which is what is expected. If a client terminates the server keeps going but the printing of the data is somewhat broken. I will investigate this issue and try to add an exception that could handle such a case. This is important because one of the clients could disconnect, stop sending data, crash, loose network connection, and so on.
+\end{itemize}
+
+\section{June 28, Friday}
+
+\begin{itemize}
 	\item 
 \end{itemize}
 
