@@ -6,14 +6,10 @@ class SerialConnection:
 	def __init__(self, port, timeout):
 		self.ser = serial.Serial()
 		self.ser.port = port
-		self.ser.timeout = timeout
+		self.timeout = timeout
 	
 	def open(self):
 		self.ser.open()
-		return self.ser.isOpen()
-
-	def close(self):
-		self.ser.close()
 		return self.ser.isOpen()
 
 	def flush_input(self):
@@ -27,3 +23,7 @@ class SerialConnection:
 		while not ' ' in buf:
 			buf += self.ser.read()
 		return buf
+
+	def close(self):
+		self.ser.close()
+		return self.ser.isOpen()
