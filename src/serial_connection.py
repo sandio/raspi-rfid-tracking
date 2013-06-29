@@ -3,16 +3,13 @@ import serial
 
 class SerialConnection:
 
-	def __init__(self, port):
+	def __init__(self, port, timeout):
 		self.ser = serial.Serial()
 		self.ser.port = port
+		self.timeout = timeout
 	
 	def open(self):
 		self.ser.open()
-		return self.ser.isOpen()
-
-	def close(self):
-		self.ser.close()
 		return self.ser.isOpen()
 
 	def flush_input(self):
@@ -22,14 +19,11 @@ class SerialConnection:
 			print self.ser.inWaiting()
 	
 	def read(self):
-		try:
-			buf = ''
-			while True:
-				char = self.ser.read()
-				if char != ' ':
-					buf += char
-				else:
-					print buf
-					buf = ''
-		except KeyboardInterrupt:
-			self.close()
+		buf = ''
+		while not ' ' in buf:
+			buf += self.ser.read()
+		return buf
+
+	def close(self):
+		self.ser.close()
+		return self.ser.isOpen()
