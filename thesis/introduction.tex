@@ -3,9 +3,21 @@
 
 \section{Motivation}
 
-\section{Goal}
+\textbf{Copied from IRP}
 
-\section{Contributions}
+Radio Frequency Identification (RFID) is an identification technology that also enables tracking of people and objects. RFID functions by remotely obtaining data stored on RFID tags. This information is mainly used for identification purposes. Systems relying on such data can only provide course-grained location information \cite{Bouet2008}. Their RFID readers are positioned at strategic control points in order to recognise tags that enter their read range. However, if an object's identity is combined with its location, then the benefits of RFID could be greater. For example, patient care and hospital operations could be improved using remote identification and tracking of patients \cite{Cangialosi2007}.
+
+RFID localisation principles are similar to the ones used for indoor wireless networks \cite{Bouet2008}. There are certain differences between both technologies, which results in tracking methods that are altered to reflect the characteristics of RFID. This project uses some of these indoor localisation schemes to detect and track a tag using three reader nodes in a controlled indoor environment. 
+
+RFID systems mainly consist of tags and readers. While tags are simple devices, readers are more complex and usually require a connection to a host computer or network \cite{Landt2005}. The high costs of tags and readers are a major factor that constrains the penetration of this technology \cite{Want2006}. Nowadays, these devices are becoming affordable to users . In addition, the recent emergence of cheap and compact single-board computers, such as the Raspberry Pi\footnote{About the Raspberry Pi - \url{http://www.raspberrypi.org/about}}, creates an exiting opportunity to build a cost-effective RFID sensor network capable of localising tags. This can be realised by connecting readers to single-board computers through USB or wired using a breadboard\footnote{Breadboard is a solderless (plug-in) construction base used for experimenting with circuit design.} and general purpose input/output (GPIO) pins on a chip.
+
+On the one hand, the RFID technology has unprecedented advantages and it has gained the attention of big industries that have identified its potential. On the other hand, the high costs of RFID tracking systems and components prevent most people from using and developing the technology. The hardware combination of affordable readers, tags, and single-board computers has the potential to benefit a vast range of businesses but also do-it-yourself hobbyists and enthusiasts. This might result into improved automated handling and tracking of goods in a warehouse, for instance. It can also result in a fast-paced, community-based, and open-source development of the RFID technology applied in a wide range of scenarios. This  project is interesting and exciting because it will try to apply RFID localisation algorithms on affordable hardware in order to create a tracking system. This will show that there can be cost-effective alternatives to commercial solutions, thus making the technology more accessible to a wider audience.
+
+\section{Hypothesis}
+
+\textbf{Copied from IRP.}
+
+The hypothesis of this project is that existing algorithms for localisation and tracking of active tags can be applied on a cost-effective Raspberry-Pi-based sensor network to achieve a similar performance. More specifically, the purpose of the project is to construct and programme three reader nodes, each consisting of a reader connected to a single-board computer, that cooperate in an indoor environment to estimate the position of a stationary or moving active tag based on the Received Signal Strength Indicator (RSSI).
 
 \section{Thesis Outline}
 

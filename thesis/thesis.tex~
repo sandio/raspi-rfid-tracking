@@ -40,12 +40,16 @@ To Do
 }
 
 \begin{document}
+
 \begin{preliminary}
 \maketitle
+
 \begin{acknowledgements}
-To Do
+I thank my supervisor Dr Michael Rovatsos and Mr Michael Anslow for their support and patience.
 \end{acknowledgements}
+
 \standarddeclaration
+
 \tableofcontents
 \end{preliminary}
 

@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.10b.
+% This file was created with JabRef 2.10b2.
 % Encoding: UTF8
 
 
@@ -9,6 +9,7 @@
   Year                     = {2007},
   Organization             = {IEEE},
   Pages                    = {1--5},
+
   File                     = {Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:RFID/Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4368102}
 }
@@ -22,7 +23,6 @@
   Pages                    = {1--7},
   Volume                   = {4},
 
-  __markedentry            = {[sandio:6]},
   File                     = {Virtual.Route.Tracking.in.ZigBee.Enabled.RFID.Interrogator.Mesh.Network-AyoubKhan2008.pdf:RFID/Virtual.Route.Tracking.in.ZigBee.Enabled.RFID.Interrogator.Mesh.Network-AyoubKhan2008.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4631904}
 }
@@ -84,8 +84,8 @@
 
   __markedentry            = {[sandio:5]},
   Abstract                 = {RFID is an automatic identification technology that enables tracking of people and objects. Both identity and location are generally key information for indoor services. An obvious and interesting method to obtain these two types of data is to localize RFID tags attached to devices or objects or carried by people. However, signals in indoor environments are generally harshly impaired and tags have very limited capabilities which pose many challenges for positioning them. In this work, we propose a classification and survey the current state-of-art of RFID localization by first presenting this technology and positioning principles. Then, we explain and classify RFID localization techniques. Finally, we discuss future trends in this domain.},
-  Comment                  = {read},
   File                     = {RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF;A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF},
+  Keywords                 = {rank5, relevant, prio1},
   Review                   = {Contains similar introduction to RFID technology. Explains the role of the server (RasPi in our case) connected to the readers that runs a localisation algorithm and provides the middleware for communication between servers. Contains a good classification of indoor localisation algorithms - distance estimation, scene analysis, and proximity. A brief but clear explanation of lateration with a useful figure. Contains a classification of range measurements techniques starting with Received Signal Strength (RSS) that will be used in this project. "The attenuation (gradual loss) of emitted signal strength is a function of the distance between the emitter and the receiver." A classification of different RFID localisation schemes is proposed. The first one is SpotON where multiple readers collect RSS measurements in order to approximate distance from the tag. Then lateration is performed to localise the tag. Landmarc is another approach that uses reference tags that are regularly deployed on the covered area. The idea here is to select the k nearest reference tags that are closest to the unknown tag using differences in RSS measurements. Having identified the k nearest reference tags their coordinates are used to localise the unknown tag. VIRE extends the methods used in Landmarc by defining a proximity map that every reader records. This proximity map consists of a 2D grid of reference tags where the centre of a cell is a tag. The difference in the RSS measurements between reference and unknown tag helps label cells in the proximity map so that it can be constructed. The union of individual proximity maps gives a global proximity map for the unknown tag. Simplex is a method that requires different transmission power levels. I am not sure if our equipment has this feature. A Kalman filtering method is briefly explained but have to read the original paper because it is hard to understand from a one paragraph description of the method. Scout is a probabilistic localisation technique that uses a probabilistic RSS model to estimate distances from a tag to readers. Predicted beliefs are calculated and corrected using reference tags until a good model is constructed.}
 }
 
@@ -109,6 +109,40 @@
   Year                     = {2006},
 
   File                     = {A.Combinatorial.Methodology.for.RFID.Benchmarking-6-Cheung2006.pdf:RFID/A.Combinatorial.Methodology.for.RFID.Benchmarking-6-Cheung2006.pdf:PDF}
+}
+
+@InProceedings{Chintalapudi2010,
+  Title                    = {{I}ndoor localization without the pain},
+  Author                   = {Chintalapudi, Krishna and Padmanabha Iyer, Anand and Padmanabhan, Venkata N},
+  Booktitle                = {Proceedings of the sixteenth annual international conference on Mobile computing and networking},
+  Year                     = {2010},
+  Organization             = {ACM},
+  Pages                    = {173--184},
+  File                     = {Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:RFID/Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:PDF},
+  Url                      = {http://dl.acm.org/citation.cfm?id=1860016}
+}
+
+@InProceedings{Cook2005,
+  Title                    = {{I}ndoor location using trilateration characteristics},
+  Author                   = {Cook, B and Buckberry, G and Scowcroft, I and Mitchell, J and Allen, T},
+  Booktitle                = {Proc. London Communications Symposium},
+  Year                     = {2005},
+  Pages                    = {147--150},
+
+  __markedentry            = {[sandio:6]},
+  File                     = {Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:RFID/Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:PDF}
+}
+
+@InProceedings{Doherty2001,
+  Title                    = {{C}onvex position estimation in wireless sensor networks},
+  Author                   = {Doherty, Lance and El Ghaoui, Laurent and others},
+  Booktitle                = {INFOCOM 2001. Twentieth Annual Joint Conference of the IEEE Computer and Communications Societies. Proceedings. IEEE},
+  Year                     = {2001},
+  Organization             = {IEEE},
+  Pages                    = {1655--1663},
+  Volume                   = {3},
+  File                     = {Convex.Position.Estimation.in.Wireless.Sensor.Networks-1506-Doherty2001.pdf:RFID/Convex.Position.Estimation.in.Wireless.Sensor.Networks-1506-Doherty2001.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=916662}
 }
 
 @InProceedings{Esler1999,
@@ -225,8 +259,8 @@
 
   __markedentry            = {[sandio:3]},
   Abstract                 = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.},
-  Comment                  = {read},
-  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF}
+  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF},
+  Keywords                 = {rank4, relevant, prio1}
 }
 
 @InProceedings{Hillbrand2007,
@@ -236,6 +270,7 @@
   Year                     = {2007},
   Organization             = {IEEE},
   Pages                    = {46--46},
+
   File                     = {Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:RFID/Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4278589}
 }
@@ -268,7 +303,9 @@
   Year                     = {2009},
   Organization             = {IEEE},
   Pages                    = {249--253},
+
   File                     = {Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:RFID/Localisation.and.tracking/Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:PDF},
+  Keywords                 = {rank3, relevant, prio2},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4809016}
 }
 
@@ -301,6 +338,7 @@
   Number                   = {6},
   Pages                    = {1067--1080},
   Volume                   = {37},
+
   File                     = {Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:RFID/Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:PDF},
   Publisher                = {IEEE},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4343996}
@@ -314,8 +352,22 @@
   Organization             = {IEEE},
   Pages                    = {1265--1270},
   Volume                   = {2},
+
   File                     = {A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:RFID/A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1297129}
+}
+
+@Article{Manolakis1996,
+  Title                    = {{E}fficient solution and performance analysis of 3-{D} position estimation by trilateration},
+  Author                   = {Manolakis, Dimitris E},
+  Journal                  = {Aerospace and Electronic Systems, IEEE Transactions on},
+  Year                     = {1996},
+  Number                   = {4},
+  Pages                    = {1239--1248},
+  Volume                   = {32},
+  File                     = {Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:RFID/Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:PDF},
+  Publisher                = {IEEE},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=543845}
 }
 
 @Article{Nath2006,
@@ -356,9 +408,20 @@
 
   __markedentry            = {[sandio:2]},
   Abstract                 = {Growing convergence among mobile computing devices and embedded technology sparks the development and deployment of “context-aware” applications, where location is the most essential context. In this paper we present LANDMARC, a location sensing prototype system that uses Radio Frequency Identification (RFID) technology for locating objects inside buildings. The major advantage of LANDMARC is that it improves the overall accuracy of locating objects by utilizing the concept of reference tags. Based on experimental analysis, we demonstrate that active RFID is a viable and cost-effective candidate for indoor location sensing. Although RFID is not designed for indoor location sensing, we point out three major features that should be added to make RFID technologies competitive in this new and growing market.},
-  Comment                  = {read},
   File                     = {LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:RFID/Localisation.and.tracking/LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:PDF},
+  Keywords                 = {rank5, relevant, prio1},
   Publisher                = {Springer}
+}
+
+@Article{Pu2011,
+  Title                    = {{I}ndoor location tracking using received signal strength indicator},
+  Author                   = {Pu, Chuan-Chin and Pu, Chuan-Hsian and Lee, Hoon-Jae},
+  Journal                  = {the Emerging Communications for Wireless Sensor Networks, ISBN},
+  Year                     = {2011},
+  Pages                    = {978--953},
+
+  __markedentry            = {[sandio:]},
+  File                     = {Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:RFID/Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:PDF}
 }
 
 @Book{Rida2010,
@@ -379,7 +442,6 @@
   Pages                    = {769--772},
   Volume                   = {2},
 
-  __markedentry            = {[sandio:]},
   File                     = {A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:RFID/A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4600544}
 }
@@ -442,8 +504,8 @@
   Volume                   = {5},
 
   __markedentry            = {[sandio:5]},
-  Comment                  = {read},
   File                     = {An.introduction.to.RFID.technology-640-Want2006.pdf:RFID/An.introduction.to.RFID.technology-640-Want2006.pdf:PDF},
+  Keywords                 = {rank5, relevant, prio3},
   Publisher                = {IEEE},
   Review                   = {It is good introductory article that clearly explains different classifications of RFID. It has helpful graphics for the distinction between near and far field RFID communication.}
 }
@@ -468,6 +530,7 @@
   Year                     = {2007},
   Organization             = {IEEE},
   Pages                    = {135--144},
+
   File                     = {An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/Localisation.and.tracking/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4144758}
 }

@@ -1,6 +1,54 @@
 \chapter{Background}
 \label{ch:background}
 
-\cite{Want2006}
+\textbf{Copied from IRP.}
+
+This section aims to describe the most important components of this project. First, it provides a brief introduction to the RFID technology. It also explains the different types of RFID hardware. Then, the Raspberry Pi is discussed. Following subsections provide information about localisation principles and algorithms relevant to this project.
+
+\subsection{Radio Frequency Identification (RFID)}
+
+Radio frequency identification is a technology that has been used for remote identification since the 1950s \cite{Landt2005}. It has been developing since then. As it matures, it is becoming more inexpensive, which will likely create a vast range of opportunities for its application \cite{Nath2006}.
+
+RFID can be considered an alternative and improvement of the current standard for identification of products, the barcodes.  Reading a barcode attached to an object requires a direct line of sight between a reader and a tag. In addition, barcodes can get obscured by other objects or substances, which hinders the identification process. RFID solves these disadvantages. It is a contactless technology that uses electromagnetic fields to carry information \cite{Finkenzeller2010}. Therefore, a direct line of sight is not required when reading data from tags attached to objects. RFID tags also support a larger set of unique IDs compared to bar codes, can be reprogrammed, and can store additional data depending on the application requirements. A RFID system has two compulsory hardware components, tags and readers.
+
+A tag is a data-carrying device consisting of an antenna attached to a microchip both encapsulated in solid enclosure \cite{Finkenzeller2010}. Tags can be classified into two main categories, passive or active \cite{Want2006}. Passive tags do not require a power source. They communicate with readers by reflecting part of received radio waves, a term referred to as backscatter modulation \cite{Bolic2010}. Passive tags need to be in the readers' range to operate. Active tags require a power source in the form of a battery or are directly connected to the electrical grid \cite{Want2006}. Although, their lifetime might be limited by the available energy, active tags can be read from greater distances compared to passive tags.
+
+A reader is a radio device that transmits radio waves and captures information send by tags. The reader's transmission frequency specifies the operational frequency of the RFID system, which is also their practical reading range \cite{Finkenzeller2010}. These devices usually consist of a radio frequency module, that capable of transmitting and receiving radio frequency signals, an antenna, and a control unit in the form of a microprocessor. 
+
+\subsection{Raspberry Pi}
+
+A single-board computer is a computer that is built on a single circuit board. It features most of the components of a personal computer. It has a processor, memory, storage, different microprocessors, and input/output interfaces. The Raspberry Pi is a particular implementation of a single-board computer. Figure \ref{fig:raspi} shows a graphical representation of its main components. Some of its strengths directly relating to this project are that it:
+\begin{itemize}
+ 	\item has an affordable price that ranges from 25 to 35,
+ 	\item can be connected to a RFID reader through USB or GPIO pins,
+ 	\item is credit-card sized,
+ 	\item consumes little power (3.5 W).
+\end{itemize}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{figures/raspi}
+		\label{fig:raspi}
+		\caption{Raspberry Pi Model B. Figure from \url{http://www.raspberrypi.org/faqs}.}
+	\end{center}
+\end{figure}
+
+\subsection{Distance estimation and localisation principles}
+
+Some RFID readers can provide an indication of the strength of radio frequency signals received from tags. This metric is called Received Signal Strength Indicator (RSSI). Its value is usually output along with the identity information stored in a tag. It is estimated at the reader side before amplifying the received input. RSSI is a measurement of the power of the received strength represented as a value ranging from 0 to 255. It will be used in this project to estimate the distance between readers and a tag. This is done using a translation function that converts the RSSI values into a distance metric. Such a function will be developed for this project based the one used by the SpotON algorithm \cite{Hightower2000}.
+
+Using the distances between readers and a tag, this project will employ the geometrical process of trilateration. It determines the relative position of a tag using properties of circles. The distance from a reader to a tag is the radius of a circle that could be drawn around the reader. The intersection of circles of three readers can be used to determine the approximate location of a tag relative to the readers. This technique has practical applications in surveying and navigation. Figure \ref{fig:lat} shows the concept of trilateration applied in the setting of this project.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{figures/lateration}
+		\label{fig:lat}
+		\caption{The trilateration geometrical process applied in the context of this project. Figure from \cite{Hightower2000}.}
+	\end{center}
+\end{figure}
+
+\subsection{SpotON}
+
+SpotON is localisation algorithm based on lateration with distance estimation using RSS measurements. SpotON's operation involves a number of readers collecting signal strength information from active tags to determine their positions in the 3D space. At the time or their research, Hightower and his colleagues were using RFID hardware with 2-bit accuracy when measuring received signal strength \cite{Hightower2000}. They identified that this accuracy is not enough to achieve the precision required for localisation in small indoor environments. The authors mentioned that 8-bit accuracy (from 0 to 255) could be used in the future for improved results \cite{Hightower2000}. The SpotON algorithm consists of two main parts. First, RSS measurements are converted into a distance estimation. This is done using a translation function relying on numerical variables that were identified based on observation. This function is not generic and probably cannot be applied in this project. However, it will be analysed because it might provide important information about the relationships between RSS and distance. The next part of the algorithm is to apply a localisation algorithm that tries to minimise RSS errors \cite{Hightower2000}. It is based on the lateration geometrical process to estimate a position for an active RFID tag. This project will be using some of the methods and procedures applied in the SpotON system.
 
 \section{Summary}
