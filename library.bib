@@ -10,7 +10,7 @@
   Organization             = {IEEE},
   Pages                    = {1--5},
 
-  File                     = {Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:RFID/Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:PDF},
+  File                     = {Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:RFID/reviews/Study.of.an.RFID.Based.Moving.Object.Tracking.System-Aydin2007.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4368102}
 }
 
@@ -37,7 +37,7 @@
   Volume                   = {51},
 
   __markedentry            = {[sandio:3]},
-  File                     = {2-D.localization.and.identification.based.on.SAW.ID-tags.at.2.5.GHz-31-Bechteler2003.pdf:RFID/Localisation.and.tracking/2-D.localization.and.identification.based.on.SAW.ID-tags.at.2.5.GHz-31-Bechteler2003.pdf:PDF},
+  File                     = {2-D.localization.and.identification.based.on.SAW.ID-tags.at.2.5.GHz-31-Bechteler2003.pdf:RFID/localisation.systems/2-D.localization.and.identification.based.on.SAW.ID-tags.at.2.5.GHz-31-Bechteler2003.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -50,7 +50,7 @@
   Pages                    = {21--21},
 
   __markedentry            = {[sandio:2]},
-  File                     = {RFID.indoor.positioning.based.on.probabilistic.RFID.map.and.kalman.filtering-83-Bekkali2007.pdf:RFID/Localisation.and.tracking/RFID.indoor.positioning.based.on.probabilistic.RFID.map.and.kalman.filtering-83-Bekkali2007.pdf:PDF}
+  File                     = {RFID.indoor.positioning.based.on.probabilistic.RFID.map.and.kalman.filtering-83-Bekkali2007.pdf:RFID/localisation.systems/RFID.indoor.positioning.based.on.probabilistic.RFID.map.and.kalman.filtering-83-Bekkali2007.pdf:PDF}
 }
 
 @Book{Bolic2010,
@@ -59,7 +59,7 @@
   Publisher                = {Wiley},
   Year                     = {2010},
 
-  File                     = {RFID.Systems.Research.Trends.and.Challenges-22-Bolic2010.pdf:RFID/Books/RFID.Systems.Research.Trends.and.Challenges-22-Bolic2010.pdf:PDF}
+  File                     = {RFID.Systems.Research.Trends.and.Challenges-22-Bolic2010.pdf:RFID/books/RFID.Systems.Research.Trends.and.Challenges-22-Bolic2010.pdf:PDF}
 }
 
 @InProceedings{Bouet2008a,
@@ -71,7 +71,7 @@
   Pages                    = {1--5},
 
   __markedentry            = {[sandio:1]},
-  File                     = {A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF}
+  File                     = {A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/localisation.systems/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF}
 }
 
 @InProceedings{Bouet2008,
@@ -84,7 +84,7 @@
 
   __markedentry            = {[sandio:5]},
   Abstract                 = {RFID is an automatic identification technology that enables tracking of people and objects. Both identity and location are generally key information for indoor services. An obvious and interesting method to obtain these two types of data is to localize RFID tags attached to devices or objects or carried by people. However, signals in indoor environments are generally harshly impaired and tags have very limited capabilities which pose many challenges for positioning them. In this work, we propose a classification and survey the current state-of-art of RFID localization by first presenting this technology and positioning principles. Then, we explain and classify RFID localization techniques. Finally, we discuss future trends in this domain.},
-  File                     = {RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF;A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/Localisation.and.tracking/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF},
+  File                     = {A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:RFID/localisation.systems/A.range-free.3-D.localization.method.for.RFID.tags.based.on.virtual.landmarks-17-Bouet2008a.pdf:PDF;RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:RFID/reviews/RFID.tags.positioning.principles.and.localization.techniques-88-Bouet2008.pdf:PDF},
   Keywords                 = {rank5, relevant, prio1},
   Review                   = {Contains similar introduction to RFID technology. Explains the role of the server (RasPi in our case) connected to the readers that runs a localisation algorithm and provides the middleware for communication between servers. Contains a good classification of indoor localisation algorithms - distance estimation, scene analysis, and proximity. A brief but clear explanation of lateration with a useful figure. Contains a classification of range measurements techniques starting with Received Signal Strength (RSS) that will be used in this project. "The attenuation (gradual loss) of emitted signal strength is a function of the distance between the emitter and the receiver." A classification of different RFID localisation schemes is proposed. The first one is SpotON where multiple readers collect RSS measurements in order to approximate distance from the tag. Then lateration is performed to localise the tag. Landmarc is another approach that uses reference tags that are regularly deployed on the covered area. The idea here is to select the k nearest reference tags that are closest to the unknown tag using differences in RSS measurements. Having identified the k nearest reference tags their coordinates are used to localise the unknown tag. VIRE extends the methods used in Landmarc by defining a proximity map that every reader records. This proximity map consists of a 2D grid of reference tags where the centre of a cell is a tag. The difference in the RSS measurements between reference and unknown tag helps label cells in the proximity map so that it can be constructed. The union of individual proximity maps gives a global proximity map for the unknown tag. Simplex is a method that requires different transmission power levels. I am not sure if our equipment has this feature. A Kalman filtering method is briefly explained but have to read the original paper because it is hard to understand from a one paragraph description of the method. Scout is a probabilistic localisation technique that uses a probabilistic RSS model to estimate distances from a tag to readers. Predicted beliefs are calculated and corrected using reference tags until a good model is constructed.}
 }
@@ -98,7 +98,7 @@
   Pages                    = {18--23},
   Volume                   = {45},
 
-  File                     = {Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:RFID/Applications/Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:PDF},
+  File                     = {Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:RFID/applications/Leveraging.RFID.in.hospitals.patient.life.cycle.and.mobility.perspectives-63-Cangialosi2007.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -119,7 +119,7 @@
   Organization             = {ACM},
   Pages                    = {173--184},
 
-  File                     = {Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:RFID/Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:PDF},
+  File                     = {Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:RFID/rssi/Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:PDF},
   Url                      = {http://dl.acm.org/citation.cfm?id=1860016}
 }
 
@@ -129,7 +129,8 @@
   Booktitle                = {Proc. London Communications Symposium},
   Year                     = {2005},
   Pages                    = {147--150},
-  File                     = {Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:RFID/Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:PDF}
+
+  File                     = {Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:RFID/trilateration/Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:PDF}
 }
 
 @InProceedings{Doherty2001,
@@ -145,6 +146,19 @@
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=916662}
 }
 
+@InProceedings{Elnahrawy2004,
+  Title                    = {{T}he limits of localization using signal strength: {A} comparative study},
+  Author                   = {Elnahrawy, Eiman and Li, Xiaoyan and Martin, Richard P},
+  Booktitle                = {Sensor and Ad Hoc Communications and Networks, 2004. IEEE SECON 2004. 2004 First Annual IEEE Communications Society Conference on},
+  Year                     = {2004},
+  Organization             = {IEEE},
+  Pages                    = {406--414},
+
+  __markedentry            = {[sandio:6]},
+  File                     = {The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:RFID/rssi/The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1381942}
+}
+
 @InProceedings{Esler1999,
   Title                    = {{N}ext century challenges: data-centric networking for invisible computing: the {P}ortolano project at the {U}niversity of {W}ashington},
   Author                   = {Esler, Mike and Hightower, Jeffrey and Anderson, Tom and Borriello, Gaetano},
@@ -153,7 +167,7 @@
   Organization             = {ACM},
   Pages                    = {256--262},
 
-  File                     = {Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:RFID/Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:PDF},
+  File                     = {Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:RFID/background/Next.Century.Challenges.Data-Centric.Networking.for.Invisible.Computing-203-Esler1999.pdf:PDF},
   Url                      = {http://dl.acm.org/citation.cfm?id=313553}
 }
 
@@ -163,7 +177,7 @@
   Publisher                = {Wiley},
   Year                     = {2010},
 
-  File                     = {RFID.Handbook.Fundamentals.and.Applications.in.Contactless.Smart.Cards.RFID.and.NFC-3877-Finkenzeller2010.pdf:RFID/Books/RFID.Handbook.Fundamentals.and.Applications.in.Contactless.Smart.Cards.RFID.and.NFC-3877-Finkenzeller2010.pdf:PDF}
+  File                     = {RFID.Handbook.Fundamentals.and.Applications.in.Contactless.Smart.Cards.RFID.and.NFC-3877-Finkenzeller2010.pdf:RFID/books/RFID.Handbook.Fundamentals.and.Applications.in.Contactless.Smart.Cards.RFID.and.NFC-3877-Finkenzeller2010.pdf:PDF}
 }
 
 @Article{Fox2003,
@@ -175,7 +189,7 @@
   Pages                    = {24--33},
   Volume                   = {2},
 
-  File                     = {Bayesian.filters.for.location.estimation-474-Fox2003.pdf:RFID/Localisation.and.tracking/Bayesian.filters.for.location.estimation-474-Fox2003.pdf:PDF},
+  File                     = {Bayesian.filters.for.location.estimation-474-Fox2003.pdf:RFID/localisation.systems/Bayesian.filters.for.location.estimation-474-Fox2003.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -188,7 +202,7 @@
   Pages                    = {184b--184b},
   Volume                   = {8},
 
-  File                     = {A.taxonomy.for.RFID-80-Hassan2006.pdf:RFID/A.taxonomy.for.RFID-80-Hassan2006.pdf:PDF}
+  File                     = {A.taxonomy.for.RFID-80-Hassan2006.pdf:RFID/background/A.taxonomy.for.RFID-80-Hassan2006.pdf:PDF}
 }
 
 @Article{Hightower2001,
@@ -200,7 +214,7 @@
   Pages                    = {57--66},
   Volume                   = {34},
 
-  File                     = {Location.systems.for.ubiquitous.computing-3006-Hightower2001.pdf:RFID/Localisation.and.tracking/Location.systems.for.ubiquitous.computing-3006-Hightower2001.pdf:PDF;Location.sensing.techniques-184-Hightower2001a.pdf:RFID/Localisation.and.tracking/Location.sensing.techniques-184-Hightower2001a.pdf:PDF;Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:RFID/Localisation.and.tracking/Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:PDF;A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:RFID/Localisation.and.tracking/A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:PDF},
+  File                     = {A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:RFID/reviews/A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:PDF;Location.sensing.techniques-184-Hightower2001a.pdf:RFID/reviews/Location.sensing.techniques-184-Hightower2001a.pdf:PDF;Location.systems.for.ubiquitous.computing-3006-Hightower2001.pdf:RFID/reviews/Location.systems.for.ubiquitous.computing-3006-Hightower2001.pdf:PDF;Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:RFID/localisation.systems/SpotON/Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -213,7 +227,7 @@
   Pages                    = {57--66},
   Volume                   = {34},
 
-  File                     = {Location.sensing.techniques-184-Hightower2001a.pdf:RFID/Localisation.and.tracking/Location.sensing.techniques-184-Hightower2001a.pdf:PDF}
+  File                     = {Location.sensing.techniques-184-Hightower2001a.pdf:RFID/reviews/Location.sensing.techniques-184-Hightower2001a.pdf:PDF}
 }
 
 @TechReport{Hightower2001c,
@@ -227,7 +241,7 @@
   Number                   = {01-08-03},
   Type                     = {UW CSE},
 
-  File                     = {A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:RFID/Localisation.and.tracking/A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:PDF}
+  File                     = {A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:RFID/reviews/A.survey.and.taxonomy.of.location.systems.for.ubiquitous.computing-184-Hightower2001c.pdf:PDF}
 }
 
 @InProceedings{Hightower2002,
@@ -238,7 +252,7 @@
   Organization             = {IEEE},
   Pages                    = {22--28},
 
-  File                     = {The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:RFID/Localisation.and.tracking/The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:PDF}
+  File                     = {The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:RFID/Localisation.and.tracking/The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:PDF;The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:RFID/localisation.systems/The.location.stack.a.layered.model.for.location.in.ubiquitous.computing-222-Hightower2002.pdf:PDF}
 }
 
 @Article{Hightower2001b,
@@ -247,7 +261,7 @@
   Journal                  = {unpublished, August},
   Year                     = {2001},
 
-  File                     = {Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:RFID/Localisation.and.tracking/Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:PDF}
+  File                     = {Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:RFID/localisation.systems/SpotON/Design.and.calibration.of.the.spoton.ad-hoc.location.sensing.system-157-Hightower2001b.pdf:PDF}
 }
 
 @Article{Hightower2000,
@@ -259,7 +273,7 @@
 
   __markedentry            = {[sandio:3]},
   Abstract                 = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.},
-  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/Localisation.and.tracking/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF},
+  File                     = {SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:RFID/localisation.systems/SpotON/SpotON.an.indoor.3D.location.sensing.technology.based.on.RF.signal.strength-733-Hightower2000.pdf:PDF},
   Keywords                 = {rank4, relevant, prio1}
 }
 
@@ -271,7 +285,7 @@
   Organization             = {IEEE},
   Pages                    = {46--46},
 
-  File                     = {Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:RFID/Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:PDF},
+  File                     = {Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:RFID/applications/Shipment.Localization.Kit.An.Automated.Approach.for.Tracking.and.Tracing.General.Cargo-Hillbrand2007.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4278589}
 }
 
@@ -284,7 +298,7 @@
   Pages                    = {1--10},
 
   __markedentry            = {[sandio:2]},
-  File                     = {Scout.outdoor.localization.using.active.RFID.technology-14-Huang2006.pdf:RFID/Localisation.and.tracking/Scout.outdoor.localization.using.active.RFID.technology-14-Huang2006.pdf:PDF}
+  File                     = {Scout.outdoor.localization.using.active.RFID.technology-14-Huang2006.pdf:RFID/localisation.systems/Scout.outdoor.localization.using.active.RFID.technology-14-Huang2006.pdf:PDF}
 }
 
 @Book{Hunt2007,
@@ -293,7 +307,7 @@
   Publisher                = {Wiley-interscience},
   Year                     = {2007},
 
-  File                     = {RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:RFID/Books/RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:PDF}
+  File                     = {RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:RFID/books/RFID.a.Guide.to.Radio.Frequency.Identification-209-Hunt2007.pdf:PDF}
 }
 
 @InProceedings{Khan2009,
@@ -304,7 +318,7 @@
   Organization             = {IEEE},
   Pages                    = {249--253},
 
-  File                     = {Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:RFID/Localisation.and.tracking/Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:PDF},
+  File                     = {Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:RFID/localisation.systems/LANDMARC/Location.Estimation.Technique.using.Extended.3-D.LANDMARC.Algorithm.for.Passive.RFID.Tag-Khan2009.pdf:PDF},
   Keywords                 = {rank3, relevant, prio2},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4809016}
 }
@@ -318,7 +332,7 @@
   Pages                    = {8--11},
   Volume                   = {24},
 
-  File                     = {The.history.of.RFID-376-Landt2005.pdf:RFID/The.history.of.RFID-376-Landt2005.pdf:PDF},
+  File                     = {The.history.of.RFID-376-Landt2005.pdf:RFID/background/The.history.of.RFID-376-Landt2005.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -327,7 +341,7 @@
   Author                   = {Landt, Jeremey},
   Year                     = {2001},
 
-  File                     = {Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:RFID/Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:PDF}
+  File                     = {Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:RFID/background/Shrouds.of.time.the.history.of.RFID-198-Landt2001.pdf:PDF}
 }
 
 @Article{Liu2007,
@@ -339,7 +353,7 @@
   Pages                    = {1067--1080},
   Volume                   = {37},
 
-  File                     = {Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:RFID/Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:PDF},
+  File                     = {Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:RFID/reviews/Survey.of.Wireless.Indoor.Positioning.Techniques.and.Systems-Liu2007.pdf:PDF},
   Publisher                = {IEEE},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4343996}
 }
@@ -353,7 +367,7 @@
   Pages                    = {1265--1270},
   Volume                   = {2},
 
-  File                     = {A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:RFID/A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:PDF},
+  File                     = {A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:RFID/reviews/A.Comparative.Study.of.Radio.Frequency-Based.Indoor.Location.Sensing.Systems-Manapure2004.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1297129}
 }
 
@@ -366,7 +380,7 @@
   Pages                    = {1239--1248},
   Volume                   = {32},
 
-  File                     = {Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:RFID/Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:PDF},
+  File                     = {Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:RFID/trilateration/Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:PDF},
   Publisher                = {IEEE},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=543845}
 }
@@ -380,7 +394,7 @@
   Pages                    = {22--24},
   Volume                   = {5},
 
-  File                     = {RFID.technology.and.applications-133-Nath2006.pdf:RFID/RFID.technology.and.applications-133-Nath2006.pdf:PDF},
+  File                     = {RFID.technology.and.applications-133-Nath2006.pdf:RFID/background/RFID.technology.and.applications-133-Nath2006.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -393,7 +407,7 @@
 
   Abstract                 = {Existing approaches for sensor networks suffer from a number of critical drawbacks. First, homogeneous deployments have been commonly as- sumed, but in practice multiple deployments of sensor nets and heterogeneity of sensor networks are a serious problem. Second, existing approaches are very application-dependent and engineering-oriented. Third, there has been little standard available for WSNs. These drawbacks have significantly limited the further development of sensor networks. To overcome these critical drawbacks, we propose an extensive framework: Semantic Sensor Net (SSN). In brief, a semantic sensor net is a heterogeneous sensor network which enables dynamic tagging of semantic information to sensory data to allow more efficient and sys- tematic monitoring and handling of the environmental dynamics to provide de- manded services.},
   Comment                  = {read},
-  File                     = {Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:RFID/Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:PDF},
+  File                     = {Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:RFID/background/Semantic.sensor.net.an.extensible.framework-22-Ni2005.pdf:PDF},
   Publisher                = {Springer},
   Review                   = {It is more concerned with sensor networks with multiple nodes, where the nodes have less importance than traditional computer networks. The article proposes an extensible framework for sensor networks that relies on attaching semantics (meanings) to sensor data but also to sensor nodes, location, context, and queries. The idea is to attach a meaning to every piece of information so that those meanings can be used by the network to route and aggregate data more efficiently, for example. This paper does not have a direct connection to this project but gives grounds for thoughts about attaching meaning to measurements, considering heterogeneous RFID reader nodes, and taking scalability into account.}
 }
@@ -409,7 +423,7 @@
 
   __markedentry            = {[sandio:2]},
   Abstract                 = {Growing convergence among mobile computing devices and embedded technology sparks the development and deployment of “context-aware” applications, where location is the most essential context. In this paper we present LANDMARC, a location sensing prototype system that uses Radio Frequency Identification (RFID) technology for locating objects inside buildings. The major advantage of LANDMARC is that it improves the overall accuracy of locating objects by utilizing the concept of reference tags. Based on experimental analysis, we demonstrate that active RFID is a viable and cost-effective candidate for indoor location sensing. Although RFID is not designed for indoor location sensing, we point out three major features that should be added to make RFID technologies competitive in this new and growing market.},
-  File                     = {LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:RFID/Localisation.and.tracking/LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:PDF},
+  File                     = {LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:RFID/localisation.systems/LANDMARC/LANDMARC.indoor.location.sensing.using.active.RFID-1273-Ni2004.pdf:PDF},
   Keywords                 = {rank5, relevant, prio1},
   Publisher                = {Springer}
 }
@@ -420,7 +434,8 @@
   Journal                  = {the Emerging Communications for Wireless Sensor Networks, ISBN},
   Year                     = {2011},
   Pages                    = {978--953},
-  File                     = {Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:RFID/Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:PDF}
+
+  File                     = {Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:RFID/rssi/Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:PDF}
 }
 
 @Book{Rida2010,
@@ -429,7 +444,7 @@
   Publisher                = {Artech House Publishers},
   Year                     = {2010},
 
-  File                     = {RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:RFID/Books/RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:PDF}
+  File                     = {RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:RFID/books/RFID-Enabled.Sensor.Design.and.Applications-26-Rida2010.pdf:PDF}
 }
 
 @InProceedings{Sanpechuda2008,
@@ -441,7 +456,7 @@
   Pages                    = {769--772},
   Volume                   = {2},
 
-  File                     = {A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:RFID/A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:PDF},
+  File                     = {A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:RFID/reviews/A.review.of.RFID.Localization.Applications.and.Techniques-Sanpechuda2008.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4600544}
 }
 
@@ -455,7 +470,7 @@
   Volume                   = {52},
 
   __markedentry            = {[sandio:3]},
-  File                     = {Concept.and.application.of.LPM-a.novel.3-D.local.position.measurement.system-70-Stelzer2004.pdf:RFID/Localisation.and.tracking/Concept.and.application.of.LPM-a.novel.3-D.local.position.measurement.system-70-Stelzer2004.pdf:PDF},
+  File                     = {Concept.and.application.of.LPM-a.novel.3-D.local.position.measurement.system-70-Stelzer2004.pdf:RFID/localisation.systems/Concept.and.application.of.LPM-a.novel.3-D.local.position.measurement.system-70-Stelzer2004.pdf:PDF},
   Publisher                = {IEEE}
 }
 
@@ -465,7 +480,7 @@
   Publisher                = {IGI Global},
   Year                     = {2009},
 
-  File                     = {Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:RFID/Books/Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:PDF}
+  File                     = {Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:RFID/books/Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:PDF}
 }
 
 @InProceedings{Teuber2006,
@@ -475,8 +490,6 @@
   Year                     = {2006},
   Pages                    = {730--738},
   Volume                   = {4},
-
-  __markedentry            = {[sandio:6]},
   File                     = {A.Two-Stage.Fuzzy.Logic.Approach.for.Wireless.LAN.Indoor.Positioning-Teuber2006.pdf:RFID/A.Two-Stage.Fuzzy.Logic.Approach.for.Wireless.LAN.Indoor.Positioning-Teuber2006.pdf:PDF}
 }
 
@@ -489,7 +502,7 @@
   Pages                    = {2--14},
   Volume                   = {12},
 
-  File                     = {RFID-based.networks.exploiting.diversity.and.redundancy-39-Vaidya2008.pdf:RFID/RFID-based.networks.exploiting.diversity.and.redundancy-39-Vaidya2008.pdf:PDF},
+  File                     = {RFID-based.networks.exploiting.diversity.and.redundancy-39-Vaidya2008.pdf:RFID/background/RFID-based.networks.exploiting.diversity.and.redundancy-39-Vaidya2008.pdf:PDF},
   Publisher                = {ACM}
 }
 
@@ -502,7 +515,7 @@
   Pages                    = {1235--1243},
 
   __markedentry            = {[sandio:2]},
-  File                     = {RFID.based.3-D.positioning.schemes-73-Wang2007.pdf:RFID/Localisation.and.tracking/RFID.based.3-D.positioning.schemes-73-Wang2007.pdf:PDF}
+  File                     = {RFID.based.3-D.positioning.schemes-73-Wang2007.pdf:RFID/localisation.systems/RFID.based.3-D.positioning.schemes-73-Wang2007.pdf:PDF}
 }
 
 @Article{Want2006,
@@ -515,7 +528,7 @@
   Volume                   = {5},
 
   __markedentry            = {[sandio:5]},
-  File                     = {An.introduction.to.RFID.technology-640-Want2006.pdf:RFID/An.introduction.to.RFID.technology-640-Want2006.pdf:PDF},
+  File                     = {An.introduction.to.RFID.technology-640-Want2006.pdf:RFID/background/An.introduction.to.RFID.technology-640-Want2006.pdf:PDF},
   Keywords                 = {rank5, relevant, prio3},
   Publisher                = {IEEE},
   Review                   = {It is good introductory article that clearly explains different classifications of RFID. It has helpful graphics for the distinction between near and far field RFID communication.}
@@ -530,8 +543,21 @@
   Pages                    = {27--33},
   Volume                   = {7},
 
-  File                     = {RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:RFID/RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:PDF},
+  File                     = {RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:RFID/background/RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:PDF},
   Publisher                = {IEEE}
+}
+
+@InProceedings{Wu2008,
+  Title                    = {{S}tudy of characteristics of {RSSI} signal},
+  Author                   = {Wu, Rong-Hou and Lee, Yang-Han and Tseng, Hsien-Wei and Jan, Yih-Guang and Chuang, Ming-Hsueh},
+  Booktitle                = {Industrial Technology, 2008. ICIT 2008. IEEE International Conference on},
+  Year                     = {2008},
+  Organization             = {IEEE},
+  Pages                    = {1--3},
+
+  __markedentry            = {[sandio:]},
+  File                     = {Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:RFID/rssi/Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4608603}
 }
 
 @InProceedings{Youssef2005,
@@ -541,8 +567,6 @@
   Year                     = {2005},
   Organization             = {ACM},
   Pages                    = {205--218},
-
-  __markedentry            = {[sandio:]},
   File                     = {The.Horus.WLAN.Location.Determination.System-Youssef2005.pdf:RFID/The.Horus.WLAN.Location.Determination.System-Youssef2005.pdf:PDF},
   Url                      = {http://dl.acm.org/citation.cfm?id=1067193}
 }
@@ -555,7 +579,7 @@
   Organization             = {IEEE},
   Pages                    = {135--144},
 
-  File                     = {An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/Localisation.and.tracking/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
+  File                     = {An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/localisation.systems/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4144758}
 }
 
@@ -567,7 +591,7 @@
   Volume                   = {2007},
 
   __markedentry            = {[sandio:3]},
-  File                     = {Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:RFID/Localisation.and.tracking/Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:PDF;An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/Localisation.and.tracking/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF},
+  File                     = {An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:RFID/localisation.systems/An.RF-based.System.for.Tracking.Transceiver-free.Objects-Zhang2007a.pdf:PDF;Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:RFID/localisation.systems/Localization.and.tracking.of.passive.RFID.tags.based.on.direction.estimation-42-Zhang2007.pdf:PDF},
   Publisher                = {Hindawi Publishing Corporation}
 }
 
@@ -577,7 +601,7 @@
   Publisher                = {CRC},
   Year                     = {2009},
 
-  File                     = {RFID.and.Sensor.Networks.architectures.protocols.security.and.integrations-17-Zhang2009.pdf:RFID/Books/RFID.and.Sensor.Networks.architectures.protocols.security.and.integrations-17-Zhang2009.pdf:PDF}
+  File                     = {RFID.and.Sensor.Networks.architectures.protocols.security.and.integrations-17-Zhang2009.pdf:RFID/books/RFID.and.Sensor.Networks.architectures.protocols.security.and.integrations-17-Zhang2009.pdf:PDF}
 }
 
 @InProceedings{Zhao2007,
@@ -589,7 +613,7 @@
   Pages                    = {56--56},
 
   __markedentry            = {[sandio:2]},
-  File                     = {VIRE.active.RFID.based.localization.using.virtual.reference.elimination-82-Zhao2007.pdf:RFID/Localisation.and.tracking/VIRE.active.RFID.based.localization.using.virtual.reference.elimination-82-Zhao2007.pdf:PDF}
+  File                     = {VIRE.active.RFID.based.localization.using.virtual.reference.elimination-82-Zhao2007.pdf:RFID/localisation.systems/LANDMARC/VIRE.active.RFID.based.localization.using.virtual.reference.elimination-82-Zhao2007.pdf:PDF}
 }
 
 @comment{jabref-meta: selector_publisher:}

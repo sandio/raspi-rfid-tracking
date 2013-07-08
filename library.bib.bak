@@ -118,6 +118,7 @@
   Year                     = {2010},
   Organization             = {ACM},
   Pages                    = {173--184},
+
   File                     = {Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:RFID/Indoor.Localization.without.the.Pain-Chintalapudi2010.pdf:PDF},
   Url                      = {http://dl.acm.org/citation.cfm?id=1860016}
 }
@@ -129,7 +130,6 @@
   Year                     = {2005},
   Pages                    = {147--150},
 
-  __markedentry            = {[sandio:6]},
   File                     = {Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:RFID/Indoor.Location.Using.Trilateration.Characteristics-Cook2005.pdf:PDF}
 }
 
@@ -141,8 +141,22 @@
   Organization             = {IEEE},
   Pages                    = {1655--1663},
   Volume                   = {3},
+
   File                     = {Convex.Position.Estimation.in.Wireless.Sensor.Networks-1506-Doherty2001.pdf:RFID/Convex.Position.Estimation.in.Wireless.Sensor.Networks-1506-Doherty2001.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=916662}
+}
+
+@InProceedings{Elnahrawy2004,
+  Title                    = {{T}he limits of localization using signal strength: {A} comparative study},
+  Author                   = {Elnahrawy, Eiman and Li, Xiaoyan and Martin, Richard P},
+  Booktitle                = {Sensor and Ad Hoc Communications and Networks, 2004. IEEE SECON 2004. 2004 First Annual IEEE Communications Society Conference on},
+  Year                     = {2004},
+  Organization             = {IEEE},
+  Pages                    = {406--414},
+
+  __markedentry            = {[sandio:6]},
+  File                     = {The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:RFID/rssi/The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1381942}
 }
 
 @InProceedings{Esler1999,
@@ -365,6 +379,7 @@
   Number                   = {4},
   Pages                    = {1239--1248},
   Volume                   = {32},
+
   File                     = {Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:RFID/Efficient.Solution.and.Performance.Analysis.of.3-D.Position.Estimation.by.Trilateration-179-Manolakis1996.pdf:PDF},
   Publisher                = {IEEE},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=543845}
@@ -420,7 +435,6 @@
   Year                     = {2011},
   Pages                    = {978--953},
 
-  __markedentry            = {[sandio:]},
   File                     = {Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:RFID/Indoor.Location.Tracking.using.Received.Signal.Strength.Indicator-Pu2011.pdf:PDF}
 }
 
@@ -467,6 +481,16 @@
   Year                     = {2009},
 
   File                     = {Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:RFID/Books/Auto-identification.and.Ubiquitous.Computing.Applications-6-Symonds2009.pdf:PDF}
+}
+
+@InProceedings{Teuber2006,
+  Title                    = {{A} two-stage fuzzy logic approach for wireless {LAN} indoor positioning},
+  Author                   = {Teuber, Andreas and Eissfeller, Bernd and Pany, Thomas},
+  Booktitle                = {Proc. IEEE/ION Position Location Navigat. Symp},
+  Year                     = {2006},
+  Pages                    = {730--738},
+  Volume                   = {4},
+  File                     = {A.Two-Stage.Fuzzy.Logic.Approach.for.Wireless.LAN.Indoor.Positioning-Teuber2006.pdf:RFID/A.Two-Stage.Fuzzy.Logic.Approach.for.Wireless.LAN.Indoor.Positioning-Teuber2006.pdf:PDF}
 }
 
 @Article{Vaidya2008,
@@ -521,6 +545,30 @@
 
   File                     = {RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:RFID/RFID.a.technical.overview.and.its.application.to.the.enterprise-419-Weinstein2005.pdf:PDF},
   Publisher                = {IEEE}
+}
+
+@InProceedings{Wu2008,
+  Title                    = {{S}tudy of characteristics of {RSSI} signal},
+  Author                   = {Wu, Rong-Hou and Lee, Yang-Han and Tseng, Hsien-Wei and Jan, Yih-Guang and Chuang, Ming-Hsueh},
+  Booktitle                = {Industrial Technology, 2008. ICIT 2008. IEEE International Conference on},
+  Year                     = {2008},
+  Organization             = {IEEE},
+  Pages                    = {1--3},
+
+  __markedentry            = {[sandio:]},
+  File                     = {Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:RFID/rssi/Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:PDF},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4608603}
+}
+
+@InProceedings{Youssef2005,
+  Title                    = {{T}he {H}orus {WLAN} location determination system},
+  Author                   = {Youssef, Moustafa and Agrawala, Ashok},
+  Booktitle                = {Proceedings of the 3rd international conference on Mobile systems, applications, and services},
+  Year                     = {2005},
+  Organization             = {ACM},
+  Pages                    = {205--218},
+  File                     = {The.Horus.WLAN.Location.Determination.System-Youssef2005.pdf:RFID/The.Horus.WLAN.Location.Determination.System-Youssef2005.pdf:PDF},
+  Url                      = {http://dl.acm.org/citation.cfm?id=1067193}
 }
 
 @InProceedings{Zhang2007a,
