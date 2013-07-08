@@ -5,6 +5,13 @@ Bouet, M. and dos Santos, A.~L. (2008).
 \newblock {RFID} tags: {P}ositioning principles and localization techniques.
 \newblock In {\em Wireless Days, 2008. WD'08. 1st IFIP}, pages 1--5. IEEE.
 
+\bibitem[Hightower and Borriello, 2001]{Hightower2001c}
+Hightower, J. and Borriello, G. (2001).
+\newblock {A} {S}urvey and {T}axonomy of {L}ocation {S}ensing {S}ystems for
+  {U}biquitous {C}omputing.
+\newblock UW CSE 01-08-03, University of Washington, Department of Computer
+  Science and Engineering, Seattle, WA.
+
 \bibitem[Hightower et~al., 2000]{Hightower2000}
 Hightower, J., Want, R., and Borriello, G. (2000).
 \newblock {S}pot{ON}: {A}n indoor 3{D} location sensing technology based on

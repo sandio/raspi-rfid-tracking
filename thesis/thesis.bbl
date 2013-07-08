@@ -1,5 +1,62 @@
 \begin{thebibliography}{}
 
+\bibitem[Bolic et~al., 2010]{Bolic2010}
+Bolic, M., Simplot-Ryl, D., and Stojmenovic, I. (2010).
+\newblock {\em {RFID} systems: research trends and challenges}.
+\newblock Wiley.
+
+\bibitem[Bouet and dos Santos, 2008]{Bouet2008}
+Bouet, M. and dos Santos, A.~L. (2008).
+\newblock {RFID} tags: {P}ositioning principles and localization techniques.
+\newblock In {\em Wireless Days, 2008. WD'08. 1st IFIP}, pages 1--5. IEEE.
+
+\bibitem[Cangialosi et~al., 2007]{Cangialosi2007}
+Cangialosi, A., Monaly, J.~E., and Yang, S.~C. (2007).
+\newblock {L}everaging {RFID} in hospitals: {P}atient life cycle and mobility
+  perspectives.
+\newblock {\em Communications Magazine, IEEE}, 45(9):18--23.
+
+\bibitem[Finkenzeller, 2010]{Finkenzeller2010}
+Finkenzeller, K. (2010).
+\newblock {\em {RFID} handbook: fundamentals and applications in contactless
+  smart cards, radio frequency identification and near-field communication}.
+\newblock Wiley.
+
+\bibitem[Hightower et~al., 2000]{Hightower2000}
+Hightower, J., Want, R., and Borriello, G. (2000).
+\newblock {S}pot{ON}: {A}n indoor 3{D} location sensing technology based on
+  {RF} signal strength.
+\newblock {\em UW CSE 00-02-02, University of Washington, Department of
+  Computer Science and Engineering, Seattle, WA}, 1.
+
+\bibitem[Khan and Antiwal, 2009]{Khan2009}
+Khan, M.~A. and Antiwal, V.~K. (2009).
+\newblock {L}ocation estimation technique using extended 3-{D} {LANDMARC}
+  algorithm for passive {RFID} tag.
+\newblock In {\em Advance Computing Conference, 2009. IACC 2009. IEEE
+  International}, pages 249--253. IEEE.
+
+\bibitem[Landt, 2005]{Landt2005}
+Landt, J. (2005).
+\newblock {T}he history of {RFID}.
+\newblock {\em Potentials, IEEE}, 24(4):8--11.
+
+\bibitem[Nath et~al., 2006]{Nath2006}
+Nath, B., Reynolds, F., and Want, R. (2006).
+\newblock {RFID} technology and applications.
+\newblock {\em Pervasive Computing, IEEE}, 5(1):22--24.
+
+\bibitem[Ni et~al., 2005]{Ni2005}
+Ni, L., Zhu, Y., Ma, J., Li, M., Luo, Q., Liu, Y., Cheung, S., and Yang, Q.
+  (2005).
+\newblock {S}emantic sensor net: {A}n extensible framework.
+\newblock {\em Networking and Mobile Computing}, pages 1144--1153.
+
+\bibitem[Ni et~al., 2004]{Ni2004}
+Ni, L.~M., Liu, Y., Lau, Y.~C., and Patil, A.~P. (2004).
+\newblock {LANDMARC}: indoor location sensing using active {RFID}.
+\newblock {\em Wireless networks}, 10(6):701--710.
+
 \bibitem[Want, 2006]{Want2006}
 Want, R. (2006).
 \newblock {A}n introduction to {RFID} technology.

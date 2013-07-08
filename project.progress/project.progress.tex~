@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{listings}
+\usepackage{mathtools}
 \usepackage[colorlinks=true, citecolor=black, linkcolor=black, urlcolor=black, bookmarks]{hyperref}
 
 \lstset{language=PHP, numbers=left, stepnumber=1}
@@ -167,7 +168,71 @@ echo $data;
 \section{June 28, Friday}
 
 \begin{itemize}
-	\item 
+	\item Now two of the Pis can send their tag ID and RSS measurements to the third Pi. It collects the other readings and they are ready for processing and running the localisation algorithm when I develop it.
+	\item I wrote a database handler for a sqlite3 database. The handler connects to a database, clears the table, and readings from the pi2 (the one with the web server) are inserted into the table. The following fields are used: the number of the reading, the tag ID and the RSS reading.
+	\item The main file of the project now starts a database handler, a network server thread accepting readings over the network, and starts reading its own reader data and inserting it to the database. The last step is a test to be able to access the database on the other side using PHP so that the readings could be viewed on the web site.
+\end{itemize}
+
+\section{June 29, Saturday}
+
+\begin{itemize}
+	\item Today I wrote a PHP script to open the database and display the table records into a table on the website with the most recent once appearing at the top of the table. The website refreshes every 3 seconds, which is roughly the period of arrival of new measurements from the RFID reader.
+	\item I am going to merge all my code now so that the changes I made here and there could be all together on GitHub.
+\end{itemize}
+
+\section{July 1, Monday}
+
+\begin{itemize}
+	\item Today I read and highlighted "Notes on MSc Dissertation Writing for the MSc in AI". Contains good tips on what each chapter of the thesis should contain and how to structure the document.
+	\item Skimmed through "Bluetooth Indoor Positioning" a Master Thesis by Anja Bekkelien at the University of Geneva submitted on March 2012. Contains useful structure and similar organisation as this project will have.
+	\item Read a presentation about a Bluetooth positioning project using directional antennas. Contains useful insight into positioning principles such as trilateration and the mathematics associated with it.
+	\item Started preparing the Introduction, Background, Methodology, and Desing and Implementation chapters for their full or partial write up.
+\end{itemize}
+
+\section{July 2, Tuesday}
+
+\begin{itemize}
+	\item Read and highlighted "A Survey and Taxonomy of Location Systems for Ubiquitous Computing" \cite{Hightower2001c}. It is a detailed survey of location systems that use different technologies (RFID, ultrasonic, etc.). The relevant bits are the discussion on lateration. It finds a solution for 2D if there are three positions/points of measurements that are non-collinear (they do not lie on the same line). For 3D, distance measurements from 4 non-coplanar points are required.
+	
+	There are three general approaches to measuring the distances required by lateration. Direct, time-of-flight, and attenuation. This project uses attenuation, which says that the intensity of an emitted signal decreases as the distance from the emission source increases.
+	
+	The author talks about the different properties of location systems. The difference between physical and symbolic location, absolute and relative, accuracy and precision, quantitative error estimation, scale, and different types of costs.
+	\item Researched trilateration. Read the Wikipedia article and Talk page about it \url{http://en.wikipedia.org/wiki/Trilateration}. It contains the mathematics as well as a C example programme that I am trying to implement.
+	
+	The Geographic Information System StackExchange forum has been a great help because people are discussing trilateration with sample code as well as multilateration, which I might implement in the future to handle multiple reader nodes.
+\end{itemize}
+
+\section{July 3, Wednesday}
+
+\begin{itemize}
+	\item I implemented a basic version of trilateration which I will test and extend tomorrow so that it handles cases when the positions of the reader nodes vary. It runs in a separate thread and is in a separate class.
+	\item I am now updating the database with readings from all 3 nodes, these could be seen on the website. I am also fetching the 3 most recent readings from 3 different readers so that I could translate the RSS into distance and plug this into the trilateration algorithm.
+	\item I am thinking of constructing a simple web form for input of positions of the readers so that the user could easily input the positions of the readers.
+\end{itemize}
+
+\section{July 4, Thursday}
+
+\begin{itemize}
+	\item I implemented a full version of trilateration. It takes 3 reader positions and their radii as an input and returns a position of the tag if there exists one. The algorithm handles cases such as 2 of the readers being concentric (having the same centre/position), 3 readers being collinear. In some cases, there aren't any existing solutions but that is reflected in the programme. The code is based on the helpful example C programme in the Talk page of Trilateration on Wikipedia \url{http://en.wikipedia.org/wiki/Talk:Trilateration#Example_C_program}.
+	\item I am now researching and investigating a good method to convert RSS to distance. I have been reading around the Internet and I am looking in a couple of papers on the subject of indoor localisation using RSS.
+\end{itemize}
+
+\section{July 5, Friday}
+
+\begin{itemize}
+	\item Today I will continue the research to find a good method to convert RSS to distance.
+	\item Also I will try to solder a nice piece of wire to act as an antenna to the tag. I need this in order to convert RSS to distance reliably.
+\end{itemize}
+
+\section{July 6, Saturday}
+
+\begin{itemize}
+	\item I tried a couple of different antenna lengths and coil diameters. The last design works good and the tag is detected without me touching it or its antenna. The wire is thick and its core is made out of a single wire.
+	\item The RSSI that the readers are transmitting is ranging from 0 (weakest signal) to 255 (strongest signal). This is according to the specifications. The RSS is ranging from -115dBm (weakest signal) to -55dBm (strongest signal). I will convert RSSI to RSS. I believe RSS is associated with FSPL ( Free Space Path Loss), which can be computed by the following formula. It does not include factors such as the gain of the antenna or other factors that affect the loss in signal strength:
+	\[ FSPL(dB) = 20*\log_{10}(d_{meters}) + 20*\log_{10}(f_{MHz}) - 27.55 \]
+	I know use the inverse-square law to map RSSI to distance but I believe I first have to convert to RSS in dBm and then apply either the inverse-square law or the above free space path loss formula to find the distance.
+	\[ Intensity \propto \frac{1}{distance^{2}} \]
+	 
 \end{itemize}
 
 \newpage
