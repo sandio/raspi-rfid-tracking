@@ -22,10 +22,11 @@ try {
 	$db = new PDO('sqlite:/home/pi/raspi-rfid-tracking/src/measurements.db');
 	
 	$data .= '<table border=1>';
-	$data .= '<tr><td>num</td><td>tag_id</td><td>rss</td></tr>';
+	$data .= '<tr><td>num</td><td>node_name</td><td>tag_id</td><td>rss</td></tr>';
 	$result = $db->query('SELECT * FROM rfid ORDER BY num DESC');
 	foreach($result as $row) {
 		$data .= '<tr><td>'.$row['num'].'</td>';
+		$data .= '<td>'.$row['node_name'].'</td>';
 		$data .= '<td>'.$row['tag_id'].'</td>';
 		$data .= '<td>'.$row['rss'].'</td></tr>';
 	}

@@ -27,3 +27,14 @@ class SerialConnection:
 	def close(self):
 		self.ser.close()
 		return self.ser.isOpen()
+
+"""
+serial_conn = SerialConnection('/dev/ttyUSB0', 0)
+serial_conn.open()
+serial_conn.flush_input()
+try:
+	while True:
+		print serial_conn.read()
+except KeyboardInterrupt:
+	serial_conn.close()
+"""
