@@ -75,7 +75,7 @@ class RcvThread(threading.Thread):
 				data = self.cli_sock.recv(7).strip()
 				tag_id = data[:4]
 				rss = data[4:]
-				self.db_hdlr.ins_into_tbl(self.node_name, tag_id, rss)
+				self.db_hdlr.ins_reading(self.node_name, tag_id, rss)
 				#print data, len(data), self.node_name
 		# Close this client socket
 		self.cli_sock.close()

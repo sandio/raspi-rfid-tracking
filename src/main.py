@@ -9,7 +9,9 @@ class Main:
 
 	def start_db_hdlr(self, db):
 		self.db_hdlr = DatabaseHandler(db)
-		self.db_hdlr.create_tbl()
+		self.db_hdlr.flush_rss_readings()
+		self.db_hdlr.check_pos_tbl()
+		self.db_hdlr.check_rsl_tbl()
 
 	def start_net_srv(self):
 		self.net_srv = NetworkServer()
@@ -30,7 +32,7 @@ class Main:
 				data = self.serial_conn.read().strip()
 				tag_id = data[:4]
 				rss = data[4:]
-				self.db_hdlr.ins_into_tbl(2, tag_id, rss)
+				self.db_hdlr.ins_reading(2, tag_id, rss)
 		except KeyboardInterrupt:
 			self.db_hdlr.close_db()
 			self.net_srv.stop()
