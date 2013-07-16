@@ -235,6 +235,128 @@ echo $data;
 	 
 \end{itemize}
 
+\section{July 7, Sunday}
+
+\begin{itemize}
+	\item Further developed the web interface. Added a web form for changing the positions of the reader nodes, which gets updated in the system through the database. Developed a visualiser to reflect the positions of the reader nodes and their range.
+	\item Updated the trilateration algorithm so that it can read the reader positions from the database if they are changed through the web interface.
+\end{itemize}
+
+\section{July 8, Monday}
+
+\begin{itemize}
+	\item Conducted an experiment with the 3 readers and the active tag. Goal: to observe how the RSSI is changing as the tag moves away from a reader. Experimental setup: For every reader the tag is placed next to it, then 0.5m, 1m, 1.5m, 2m, 2.5m, and 3m away from the reader. For every distance the RSSI is recorded when there is a direct line of sight between the reader and the tag but also when the direct line of sight is obscured by some object (a suitcase filled with stuff). This is done for every reader and for every orientation of the reader (0, 45, 90, 135, 180, 225, 270, 315) to see if the readings get affected by the orientation of the reader. As a result, we get 8 tables (1 for every orientation) consisting of readings from the 3 readers once with a direct line of sight and once with an obscured line of sight (6 columns). These tables have 7 rows (1 for each distance). The results will be plotted and included in the final report where there will be a discussion of the implications of these results.
+	\item Attended a group meeting with Dr Rovatsos to discuss the status of the project. We also talked about the group presentation (10-15min) on the 18th of July (Thursday). I should tell what my hypothesis is, what is my evaluation plan, and my project plan until the submission date. I should bring the hardware to show it. I should plot the results of the initial hardware experiments until then. I have to draw a diagram of the system consisting of the major components and how they interact.
+\end{itemize}
+
+\section{July 9, Tuesday}
+
+\begin{itemize}
+	\item Conducted an experiment with the 3 readers and the active tag. Goal: to measure the range of the readers and to see if their range gets affected by an object obscuring their line of sight. Experimental setup: I went to Appleton Tower room 3.01 (Robotics Lab) to conduct the experiment because the lab has a long stretch of empty space that is good for measurements. The lab is 14m long but I could use 13m of it. I placed each of the readers separately in one of the lab's end and recorded their RSSI from the tag as it was moved 1m at a time from 1m away to 13m away. After measuring the direct line of sight I obscured with using the same distances and measured. I did this for all 3 readers separately. This resulted in a table with 13 rows ( 13 distances) and 6 columns (3 for direct and 3 for non-direct line of sight). I will plot the results and include them in the final report.
+	\item Conducted an experiment with the 3 readers and the active tag. Goal: to measure if the position of the tag in height from the ground affects the RSSI. Experimental setup: The readers are positioned at floor level (6cm), at desk level (60 cm), and at 130cm. The tag is placed at the same heights at distances 1m, 1.5m, 2.0m, 2.5m, 3.0m, 3.5m, 4.0m. This results in a table with RSSI with 9 columns (3x for each reader at different heights) and 7 columns for each distance.
+	\item Conducted an experiment with one reader and the active tag. Goal: to see the penetration capabilities of the tag/transmitter. Experimental setup: The reader was placed in one room, the tag in the adjacent room separated by a thin wall. The distance apart was 3m and RSSI: 41. Then I moved the tag in the next room adjacent to the previous so that the straight line between tag and reader is preserved. The tag was read at 4.8m distance with RSSI: 51. In the same room the tag was moved at the furthest possible position in the room at 8.2m with RSSI: 40. Then I got outside and went behind the building. The tag was read behind a 3rd thicker wall at distance 8.6m with RSSI: 32.
+\end{itemize}
+
+\section{July 10, Wednesday}
+
+\begin{itemize}
+	\item I decided to use the measurements from the experiments I conducted in order to find a conversion between RSSI and distance. I looked at the readings and decided that it is best to build a translation table for every reader. This is because readings from different readers vary because they are not calibrated in hardware. I decided to go with 1m granularity because the readers could be read at even 13m so I thought is it a good match. I constructed 3 table with RSSI ranges for every meter step. For example, for reader0 for distance 0 to 1m I computed that the RSSI range is 80 to 65. I did the same for the other readers using the same distance step. When a reading of 77 is received then this value is converted to meters using a linear conversion with old range of 80 to 65 and a new range of 0 to 1. I computed the RSSI ranges by gathering readings at these distances with various orientations of the readers and free and non-free line of sight. I took the average for these readings for every distance step in order to account for different indoor conditions.
+	\item I programmed my idea into my system and constructed the components and methods for it to work.
+\end{itemize}
+
+\section{July 11, Thursday}
+
+\begin{itemize}
+	\item I started testing the whole system and changed the web site in order to get more information of what is happening real-time. I also changed the colours of the reader nodes and the tag computed position so that it is clear for me and the user what is what.
+	\item I observed that maybe the battery of the tag/transmitter has gone down a little bit because I am getting weaker RSSI measurements by the readers and this is affecting my conversion table values, which is expected of course because these are hardcoded values and this method is not generic.
+	\item Personal meeting with Dr Rovatsos. We discussed the accuracy of the RSSI measurements and the maximum/minimum values of the readers. We discussed the experiments that I already conducted. We talked about the following experiment that I should do. He suggested I setup a basic positions of the readers and test the localisation system for a lot of positions like a grid and record these measurements. I should also record precision, accuracy, and compute the error between estimated and real locations. We discussed where this project fits between detection of ID and really precise localisation. Time and experiments will show where it fits. But we talked about possible applications in the real world like hospital, warehouse, crime scene. We discussed that I should find the precision of a commercial RFID active system or research systems to use a baseline for localisation. For the presentation next week I should plot the results I have, say if a basic localisation is possible (through experimentation), present a revised work plan, present an evaluation plan, work on the structure of my thesis and think what goes where.
+\end{itemize}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_0deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_45deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_90deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_135deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_180deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_225deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_270deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_3m_315deg}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_13m}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_4m}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_grid_r1}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_grid_r2}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{rssi_distance_grid_r3}
+		\caption{}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{error_distance_grid}
+		\caption{}
+	\end{center}
+\end{figure}
+
 \newpage
 \bibliographystyle{apalike}
 \bibliography{../library}

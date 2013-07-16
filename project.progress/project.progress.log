@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  8 JUL 2013 09:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  16 JUL 2013 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -540,23 +540,132 @@ Overfull \hbox (5.77888pt too wide) in paragraph at lines 140--141
 / p / pyserial / support-[]requests / 44/$[][]\OT1/cmr/m/n/12 .
  []
 
-[9] [10] [11] [12] [13] [14] [15] [16] (./project.progress.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
- [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+<rssi_distance_3m_0deg.pdf, id=257, 722.7pt x 361.35pt>
+File: rssi_distance_3m_0deg.pdf Graphic file (type pdf)
 
-(./project.progress.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+<use rssi_distance_3m_0deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_0deg.pdf used on input line 297.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_45deg.pdf, id=258, 722.7pt x 361.35pt>
+File: rssi_distance_3m_45deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_45deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_45deg.pdf used on input line 303.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_90deg.pdf, id=259, 722.7pt x 361.35pt>
+File: rssi_distance_3m_90deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_90deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_90deg.pdf used on input line 309.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_135deg.pdf, id=260, 722.7pt x 361.35pt>
+File: rssi_distance_3m_135deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_135deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_135deg.pdf used on input line 315.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_180deg.pdf, id=261, 722.7pt x 361.35pt>
+File: rssi_distance_3m_180deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_180deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_180deg.pdf used on input line 321.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_225deg.pdf, id=262, 722.7pt x 361.35pt>
+File: rssi_distance_3m_225deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_225deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_225deg.pdf used on input line 327.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_270deg.pdf, id=263, 722.7pt x 361.35pt>
+File: rssi_distance_3m_270deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_270deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_270deg.pdf used on input line 333.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_3m_315deg.pdf, id=264, 722.7pt x 361.35pt>
+File: rssi_distance_3m_315deg.pdf Graphic file (type pdf)
+
+<use rssi_distance_3m_315deg.pdf>
+Package pdftex.def Info: rssi_distance_3m_315deg.pdf used on input line 339.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_13m.pdf, id=265, 867.24pt x 361.35pt>
+File: rssi_distance_13m.pdf Graphic file (type pdf)
+
+<use rssi_distance_13m.pdf>
+Package pdftex.def Info: rssi_distance_13m.pdf used on input line 345.
+(pdftex.def)             Requested size: 418.25368pt x 174.27309pt.
+ <rssi_distance_4m.pdf, id=266, 722.7pt x 361.35pt>
+File: rssi_distance_4m.pdf Graphic file (type pdf)
+
+<use rssi_distance_4m.pdf>
+Package pdftex.def Info: rssi_distance_4m.pdf used on input line 351.
+(pdftex.def)             Requested size: 418.25368pt x 209.1255pt.
+
+<rssi_distance_grid_r1.pdf, id=267, 722.7pt x 722.7pt>
+File: rssi_distance_grid_r1.pdf Graphic file (type pdf)
+
+<use rssi_distance_grid_r1.pdf>
+Package pdftex.def Info: rssi_distance_grid_r1.pdf used on input line 357.
+(pdftex.def)             Requested size: 418.25368pt x 418.251pt.
+
+<rssi_distance_grid_r2.pdf, id=268, 722.7pt x 722.7pt>
+File: rssi_distance_grid_r2.pdf Graphic file (type pdf)
+
+<use rssi_distance_grid_r2.pdf>
+Package pdftex.def Info: rssi_distance_grid_r2.pdf used on input line 363.
+(pdftex.def)             Requested size: 418.25368pt x 418.251pt.
+
+<rssi_distance_grid_r3.pdf, id=269, 722.7pt x 722.7pt>
+File: rssi_distance_grid_r3.pdf Graphic file (type pdf)
+
+<use rssi_distance_grid_r3.pdf>
+Package pdftex.def Info: rssi_distance_grid_r3.pdf used on input line 369.
+(pdftex.def)             Requested size: 418.25368pt x 418.251pt.
+
+<error_distance_grid.pdf, id=270, 722.7pt x 722.7pt>
+File: error_distance_grid.pdf Graphic file (type pdf)
+
+<use error_distance_grid.pdf>
+Package pdftex.def Info: error_distance_grid.pdf used on input line 375.
+(pdftex.def)             Requested size: 418.25368pt x 418.251pt.
+ <error_boxplot.pdf, id=271, 722.7pt x 505.89pt>
+File: error_boxplot.pdf Graphic file (type pdf)
+
+<use error_boxplot.pdf>
+Package pdftex.def Info: error_boxplot.pdf used on input line 388.
+(pdftex.def)             Requested size: 418.25368pt x 292.7757pt.
+ [19] [20 <./rssi_distance_3m_0deg.pdf>] [21 <./rssi_distance_3m_45deg.pdf>] [2
+2 <./rssi_distance_3m_90deg.pdf>] [23 <./rssi_distance_3m_135deg.pdf>] [24 <./r
+ssi_distance_3m_180deg.pdf>] [25 <./rssi_distance_3m_225deg.pdf>] [26 <./rssi_d
+istance_3m_270deg.pdf>] [27 <./rssi_distance_3m_315deg.pdf> <./rssi_distance_13
+m.pdf>] [28 <./rssi_distance_4m.pdf>] [29 <./rssi_distance_grid_r1.pdf>] [30 <.
+/rssi_distance_grid_r2.pdf>] [31 <./rssi_distance_grid_r3.pdf>] [32 <./error_di
+stance_grid.pdf>] [33 <./error_boxplot.pdf>]
+(./project.progress.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+ [34]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+ (./project.progress.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
 Package rerunfilecheck Info: File `project.progress.out' has not changed.
-(rerunfilecheck)             Checksum: 4C26B95900BB24B65D51EB5D9F57984E;1039.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+(rerunfilecheck)             Checksum: BB7A04244470C011B75E5588108E5F33;1514.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 10204 strings out of 495059
- 155922 string characters out of 3182030
+ 10333 strings out of 495059
+ 158525 string characters out of 3182030
  493839 words of memory out of 3000000
- 13227 multiletter control sequences out of 15000+200000
+ 13299 multiletter control sequences out of 15000+200000
  11087 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  33i,6n,40p,1371b,3019s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -572,10 +681,10 @@ onts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
-Output written on project.progress.pdf (17 pages, 173597 bytes).
+Output written on project.progress.pdf (34 pages, 339879 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 
