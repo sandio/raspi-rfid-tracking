@@ -272,88 +272,121 @@ echo $data;
 	\item Personal meeting with Dr Rovatsos. We discussed the accuracy of the RSSI measurements and the maximum/minimum values of the readers. We discussed the experiments that I already conducted. We talked about the following experiment that I should do. He suggested I setup a basic positions of the readers and test the localisation system for a lot of positions like a grid and record these measurements. I should also record precision, accuracy, and compute the error between estimated and real locations. We discussed where this project fits between detection of ID and really precise localisation. Time and experiments will show where it fits. But we talked about possible applications in the real world like hospital, warehouse, crime scene. We discussed that I should find the precision of a commercial RFID active system or research systems to use a baseline for localisation. For the presentation next week I should plot the results I have, say if a basic localisation is possible (through experimentation), present a revised work plan, present an evaluation plan, work on the structure of my thesis and think what goes where.
 \end{itemize}
 
+\section{July 12, Friday}
+\begin{itemize}
+	\item Conducted a experiment in AT 3.01 (Robotics Lab). I took all the equipment, which fits into my backpack. I cleared a space 3 by 3 meters with no obstacles (line-of-sight propagation). Placed the reader nodes at 3 of the sides of the forming grid. Then I connected the whole system and powered it up. In this space, I placed markers every meter, thus forming a grid with 16 possible positions to place the tag. I did RSSI measurements at each position and also rotating the tag by 90 degrees. This resulted in 3 tables of RSSI measurements, one per reader. Each table consists of 16 cells, one for every position. Every cell has four RSSI values for different orientations of the tag. I also constructed a table with error measurements for every orientation of the tag. The error is a positive value in meters for both x and y axes reflecting the difference between real and estimated positions. 
+\end{itemize}
+
+\section{July 13, Saturday}
+\begin{itemize}
+	\item Started learning how to plot the data I had collected. Started learning the R statistical programming language.
+\end{itemize}
+
+\section{July 14, Sunday}
+\begin{itemize}
+	\item Continued experimenting with the R language and kept thinking how to best plot all this data that is piling up.
+\end{itemize}
+
+\section{July 15, Monday}
+\begin{itemize}
+	\item Created the following graphs and figures based on the experiments I have been conducting in the last two weeks.
+\end{itemize}
+
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_0deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 0 degrees (antennas facing the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_45deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 45 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_90deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 90 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_135deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 135 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_180deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 180 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_225deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 225 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_270deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 270 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_3m_315deg}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 315 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_13m}
-		\caption{}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers facing the tag. The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_4m}
-		\caption{}
+		\caption{Three plots of RSSI measurements at increasing distances with the readers at different elevation from the floor in an indoor environment. The first graph shows how RSSI measurements change as the distance grows when the tag is placed at 6cm above floor level. The second and third graph show the same experiment but the tag is at 60cm and 130cm above the floor level.}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_grid_r1}
-		\caption{}
+		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{first} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_grid_r2}
-		\caption{}
+		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{second} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{rssi_distance_grid_r3}
-		\caption{}
+		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{third} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
 	\end{center}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=1\textwidth]{error_distance_grid}
-		\caption{}
+		\caption{Sixteen plots are organised into a four by four grid. The readers are placed at positions (0,0), (0,3), and (3,0). Each plot represents the error in meters between measured and estimated location when the tag is placed at different positions on the grid. Each plot consists of four ellipses that illustrate the x and y error when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree). The colours of the ellipses are red, green, blue, and black, respectively.}
+	\end{center}
+\end{figure}
+
+\section{July 16, Tuesday}
+
+\begin{itemize}
+	\item Created a box plot using the errors of the last experiment.
+\end{itemize}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{error_boxplot}
+		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in the x and y axes for a particular orientation of the tag. The horizontal line across the whole plot is the mean of all errors regardless of the tag orientation.}
 	\end{center}
 \end{figure}
 

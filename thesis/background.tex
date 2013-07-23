@@ -1,21 +1,92 @@
 \chapter{Background}
 \label{ch:background}
 
-\textbf{Copied from IRP.}
+This section presents background information of the technologies and hardware used in this project. First, an introduction of RFID is provided in Section \ref{sec:rfid}. This includes a description of the technology, typical components of such systems, and potential applications in the context of this work. Then, Section \ref{sec:rssi} discusses the Received Signal Strength Indicator (RSSI) as the metric for measuring distance between readers and tags. Next, the hardware components of the project are presented in Section \ref{sec:projhard}. These are RFID readers, an active tag, and single-board computers (Raspberry Pis). Section \ref{sec:locprinc} includes a discussion of general localisation principles and challenges. This chapter is concluded by a survey of previous work using active RFID components to localise objects in indoor environments.
 
-This section aims to describe the most important components of this project. First, it provides a brief introduction to the RFID technology. It also explains the different types of RFID hardware. Then, the Raspberry Pi is discussed. Following subsections provide information about localisation principles and algorithms relevant to this project.
+\section{Radio Frequency Identification (RFID)}
+\label{sec:rfid}
 
-\subsection{Radio Frequency Identification (RFID)}
+Radio Frequency Identification (RFID) is a wireless technology that communicates electronically stored data between radio devices. This information is used to remotely identify objects marked with tags \cite[p. 5]{Hunt2007}. RFID uses electromagnetic waves to carry information. Such systems differ from each other by their radio frequency of operation, physical coupling method, and transmission range \cite[p. 21]{Finkenzeller2010}. Radio frequencies used in RFID range from 100kHz to 10GHz \cite{Landt2005}. The physical coupling methods in RFID classify such systems into three main categories. Close-coupling systems have a small interrogation range of up to 1cm. Remote coupled systems are capable of sensing information of up to 1m. All systems that can wirelessly read data from a marked object positioned over 1m away are called long-range systems \cite[p. 22]{Finkenzeller2010}. A RFID system has three compulsory hardware components, tags (also known as transpoders), readers (also called interrogators), and controllers.
 
-Radio frequency identification is a technology that has been used for remote identification since the 1950s \cite{Landt2005}. It has been developing since then. As it matures, it is becoming more inexpensive, which will likely create a vast range of opportunities for its application \cite{Nath2006}.
+\subsection{RFID tags}
 
-RFID can be considered an alternative and improvement of the current standard for identification of products, the barcodes.  Reading a barcode attached to an object requires a direct line of sight between a reader and a tag. In addition, barcodes can get obscured by other objects or substances, which hinders the identification process. RFID solves these disadvantages. It is a contactless technology that uses electromagnetic fields to carry information \cite{Finkenzeller2010}. Therefore, a direct line of sight is not required when reading data from tags attached to objects. RFID tags also support a larger set of unique IDs compared to bar codes, can be reprogrammed, and can store additional data depending on the application requirements. A RFID system has two compulsory hardware components, tags and readers.
+A tag is a data-carrying device that transmits identification information in response to a received signal from a reader. RFID tags usually consist of an antenna attached to a microchip \cite[p. 2]{Want2006}. The hardware can be encapsulated in different types of enclosures. Tags come in different shapes and sizes depending on their operational environment (Figure \ref{fig:rfidtags}). RFID tags also have memory where the identification and sometimes additional information is stored. Additional data might include a delivery date of a parcel, for example. The information stored on a tag is usually only for reading. However, there are implementations of the RFID technology that benefit from writing data to a tag. For instance, a pallet might have a tag attached to it that can store the contents of the pallet as it changes over time \cite[p. 8]{Hunt2007}.
 
-A tag is a data-carrying device consisting of an antenna attached to a microchip both encapsulated in solid enclosure \cite{Finkenzeller2010}. Tags can be classified into two main categories, passive or active \cite{Want2006}. Passive tags do not require a power source. They communicate with readers by reflecting part of received radio waves, a term referred to as backscatter modulation \cite{Bolic2010}. Passive tags need to be in the readers' range to operate. Active tags require a power source in the form of a battery or are directly connected to the electrical grid \cite{Want2006}. Although, their lifetime might be limited by the available energy, active tags can be read from greater distances compared to passive tags.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{figures/rfidtags}
+		\caption{Three different variants of RFID tags. Figure from \cite{Want2006}.}
+		\label{fig:rfidtags}
+	\end{center}
+\end{figure}
 
-A reader is a radio device that transmits radio waves and captures information send by tags. The reader's transmission frequency specifies the operational frequency of the RFID system, which is also their practical reading range \cite{Finkenzeller2010}. These devices usually consist of a radio frequency module, that capable of transmitting and receiving radio frequency signals, an antenna, and a control unit in the form of a microprocessor. 
+\subsubsection{Passive and active tags}
 
-\subsection{Raspberry Pi}
+Tags can be classified into two main categories, passive and active . Passive tags do not require a power source. They communicate with readers by reflecting part of received radio waves, a term referred to as backscatter modulation \cite{Bolic2010}. They have a number of advantages, which include their small size, very long operational life, and low price. Nevertheless, passive tags need to be in the readers' range in order to operate. This is because passive tags obtain the power they need to supply their circuitry from an electromagnetic signal received from a RFID reader. A charge builds up into a capacitor that can power the passive tag and transmit the identification information it is storing \cite{Weinstein2005}.
+
+In contrast, active tags require a power source in the form of a battery or are directly connected to the electrical grid \cite{Want2006}. Although, their lifetime might be limited by the available energy, active tags can be read from greater distances compared to passive tags. This is because they have their own power source which enables them to emit strong signals to the readers \cite{Weinstein2005}. Compared to passive tags, active ones are larger in size and have a higher price.
+
+\subsection{RFID readers}
+
+A reader is a radio device that is capable of transmitting interrogation signals and capturing information send back by tags. The reader's transmission frequency specifies the operational frequency of the RFID system, which also defines their practical reading range \cite{Finkenzeller2010}. These devices usually consist of a radio frequency (RF) module, that is capable of sending and receiving  signals, an antenna, and a control unit in the form of a microprocessor. RFID readers have the following main functions:
+
+\begin{itemize}
+	\item read/write data from/to a RFID tag,
+	\item power a passive tag,
+	\item relay the obtained information to a host computer \cite[p. 9]{Hunt2007}.
+\end{itemize}
+
+Readers are responsible for bringing additional functionality to a RFID system. This includes support for simultaneous sensing of multiple tags, authentication of tags to prevent unauthorised access to a system, and data encryption of the stored data to ensure integrity \cite[p. 10]{Hunt2007}. There are a wide range of RFID readers that differ in their operational radio frequency, range, and coupling method. These properties are formed by factors such as the specifications of the system, its budget, and security requirements \cite[p. 25]{Finkenzeller2010}.
+
+\subsection{RFID controllers}
+
+The third component of a RFID system is the controller or server. It is a computer that is responsible for connecting and communicating with multiple readers, aggregating any incoming data, and processing it. Readers can be connected to the server using a network or serial connection. Identification information is usually stored in a database and is used by an application software \cite[p. 11]{Hunt2007}. Figure \ref{fig:rfidsys} shows the components of a typical RFID system.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{figures/rfidsys}
+		\caption{Components and applications of RFID. Figure from \cite[p. 20]{Rida2010}.}
+		\label{fig:rfidsys}
+	\end{center}
+\end{figure}
+
+\subsection{RFID applications}
+
+RFID hardware is becoming more inexpensive, which creates a wide range of possible scenarios where this technology can be applied \cite{Nath2006}. The most widespread applications are in tracking of objects or people, in supply chain and asset management, and in health services \cite{Weinstein2005}.
+
+Passive RFID systems can be used as an alternative and improvement of the current standard for identification of products, the barcodes.  Reading a barcode attached to an object requires a direct line of sight between a reader and a tag. In addition, barcodes can get obscured by other objects or substances, which hinders the identification process. RFID solves these disadvantages. A line of sight is not required when reading data from tags attached to objects. RFID tags also support a larger set of unique IDs compared to bar codes, can be reprogrammed, and can store additional data depending on the application requirements \cite{Weinstein2005}.
+
+In the context of this project, which is concerned with location sensing, RFID has applications in tracking important objects or personnel and trying to pinpoint their position. For example, active RFID systems can be used in hospitals to monitor the location and life cycle of patients in an indoor environment \cite{Cangialosi2007}. Expensive hospital equipment could be tracked so that it would be at the right place and time. Another possible scenario is to track school kinds while on school grounds in order to find lost children and monitor their attendance \cite{Swartz2004}.
+
+\section{Received Signal Strength Indicator (RSSI)}
+\label{sec:rssi}
+
+Some RFID readers provide an indication of the strength of radio signals received from tags. This metric is called Received Signal Strength Indicator (RSSI). Its value is often output along with the identity information stored in a tag. It is estimated at the reader side before amplifying the received input. RSSI is an uniteless measurement of the power of the received signal represented as a positive value with certain resolution range. A resolution of two bits gives a precision of eight possible values for RSSI. This means that there are eight different steps of estimating how far a tag is. A resolution of eight bits, supported by the project hardware, lets readers output values between 0 and 255 giving a better approximation of the distance between a reader and a tag. 
+
+\subsection{RSSI and RSS}
+
+RSSI is not to be confused with the Received Signal Strength (RSS), on which RSSI is based. RSS is usually measured in dBm\footnote{dBm - Power ratio in decibels of power referenced to one milliwatt (mW) - \url{http://en.wikipedia.org/wiki/DBm}}. It represents the attenuation of a received signal and is a function of the distance between a receiver and transmitter \cite{Bouet2008}. In WiFi, the 802.11 standard does not define the relationship between RSSI values and reported signal power levels. It is up to the manufacturers to provide a conversion function or table that specifies range and accuracy of the RSS values and how these translate into a RSSI range between zero and a maximum value \cite{Lui2011}. The above applies to RFID, which is also a radio technology. 
+
+\subsection{RSSI and distance}
+
+A third relationship is the one between RSSI and distance. In other words, it is the problem of using RSSI reader measurements to estimate the distance separating a receiver and transmitter. More importantly, one might ask whether RSSI is a reliable parameter for localisation algorithms in wireless networks. This is not the main question that this work is concerned with. However, the reliability of this measure is of prime importance because position estimation here relies solely on this parameter. 
+
+On the one hand, there are studies that test the reliability of both RSS and RSSI for location sensing \cite{Elnahrawy2004, Parameswaran2009}. These concluded that the limitations of determining inter nodal distances are fundamental. On the other hand, signal strength is readily available in devices today, which creates attractive opportunities for estimating position without any additional hardware. Indeed, there are a number of WiFi-based systems that rely on received signal strength including the Horus WLAN location system \cite{Youssef2005}, the EZ localisation system \cite{Chintalapudi2010}, an indoor location system using trilateration \cite{Cook2005}.
+
+\subsection{How RSSI fits in this project}
+
+Although RSSI is not considered a reliable measure for distance due to the physical properties of radio waves and due to cluttered and dynamic indoor environments, the aforementioned systems show that researchers and engineers try to get the best of what is already provided. In the same manner, this work uses RSSI reader measurements as a basis for location sensing. This is done using a translation table that converts RSSI into a distance metric. The methods used and the challenges faced while doing this are explained in ... FILL CHAPTER AND SECTION.
+
+\section{Project Hardware}
+\label{sec:projhard}
+
+
+
+\subsection{RF9315R-u Active RFID 8 Meters Receiver with RSSI Module}
+
+\subsection{RF8315T Active RFID 8 Meters Transmitting Module}
+
+\subsection{The Raspberry Pi}
 
 A single-board computer is a computer that is built on a single circuit board. It features most of the components of a personal computer. It has a processor, memory, storage, different microprocessors, and input/output interfaces. The Raspberry Pi is a particular implementation of a single-board computer. Figure \ref{fig:raspi} shows a graphical representation of its main components. Some of its strengths directly relating to this project are that it:
 \begin{itemize}
@@ -25,29 +96,29 @@ A single-board computer is a computer that is built on a single circuit board. I
  	\item consumes little power (3.5 W).
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{figures/raspi}
-		\label{fig:raspi}
 		\caption{Raspberry Pi Model B. Figure from \url{http://www.raspberrypi.org/faqs}.}
+		\label{fig:raspi}
 	\end{center}
 \end{figure}
 
-\subsection{Distance estimation and localisation principles}
 
-Some RFID readers can provide an indication of the strength of radio frequency signals received from tags. This metric is called Received Signal Strength Indicator (RSSI). Its value is usually output along with the identity information stored in a tag. It is estimated at the reader side before amplifying the received input. RSSI is a measurement of the power of the received strength represented as a value ranging from 0 to 255. It will be used in this project to estimate the distance between readers and a tag. This is done using a translation function that converts the RSSI values into a distance metric. Such a function will be developed for this project based the one used by the SpotON algorithm \cite{Hightower2000}.
+\section{Localisation principles}
+\label{sec:locprinc}
 
 Using the distances between readers and a tag, this project will employ the geometrical process of trilateration. It determines the relative position of a tag using properties of circles. The distance from a reader to a tag is the radius of a circle that could be drawn around the reader. The intersection of circles of three readers can be used to determine the approximate location of a tag relative to the readers. This technique has practical applications in surveying and navigation. Figure \ref{fig:lat} shows the concept of trilateration applied in the setting of this project.
 
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=0.45\textwidth]{figures/lateration}
-		\label{fig:lat}
 		\caption{The trilateration geometrical process applied in the context of this project. Figure from \cite{Hightower2000}.}
+		\label{fig:lat}
 	\end{center}
 \end{figure}
 
-\section{Literature review}
+\section{Previous work}
 
 \textbf{Copied from IRP.}
 

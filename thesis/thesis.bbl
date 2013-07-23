@@ -16,6 +16,25 @@ Cangialosi, A., Monaly, J.~E., and Yang, S.~C. (2007).
   perspectives.
 \newblock {\em Communications Magazine, IEEE}, 45(9):18--23.
 
+\bibitem[Chintalapudi et~al., 2010]{Chintalapudi2010}
+Chintalapudi, K., Padmanabha~Iyer, A., and Padmanabhan, V.~N. (2010).
+\newblock {I}ndoor localization without the pain.
+\newblock In {\em Proceedings of the sixteenth annual international conference
+  on Mobile computing and networking}, pages 173--184. ACM.
+
+\bibitem[Cook et~al., 2005]{Cook2005}
+Cook, B., Buckberry, G., Scowcroft, I., Mitchell, J., and Allen, T. (2005).
+\newblock {I}ndoor location using trilateration characteristics.
+\newblock In {\em Proc. London Communications Symposium}, pages 147--150.
+
+\bibitem[Elnahrawy et~al., 2004]{Elnahrawy2004}
+Elnahrawy, E., Li, X., and Martin, R.~P. (2004).
+\newblock {T}he limits of localization using signal strength: {A} comparative
+  study.
+\newblock In {\em Sensor and Ad Hoc Communications and Networks, 2004. IEEE
+  SECON 2004. 2004 First Annual IEEE Communications Society Conference on},
+  pages 406--414. IEEE.
+
 \bibitem[Finkenzeller, 2010]{Finkenzeller2010}
 Finkenzeller, K. (2010).
 \newblock {\em {RFID} handbook: fundamentals and applications in contactless
@@ -29,6 +48,11 @@ Hightower, J., Want, R., and Borriello, G. (2000).
 \newblock {\em UW CSE 00-02-02, University of Washington, Department of
   Computer Science and Engineering, Seattle, WA}, 1.
 
+\bibitem[Hunt et~al., 2007]{Hunt2007}
+Hunt, V.~D., Puglia, A., and Puglia, M. (2007).
+\newblock {\em {RFID}: a guide to radio frequency identification}.
+\newblock Wiley-interscience.
+
 \bibitem[Khan and Antiwal, 2009]{Khan2009}
 Khan, M.~A. and Antiwal, V.~K. (2009).
 \newblock {L}ocation estimation technique using extended 3-{D} {LANDMARC}
@@ -40,6 +64,13 @@ Khan, M.~A. and Antiwal, V.~K. (2009).
 Landt, J. (2005).
 \newblock {T}he history of {RFID}.
 \newblock {\em Potentials, IEEE}, 24(4):8--11.
+
+\bibitem[Lui et~al., 2011]{Lui2011}
+Lui, G., Gallagher, T., Li, B., Dempster, A.~G., and Rizos, C. (2011).
+\newblock {D}ifferences in {RSSI} readings made by different {W}i-{F}i
+  chipsets: {A} limitation of {WLAN} localization.
+\newblock In {\em Localization and GNSS (ICL-GNSS), 2011 International
+  Conference on}, pages 53--57. IEEE.
 
 \bibitem[Nath et~al., 2006]{Nath2006}
 Nath, B., Reynolds, F., and Want, R. (2006).
@@ -57,9 +88,36 @@ Ni, L.~M., Liu, Y., Lau, Y.~C., and Patil, A.~P. (2004).
 \newblock {LANDMARC}: indoor location sensing using active {RFID}.
 \newblock {\em Wireless networks}, 10(6):701--710.
 
+\bibitem[Parameswaran et~al., 2009]{Parameswaran2009}
+Parameswaran, A.~T., Husain, M.~I., and Upadhyaya, S. (2009).
+\newblock {I}s rssi a reliable parameter in sensor localization algorithms:
+  {A}n experimental study.
+\newblock In {\em Field Failure Data Analysis Workshop (F2DA09)}.
+
+\bibitem[Rida et~al., 2010]{Rida2010}
+Rida, A., Yang, L., and Tentzeris, M.~M. (2010).
+\newblock {\em {RFID}-{E}nabled sensor design and applications}.
+\newblock Artech House Publishers.
+
+\bibitem[Swartz, 2004]{Swartz2004}
+Swartz, N. (2004).
+\newblock {T}agging toothpaste and toddlers.
+\newblock {\em Information Management Journal}, 38(5):22.
+
 \bibitem[Want, 2006]{Want2006}
 Want, R. (2006).
 \newblock {A}n introduction to {RFID} technology.
 \newblock {\em Pervasive Computing, IEEE}, 5(1):25--33.
+
+\bibitem[Weinstein, 2005]{Weinstein2005}
+Weinstein, R. (2005).
+\newblock {RFID}: a technical overview and its application to the enterprise.
+\newblock {\em IT professional}, 7(3):27--33.
+
+\bibitem[Youssef and Agrawala, 2005]{Youssef2005}
+Youssef, M. and Agrawala, A. (2005).
+\newblock {T}he {H}orus {WLAN} location determination system.
+\newblock In {\em Proceedings of the 3rd international conference on Mobile
+  systems, applications, and services}, pages 205--218. ACM.
 
 \end{thebibliography}
