@@ -1,4 +1,81 @@
 \chapter{Methodology}
 \label{ch:methodology}
 
+This project explores the possibility of developing an RFID location sensing system using cost-effective hardware. This chapter details the software engineering tools and mathematical techniques that were employed to achieve this goal.
+
+\section{Project management}
+
+A number of considerations were taken into account when deciding how to manage this project. First, the system operates using a server-client model. This means that different software components are executing on multiple processing nodes. As a result, changes in one node need to be propagated in the whole system ensuring the consistency of the software.  Second, the software implementation is making use of different programming languages, multiple programming libraries, and a database management system. In order to insure an iterative development process, where software components are constructed, reused, debugged, and packaged together, it was decided to use the \textsc{Git} version control system. This system keeps a distributed repository of all software and database files so that each node stores a copy of not only the whole software system, but also a complete history of changes. In addition, the use of a version control system stimulates the developer to summarise a number of important changes into versions of the software. In this way, it becomes easy to track and examine the project's progress.
+
+
+\section{Software Engineering Practices}
+
+A number of software engineering practices were of great help when developing the RFID location sensing system. This section presents them and explains the problems that they solve.  
+
+\subsection{Project decomposition}
+
+It would have been a serious challenge to approach the project's task directly. The system consists of pieces of hardware that had to be orchestrated to solve a common problem. Therefore, it was very important to identify the system's components from early on. Hierarchical relationships between these parts were also defined. These steps ensured that the project could be divided into distinctive stages that helped solving the main task systematically. Regular deliveries of working components provided a more manageable way of constructing the final solution. For example, the work plan, devised before the start of the project, consisted of the following key activities:
+
+\begin{enumerate}
+ 	\item Prepare the single-board computers (the Raspberry Pis)
+ 	\item Construct functional RFID reader nodes
+ 	\item Receive information from the active RFID tag
+ 	\item Evaluation of the hardware components
+ 	\item Network communication between reader nodes
+ 	\item Localisation algorithm development
+ 	\item Evaluation of the system
+ \end{enumerate} 
+
+\subsection{Abstraction}
+
+\subsection{Scalability}
+
+\subsection{API and Manual}
+
+iteration, design, systematic approach, decisions, resolving problems, 
+
+\section{Programming Languages and Tools}
+
+\section{IRP}
+
+This project can be decomposed into a number of parts that include several small steps. Each part delivers an important piece of the system. This way the project is more manageable and each deliverable presents a working and tested component of the system.
+
+\subsection{Preparing the Raspberry Pis}
+The first part of this project concentrates on the single-board computers. This phase is mainly concerned with setting up each individual device with an operating system. This involves installing a Linux operating system using the Raspberry Pi Linux kernel\footnote{\textsc{GitHub} repository of the Raspberry Pi Linux kernel - \url{https://github.com/raspberrypi/linux}}. The kernel needs to be cross-compiled on a standard x86 computer to run on the ARM architecture used by the Raspberry Pi. This kernel will be used in combination with a particular Linux distribution. The Debian\footnote{\textsc{Debian} is a GNU/Linux operating system - \url{http://www.debian.org/}} Linux distribution will be used. This is because it is a popular and well-maintained distribution with thousands of software packages. After installing an operating system on the three Raspberry Pi computers, they will be tested on how well they run with it. This involves checking that the computer's ports are working and that the computers can communicate over a network.
+
+\subsection{Constructing a reader node}
+
+The next part of the project is to construct three RFID reader nodes each consisting of a reader connected to a single-board computer. The Rasberry Pi has a number of general purpose input/output pins as part of its board. It also has two USB ports. Both connectivity methods can be used to connect an RFID reader. There are a number of issues that arise from the readers and single-board computers.
+
+A reader can output its readings using a serial connection or a USB connection. If a reader uses serial output pins then these need to be connected to the Raspberry Pi's GPIO pins via a breadboard that has a simple circuit. This scenario requires more time, resources, and effort but has been proven to work in many cases in the Raspberry Pi's community forum\footnote{Raspberry Pi Forum - \url{http://www.raspberrypi.org/phpBB3/index.php}}.
+
+If the readers communicate through USB then it is a matter of connecting the two pieces of hardware. Nevertheless, there have been a number of reported issues related to the functionality and reliability of the Raspberry Pi's USB ports\footnote{Raspberry Pi's USB problems - \url{http://www.raspberrypi.org/phpBB3/viewtopic.php?f=28&t=23544&hilit=usb+redux}}. Moreover, it is not certain if the computers will correctly recognise the readers in software. As a result, those problems might affect the operation of the system that this project will create.
+
+\subsection{Reading data from a tag}
+
+After constructing three reader nodes, they need to be tested and calibrated by reading identity information and RSSI values from an active tag. Most readers' data can be captured with a number of command-line tools on Linux. An important step is to be able to parse this information and disambiguate its meaning. Fortunately, active readers and tags have been tested and reviewed on the Internet providing valuable information about their data representation\footnote{\textsc{OpenBeacon} active RFID platform review - \url{http://blog.amal.net/?p=247}}.
+
+There is an important hardware issue to bear in mind when relying on tag data. This project will be using cheap hardware solutions in order to construct an affordable RFID tracking system. An inherent property of such RFID hardware is that RSSI readings of the same tag measured from the same distance may vary. In order to mitigate this issue, the following steps need to be taken. Every reader need to capture RSSI values of an active tag in various distances and orientations. Then, these readings have to be compared with each other to identify substantial differences. This is required because  upper layers of the system will extensively rely on these values to estimate the location of a tag. RSSI measurements are also influenced by the power sources of both readers and tags, their orientation, size of the indoor environment (receiving reflected radio beams), any objects that lie between a reader and a tag. All this factors need to be taken into account when processing RSSI data in software. This might include averaging RSSI values over some time frame and dropping values that greatly differ from previous ones.
+
+\subsection{Communication between reader nodes}
+
+After obtaining a reliable stream of identification and RSSI data from the reader nodes, this information needs to be communicated between devices. A \textit{basic} setup will involve using the computers' Ethernet ports to connect them to a switch. A requirement of this part of the project is to establish a simple protocol for the transfer of information between the devices. They will communicate through network sockets and will both listen and send information through these sockets. Information that could be send could be strings containing measurements but also serialised objects if an object-oriented design is employed. The resulting network will be sufficient for the exchange processed reader information. An \textit{advanced} network setup, which removes the need of network cables, uses the second USB port on the Raspberry Pi to plug a wireless dongle. In this case, one of the computers is designated as an access point and the others connect to it. However, this approach requires more resources and maybe a powered USB hub.
+
+\subsection{Implementing a localisation algorithm}
+
+If the previous components work as expected, one single-board computer will be receiving a constant stream of data from its neighbouring peers as well as from its own RFID reader. This information will be used to estimate the position of an active tag relative to the readers. A localisation algorithm will be implemented to run on a single Raspberry Pi. This can be accomplished in a number of programming languages but a implementation language is not chosen yet. However, Python, Java, or C are all good candidates. An advanced setup might involve distributed computation of certain parts of an algorithm that do not depend on each other. This can be done to better utilise the processing power of the single-board computers.
+
+A good starting point is to implement the SpotOn \cite{Hightower2000} algorithm because it uses Received Signal Strength (RSS) measurements and an active tag to laterate its location. RSS values are approximated into a distance using a function defined with empirical data \cite{Bouet2008}. Difficulties that might arise during the main software implementation include:
+
+\begin{itemize}
+ 	\item accurately estimating distance based on RSS,
+ 	\item reliable localisation using trilateration,
+ 	\item achieving similar results using an existing algorithm on this hardware.
+\end{itemize}
+
+\subsection{Improving the system}
+
+As mentioned in previous subsections, some parts of the system allow for improvements or advanced features, such as using a wireless communication between reader nodes or distributed computation of location information. The Raspberry Pis provide sufficient computing power with low energy consumption which creates a vast range of opportunities to utilise their processing power. For instance, a practical idea is to set up a web server on one of the computers in order to monitor identification information and positions of the tag over the Internet. This way every reader node can provide different services and alleviate the need for additional hardware components to construct an RFID sensor network. This project could also benefit from a good software engineering design because, if successful, it can be made available as an open-source project on the Internet, which might benefit RFID and Raspberry Pi communities. If time permits, the software implementation will be made as flexible and modular as possible in order to enable its application in different scenarios and hardware.
+
+
 \section{Summary}

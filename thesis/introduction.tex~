@@ -17,7 +17,9 @@ On the one hand, the RFID technology has unprecedented advantages and it has gai
 
 \textbf{Copied from IRP.}
 
-The hypothesis of this project is that existing algorithms for localisation and tracking of active tags can be applied on a cost-effective Raspberry-Pi-based sensor network to achieve a similar performance. More specifically, the purpose of the project is to construct and programme three reader nodes, each consisting of a reader connected to a single-board computer, that cooperate in an indoor environment to estimate the position of a stationary or moving active tag based on the Received Signal Strength Indicator (RSSI).
+The hypothesis of this project is that existing algorithms for localisation and tracking of active tags can be applied on a cost-effective Raspberry-Pi-based sensor network to achieve a similar performance. More specifically, the purpose of the project is to construct and programme three reader nodes, each consisting of a reader connected to a single-board computer, that cooperate in an indoor environment to estimate the position of a stationary or moving active tag based on the Received Signal Strength Indicator (RSSI) using a localisation method called trilateration.
+
+\section{Contributions}
 
 \section{Thesis Outline}
 

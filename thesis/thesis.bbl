@@ -41,6 +41,18 @@ Finkenzeller, K. (2010).
   smart cards, radio frequency identification and near-field communication}.
 \newblock Wiley.
 
+\bibitem[Hightower and Borriello, 2001a]{Hightower2001c}
+Hightower, J. and Borriello, G. (2001a).
+\newblock {A} {S}urvey and {T}axonomy of {L}ocation {S}ensing {S}ystems for
+  {U}biquitous {C}omputing.
+\newblock UW CSE 01-08-03, University of Washington, Department of Computer
+  Science and Engineering, Seattle, WA.
+
+\bibitem[Hightower and Borriello, 2001b]{Hightower2001}
+Hightower, J. and Borriello, G. (2001b).
+\newblock {L}ocation systems for ubiquitous computing.
+\newblock {\em Computer}, 34(8):57--66.
+
 \bibitem[Hightower et~al., 2000]{Hightower2000}
 Hightower, J., Want, R., and Borriello, G. (2000).
 \newblock {S}pot{ON}: {A}n indoor 3{D} location sensing technology based on
@@ -76,12 +88,6 @@ Lui, G., Gallagher, T., Li, B., Dempster, A.~G., and Rizos, C. (2011).
 Nath, B., Reynolds, F., and Want, R. (2006).
 \newblock {RFID} technology and applications.
 \newblock {\em Pervasive Computing, IEEE}, 5(1):22--24.
-
-\bibitem[Ni et~al., 2005]{Ni2005}
-Ni, L., Zhu, Y., Ma, J., Li, M., Luo, Q., Liu, Y., Cheung, S., and Yang, Q.
-  (2005).
-\newblock {S}emantic sensor net: {A}n extensible framework.
-\newblock {\em Networking and Mobile Computing}, pages 1144--1153.
 
 \bibitem[Ni et~al., 2004]{Ni2004}
 Ni, L.~M., Liu, Y., Lau, Y.~C., and Patil, A.~P. (2004).
@@ -119,5 +125,18 @@ Youssef, M. and Agrawala, A. (2005).
 \newblock {T}he {H}orus {WLAN} location determination system.
 \newblock In {\em Proceedings of the 3rd international conference on Mobile
   systems, applications, and services}, pages 205--218. ACM.
+
+\bibitem[Zhang et~al., 2009]{Zhang2009}
+Zhang, Y., Yang, L.~T., and Chen, J. (2009).
+\newblock {\em {RFID} and {S}ensor {N}etworks: {A}rchitectures, {P}rotocols,
+  {S}ecurity and {I}ntegrations}.
+\newblock CRC.
+
+\bibitem[Zhao et~al., 2007]{Zhao2007}
+Zhao, Y., Liu, Y., and Ni, L.~M. (2007).
+\newblock {VIRE}: {A}ctive {RFID}-based localization using virtual reference
+  elimination.
+\newblock In {\em Parallel Processing, 2007. ICPP 2007. International
+  Conference on}, pages 56--56. IEEE.
 
 \end{thebibliography}
