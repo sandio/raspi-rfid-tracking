@@ -29,23 +29,20 @@
 \BOOKMARK [1][-]{section.3.2}{Software Engineering Practices}{chapter.3}% 29
 \BOOKMARK [2][-]{subsection.3.2.1}{Project decomposition}{section.3.2}% 30
 \BOOKMARK [2][-]{subsection.3.2.2}{Object-oriented design}{section.3.2}% 31
-\BOOKMARK [2][-]{subsection.3.2.3}{Scalability}{section.3.2}% 32
-\BOOKMARK [2][-]{subsection.3.2.4}{API and Manual}{section.3.2}% 33
-\BOOKMARK [1][-]{section.3.3}{Translating RSSI to distance}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.4}{Trilateration}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.5}{IRP}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.5.1}{Preparing the Raspberry Pis}{section.3.5}% 37
-\BOOKMARK [2][-]{subsection.3.5.2}{Constructing a reader node}{section.3.5}% 38
-\BOOKMARK [2][-]{subsection.3.5.3}{Reading data from a tag}{section.3.5}% 39
-\BOOKMARK [2][-]{subsection.3.5.4}{Communication between reader nodes}{section.3.5}% 40
-\BOOKMARK [2][-]{subsection.3.5.5}{Implementing a localisation algorithm}{section.3.5}% 41
-\BOOKMARK [2][-]{subsection.3.5.6}{Improving the system}{section.3.5}% 42
-\BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}% 43
-\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 44
-\BOOKMARK [1][-]{section.4.1}{Summary}{chapter.4}% 45
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 46
-\BOOKMARK [1][-]{section.5.1}{Summary}{chapter.5}% 47
-\BOOKMARK [0][-]{chapter.6}{Discussion and Future Work}{}% 48
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 49
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 50
-\BOOKMARK [0][-]{appendix*.28}{Bibliography}{}% 51
+\BOOKMARK [2][-]{subsection.3.2.3}{System scalability}{section.3.2}% 32
+\BOOKMARK [2][-]{subsection.3.2.4}{Documentation}{section.3.2}% 33
+\BOOKMARK [1][-]{section.3.3}{Converting RSSI to distance}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.3.1}{Free-space Path Loss}{section.3.3}% 35
+\BOOKMARK [2][-]{subsection.3.3.2}{Translation table}{section.3.3}% 36
+\BOOKMARK [1][-]{section.3.4}{Trilateration}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.4.1}{Special case}{section.3.4}% 38
+\BOOKMARK [2][-]{subsection.3.4.2}{General solution}{section.3.4}% 39
+\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 40
+\BOOKMARK [1][-]{section.4.1}{Summary}{chapter.4}% 41
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Summary}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.6}{Discussion and Future Work}{}% 44
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 45
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 46
+\BOOKMARK [1][-]{section.A.1}{Per reader translation tables from RSSI to distance}{appendix.A}% 47
+\BOOKMARK [0][-]{appendix*.33}{Bibliography}{}% 48

@@ -1,0 +1,69 @@
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'trilat2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{497.87202148bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.99400643)%
+    \put(0,0){\includegraphics[width=\unitlength]{figures/trilat2.pdf}}%
+    \put(0.75233552,0.68419968){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$(d,0)$}}}%
+    \put(0.44132304,0.73703543){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$(0,0)$}}}%
+    \put(0.60301133,0.33959041){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$(i,j)$}}}%
+    \put(0.38396634,0.86875545){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$r_1$}}}%
+    \put(0.5056188,0.69151376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d$}}}%
+    \put(0.68181988,0.76144444){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$r_2$}}}%
+    \put(0.75979873,0.72207513){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\vec p_2$}}}%
+    \put(0.3673608,0.708893){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\vec p_1$}}}%
+    \put(0.55044248,0.28155317){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\vec p_3$}}}%
+    \put(0.61634498,0.42076194){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$r_3$}}}%
+    \put(0.44024526,0.35616221){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i$}}}%
+    \put(0.51778253,0.41461547){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$j$}}}%
+    \put(0.15159235,0.48869697){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Intersections}}}%
+    \put(0.1259457,0.40753926){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$x$ positive right}}}%
+    \put(0.12560676,0.24684726){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$y$ positive down}}}%
+  \end{picture}%
+\endgroup%

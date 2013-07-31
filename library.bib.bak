@@ -27,6 +27,15 @@
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4631904}
 }
 
+@Book{Balanis2012,
+  Title                    = {{A}ntenna theory: analysis and design},
+  Author                   = {Balanis, Constantine A},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {2012},
+
+  __markedentry            = {[sandio:6]}
+}
+
 @Article{Bechteler2003,
   Title                    = {2-{D} localization and identification based on {SAW} {ID}-tags at 2.5 {GH}z},
   Author                   = {Bechteler, Thomas F and Yenigun, H},
@@ -153,6 +162,7 @@
   Year                     = {2004},
   Organization             = {IEEE},
   Pages                    = {406--414},
+
   File                     = {The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:RFID/rssi/The.Limits.of.Localization.Using.Signal.Strength.a.Comparative.Study-Elnahrawy2004.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1381942}
 }
@@ -363,8 +373,6 @@
   Year                     = {2011},
   Organization             = {IEEE},
   Pages                    = {53--57},
-
-  __markedentry            = {[sandio:6]},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5955283}
 }
 
@@ -438,6 +446,15 @@
   Publisher                = {Springer}
 }
 
+@InProceedings{Parameswaran2009,
+  Title                    = {{I}s rssi a reliable parameter in sensor localization algorithms: {A}n experimental study},
+  Author                   = {Parameswaran, Ambili Thottam and Husain, Mohammad Iftekhar and Upadhyaya, Shambhu},
+  Booktitle                = {Field Failure Data Analysis Workshop (F2DA09)},
+  Year                     = {2009},
+
+  __markedentry            = {[sandio:]}
+}
+
 @Article{Pu2011,
   Title                    = {{I}ndoor location tracking using received signal strength indicator},
   Author                   = {Pu, Chuan-Chin and Pu, Chuan-Hsian and Lee, Hoon-Jae},
@@ -470,6 +487,15 @@
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4600544}
 }
 
+@Book{Schlaikjer1962,
+  Title                    = {{R}eference {D}ata for radio engineers},
+  Author                   = {Schlaikjer, J.E. and Westman, H.P.},
+  Publisher                = {Internat. Telephone and Telegraph Corporation},
+  Year                     = {1962},
+
+  Url                      = {http://books.google.co.uk/books?id=Q7aSPwAACAAJ}
+}
+
 @Article{Stelzer2004,
   Title                    = {{C}oncept and application of {LPM}-a novel 3-{D} local position measurement system},
   Author                   = {Stelzer, Andreas and Pourvoyeur, Klaus and Fischer, Alexander},
@@ -493,7 +519,6 @@
   Pages                    = {22},
   Volume                   = {38},
 
-  __markedentry            = {[sandio:]},
   Publisher                = {AIM Publications}
 }
 
@@ -571,6 +596,16 @@
   Publisher                = {IEEE}
 }
 
+@Misc{Wikipedi2013,
+  Title                    = {{T}rilateration --- {W}ikipedia{,} {T}he {F}ree {E}ncyclopedia},
+
+  Author                   = {Wikipedia},
+  Note                     = {[Online; accessed 31-July-2013]},
+  Year                     = {2013},
+
+  Url                      = {\url{http://en.wikipedia.org/w/index.php?title=Trilateration&oldid=564380696}}
+}
+
 @InProceedings{Wu2008,
   Title                    = {{S}tudy of characteristics of {RSSI} signal},
   Author                   = {Wu, Rong-Hou and Lee, Yang-Han and Tseng, Hsien-Wei and Jan, Yih-Guang and Chuang, Ming-Hsueh},
@@ -578,6 +613,7 @@
   Year                     = {2008},
   Organization             = {IEEE},
   Pages                    = {1--3},
+
   File                     = {Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:RFID/rssi/Study.of.Characteristics.of.RSSI.Signal-Wu2008.pdf:PDF},
   Url                      = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4608603}
 }

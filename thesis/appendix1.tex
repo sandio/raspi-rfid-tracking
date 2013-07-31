@@ -1,2 +1,39 @@
 \chapter{Appendix}
 \label{ap:appendix}
+
+\section{Per reader translation tables from RSSI to distance}
+\label{sec:trans}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | c | c | c || c | c || c | c || c | c || c | c || c | c || c | c | }
+		\hline
+		Distance 	& 0  & 1  & 1  & 2  & 2  & 3  & 3  & 4  & 4  & 5  & 5  & 6  & 6  & 7  \\ \hline
+		RSSI 		& 80 & 65 & 64 & 62 & 61 & 57 & 56 & 53 & 52 & 48 & 47 & 46 & 45 & 44  \\ \hline
+	\end{tabular}
+	\caption{RSSI value ranges used to estimate distance when using the first reader. }
+	\label{tbl:trans1}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | c | c | c || c | c || c | c || c | c || c | c || c | c || c | c | }
+		\hline
+		Distance 	& 0  & 1  & 1  & 2  & 2  & 3  & 3  & 4  & 4  & 5  & 5  & 6  & 6  & 7  \\ \hline
+		RSSI 		& 77 & 63 & 62 & 58 & 57 & 55 & 54 &53  & 52 & 49 & 48 & 47 & 46 & 44 \\ \hline
+	\end{tabular}
+	\caption{RSSI value ranges used to estimate distance when using the second reader. }
+	\label{tbl:trans2}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | c | c | c || c | c || c | c || c | c || c | c || c | c || c | c | }
+		\hline
+		Distance 	& 0  & 1  & 1  & 2  & 2  & 3  & 3  & 4  & 4  & 5  & 5  & 6  & 6  & 7  \\ \hline
+		RSSI 		& 78 & 64 & 63 & 60 & 59 & 56 & 55 & 54 & 53 & 49 & 48 & 45 & 44 & 43 \\ \hline
+	\end{tabular}
+	\caption{RSSI value ranges used to estimate distance when using the third reader. }
+	\label{tbl:trans3}
+\end{table}
+

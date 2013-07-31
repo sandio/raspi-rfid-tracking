@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Balanis, 2012]{Balanis2012}
+Balanis, C.~A. (2012).
+\newblock {\em {A}ntenna theory: analysis and design}.
+\newblock John Wiley \& Sons.
+
 \bibitem[Bolic et~al., 2010]{Bolic2010}
 Bolic, M., Simplot-Ryl, D., and Stojmenovic, I. (2010).
 \newblock {\em {RFID} systems: research trends and challenges}.
@@ -84,6 +89,13 @@ Lui, G., Gallagher, T., Li, B., Dempster, A.~G., and Rizos, C. (2011).
 \newblock In {\em Localization and GNSS (ICL-GNSS), 2011 International
   Conference on}, pages 53--57. IEEE.
 
+\bibitem[Manolakis, 1996]{Manolakis1996}
+Manolakis, D.~E. (1996).
+\newblock {E}fficient solution and performance analysis of 3-{D} position
+  estimation by trilateration.
+\newblock {\em Aerospace and Electronic Systems, IEEE Transactions on},
+  32(4):1239--1248.
+
 \bibitem[Nath et~al., 2006]{Nath2006}
 Nath, B., Reynolds, F., and Want, R. (2006).
 \newblock {RFID} technology and applications.
@@ -105,6 +117,11 @@ Rida, A., Yang, L., and Tentzeris, M.~M. (2010).
 \newblock {\em {RFID}-{E}nabled sensor design and applications}.
 \newblock Artech House Publishers.
 
+\bibitem[Schlaikjer and Westman, 1962]{Schlaikjer1962}
+Schlaikjer, J. and Westman, H. (1962).
+\newblock {\em {R}eference {D}ata for radio engineers}.
+\newblock Internat. Telephone and Telegraph Corporation.
+
 \bibitem[Swartz, 2004]{Swartz2004}
 Swartz, N. (2004).
 \newblock {T}agging toothpaste and toddlers.
@@ -119,6 +136,13 @@ Want, R. (2006).
 Weinstein, R. (2005).
 \newblock {RFID}: a technical overview and its application to the enterprise.
 \newblock {\em IT professional}, 7(3):27--33.
+
+\bibitem[Wikipedia, 2013]{Wikipedi2013}
+Wikipedia (2013).
+\newblock {T}rilateration --- {W}ikipedia{,} {T}he {F}ree {E}ncyclopedia.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Trilateration&oldid=564380696}.
+\newblock [Online; accessed 31-July-2013].
 
 \bibitem[Youssef and Agrawala, 2005]{Youssef2005}
 Youssef, M. and Agrawala, A. (2005).
