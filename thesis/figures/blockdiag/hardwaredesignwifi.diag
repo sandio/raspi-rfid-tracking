@@ -1,0 +1,47 @@
+blockdiag {
+	default_fontsize = 14
+	
+	group node1 {
+		label = "Reader Node 1"
+		color = lightgray
+
+		raspi1 [label = "Raspberry Pi", background = "network-server.png"]
+		reader1 [label = "RFID Reader", shape = roundedbox, background = "network-wireless.png"]
+
+		reader1 -- raspi1 [label = "USB"]
+	}
+
+	group node2 {
+		label = "Reader Node 2"
+		color = lightgray
+
+		raspi2 [label = "Raspberry Pi", background = "network-server.png"]
+		reader2 [label = "RFID Reader", shape = roundedbox, background = "network-wireless.png"]
+
+		reader2 -- raspi2 [label = "USB"]
+	}
+
+	group node3 {
+		label = "Reader Node 3"
+		color = lightgray
+
+		raspi3 [label = "Raspberry Pi", background = "network-server.png"]
+		reader3 [label = "RFID Reader", shape = roundedbox, background = "network-wireless.png"]
+
+		reader3 -- raspi3 [label = "USB"]
+	}
+
+	switch [label = "Wireless Router", shape = flowchart.loopin, background = "network-wireless.png"]
+	inet [label = "Internet", shape = cloud]
+	tag [label = "RFID Tag", shape = ellipse]
+	connection [label = "Remote Connection", background = "computer.png"]
+	actor [shape = actor]
+	
+	tag -- reader1, reader2, reader3 [label = "Radio", fontsize = 12, style = dotted]
+
+	raspi1, raspi2, raspi3 <-> switch [label = "Wi-Fi", fontsize = 12, style = dashed, folded]
+	switch -- connection [label = "Wi-Fi", fontsize = 12, style = dashed]
+	switch -- inet
+	inet -- connection [style = dashed, folded]
+	connection -- actor [label = "Interface", fontsize = 12]
+}

@@ -1,6 +1,6 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Hypothesis}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Contributions}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Contribution}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Thesis Outline}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{Summary}{chapter.1}% 5
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 6
@@ -25,24 +25,44 @@
 \BOOKMARK [2][-]{subsection.2.5.2}{LANDMARC}{section.2.5}% 25
 \BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 26
 \BOOKMARK [0][-]{chapter.3}{Methodology}{}% 27
-\BOOKMARK [1][-]{section.3.1}{Project management}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{Software Engineering Practices}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.2.1}{Project decomposition}{section.3.2}% 30
-\BOOKMARK [2][-]{subsection.3.2.2}{Object-oriented design}{section.3.2}% 31
-\BOOKMARK [2][-]{subsection.3.2.3}{System scalability}{section.3.2}% 32
-\BOOKMARK [2][-]{subsection.3.2.4}{Documentation}{section.3.2}% 33
-\BOOKMARK [1][-]{section.3.3}{Converting RSSI to distance}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.3.1}{Free-space Path Loss}{section.3.3}% 35
-\BOOKMARK [2][-]{subsection.3.3.2}{Translation table}{section.3.3}% 36
-\BOOKMARK [1][-]{section.3.4}{Trilateration}{chapter.3}% 37
-\BOOKMARK [2][-]{subsection.3.4.1}{Special case}{section.3.4}% 38
-\BOOKMARK [2][-]{subsection.3.4.2}{General solution}{section.3.4}% 39
-\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 40
-\BOOKMARK [1][-]{section.4.1}{Summary}{chapter.4}% 41
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 42
-\BOOKMARK [1][-]{section.5.1}{Summary}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Discussion and Future Work}{}% 44
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 45
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 46
-\BOOKMARK [1][-]{section.A.1}{Per reader translation tables from RSSI to distance}{appendix.A}% 47
-\BOOKMARK [0][-]{appendix*.33}{Bibliography}{}% 48
+\BOOKMARK [1][-]{section.3.1}{Hardware Setup}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.1.1}{Reader nodes}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.2}{Computer Network}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.3}{Alternative connectivity using Wi-Fi}{section.3.1}% 31
+\BOOKMARK [1][-]{section.3.2}{Problem Definition}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.3}{Software Architecture}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Converting RSSI to distance}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.4.1}{Free-space Path Loss}{section.3.4}% 35
+\BOOKMARK [2][-]{subsection.3.4.2}{Translation table}{section.3.4}% 36
+\BOOKMARK [1][-]{section.3.5}{Trilateration}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.5.1}{Special case}{section.3.5}% 38
+\BOOKMARK [2][-]{subsection.3.5.2}{General solution}{section.3.5}% 39
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 40
+\BOOKMARK [1][-]{section.4.1}{Antenna Design}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.2}{Project management}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.3}{Software Engineering Practices}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.3.1}{Project decomposition}{section.4.3}% 44
+\BOOKMARK [2][-]{subsection.4.3.2}{Object-oriented design}{section.4.3}% 45
+\BOOKMARK [2][-]{subsection.4.3.3}{System scalability}{section.4.3}% 46
+\BOOKMARK [2][-]{subsection.4.3.4}{Documentation}{section.4.3}% 47
+\BOOKMARK [1][-]{section.4.4}{Summary}{chapter.4}% 48
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 49
+\BOOKMARK [1][-]{section.5.1}{Hardware Evaluation}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.1.1}{Orientation}{section.5.1}% 51
+\BOOKMARK [2][-]{subsection.5.1.2}{Range}{section.5.1}% 52
+\BOOKMARK [2][-]{subsection.5.1.3}{Elevation}{section.5.1}% 53
+\BOOKMARK [2][-]{subsection.5.1.4}{Line-of-sight Grid RSSI}{section.5.1}% 54
+\BOOKMARK [1][-]{section.5.2}{System evaluation}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.2.1}{Line-of-sight Grid Error}{section.5.2}% 56
+\BOOKMARK [1][-]{section.5.3}{Discussion}{chapter.5}% 57
+\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 58
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 59
+\BOOKMARK [1][-]{section.6.1}{Contribution}{chapter.6}% 60
+\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 61
+\BOOKMARK [1][-]{section.6.3}{Summary}{chapter.6}% 62
+\BOOKMARK [0][-]{appendix.A}{Supplementary Information}{}% 63
+\BOOKMARK [1][-]{section.A.1}{Hardware setup using Wi-Fi connectivity}{appendix.A}% 64
+\BOOKMARK [1][-]{section.A.2}{Translation tables from RSSI to distance}{appendix.A}% 65
+\BOOKMARK [1][-]{section.A.3}{Orientation}{appendix.A}% 66
+\BOOKMARK [1][-]{section.A.4}{Grid}{appendix.A}% 67
+\BOOKMARK [0][-]{appendix*.37}{Bibliography}{}% 68

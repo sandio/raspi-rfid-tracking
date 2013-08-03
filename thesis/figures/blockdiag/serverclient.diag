@@ -1,0 +1,11 @@
+blockdiag {
+	default_fontsize = 14
+	span_width = 175
+	
+	server [label = "Server Node"]
+	client1 [label = "Client Node", numbered = 1]
+	client2 [label = "Client Node", numbered = 2]
+	dummy [shape = "dots"]
+
+	server <- client1, client2, dummy [label = "Tag ID and RSSI"]
+}

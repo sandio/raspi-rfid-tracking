@@ -1,7 +1,19 @@
-\chapter{Appendix}
+\chapter{Supplementary Information}
 \label{ap:appendix}
 
-\section{Per reader translation tables from RSSI to distance}
+\section{Hardware setup using Wi-Fi connectivity}
+\label{sec:hardsetwifi}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/blockdiag/hardwaredesignwifi}
+		\caption{Hardware setup with wireless connectivity between reader nodes.}
+		\label{fig:hardsetwifi}
+	\end{center}
+\end{figure}
+
+\newpage
+\section{Translation tables from RSSI to distance}
 \label{sec:trans}
 
 \begin{table}[h]
@@ -37,3 +49,50 @@
 	\label{tbl:trans3}
 \end{table}
 
+\newpage
+\section{Orientation}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_180deg}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 180 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_225deg}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 225 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_270deg}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 270 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_315deg}
+		\caption{Two plots of RSSI measurements at increasing distances with the readers at 315 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
+	\end{center}
+\end{figure}
+
+\newpage
+\section{Grid}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_grid_r2}
+		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{second} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_grid_r3}
+		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{third} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
+	\end{center}
+\end{figure}

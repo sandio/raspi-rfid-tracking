@@ -57,6 +57,7 @@ I thank my supervisor Dr Michael Rovatsos and Mr Michael Anslow for their suppor
 \include{introduction}
 \include{background}
 \include{methodology}
+\include{design}
 \include{implementation}
 \include{evaluation}
 \include{discussion}

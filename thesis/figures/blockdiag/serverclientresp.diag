@@ -1,0 +1,29 @@
+blockdiag {
+	default_fontsize = 14
+	orientation = portrait
+	
+	group client1 {
+		label = "Client"
+		color = lightgray
+
+		read1 [label = "Read tag's ID\nand RSSI", numbered = 1]
+		send [label = "Send data\nto server", numbered = 2]
+
+		read1 -> send
+
+	}
+	
+	group server1 {
+		label = "Server"
+		color = lightgray
+
+		read2 [label = "Read tag's ID\nand RSSI", numbered = 1]
+		receive [label = "Receive data\nfrom clients", numbered = 1]
+		convert [label = "Convert RSSI\nto distance", numbered = 2]
+		location [label = "Estimate the\ntag's location", numbered = 3]
+
+		read2, receive -> convert
+		convert -> location
+
+	}
+}

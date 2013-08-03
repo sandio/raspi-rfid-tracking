@@ -6,14 +6,13 @@ A level-1 auxiliary file: background.aux
 A level-1 auxiliary file: methodology.aux
 A level-1 auxiliary file: implementation.aux
 A level-1 auxiliary file: evaluation.aux
-A level-1 auxiliary file: discussion.aux
 A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: appendix1.aux
 The style file: apalike.bst
 Database file #1: ../library.bib
 You've used 28 entries,
             1935 wiz_defined-function locations,
-            667 strings with 8844 characters,
+            666 strings with 8830 characters,
 and the built_in function-call counts, 11245 in all, are:
 = -- 1129
 > -- 411

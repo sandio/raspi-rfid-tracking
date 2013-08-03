@@ -82,7 +82,7 @@ Although RSSI is not considered a reliable measure for distance due to the physi
 \section{Project Hardware}
 \label{sec:projhard}
 
-This project combines three types of hardware. The first is active RFID devices, the second - single-board computers, and the last is a commodity network infrastructure. The main hardware components can be seen on Figures \ref{fig:projrfid} and \ref{fig:projcomp}. The following subsections present these devices and their specifications. Details on how the components are combined in forming the resulting system are given \textbf{REF}. 
+This project combines three types of hardware. The first is active RFID devices, the second - single-board computers, and the last is a commodity network infrastructure. The main hardware components can be seen on Figures \ref{fig:projrfid} and \ref{fig:projcomp}. The following subsections present these devices and their specifications. Details on how the components are combined in forming the resulting system are given section \ref{sec:hardset}. 
 
 \begin{figure}[h]
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -172,7 +172,7 @@ The integrated RSSI module measures the received radio frequency signal over a r
 
 The active tag is a radio transmitting device that sends out its unique four character identification every 2.5 $\pm$ 0.5 seconds. Figure \ref{fig:tag} shows the active RFID tag used in this work. Its transmission time is around 11ms giving a small probability of tags' signals colliding. The tag can use CR2025 and CR2032 batteries as a power supply. It can operate between 5,000 and 7,000 hours with a single battery. The tag consumes most of its power (4mA) while transmitting. During the rest of the time, the tag stays into hibernation mode using only 18uA.
 
-The effective transmission range of the tag is estimated at eight meters by the manufacturer. For range measurements conducted during this project refer to \textbf{REF}. The tag arrived without an antenna. According to the specifications, to achieve its effective range, the antenna should have a 8mm coil diameter and 2cm coil length. The construction of the antenna is discussed in \textbf{REF}. The tag specifications described above are summarised in Table \ref{tbl:tag}. This RFID tag was chosen for this project because of its low price, transmission range, portable size, low power consumption, and matching operating frequency to the readers.
+The effective transmission range of the tag is estimated at eight meters by the manufacturer. For range measurements conducted during this project refer to \textbf{REF}. The tag arrived without an antenna. According to the specifications, to achieve its effective range, the antenna should have a 8mm coil diameter and 2cm coil length. The construction of the antenna is discussed in section \ref{sec:antdes}. The tag specifications described above are summarised in Table \ref{tbl:tag}. This RFID tag was chosen for this project because of its low price, transmission range, portable size, low power consumption, and matching operating frequency to the readers.
 
 \begin{table}[h]
 	\centering
@@ -265,6 +265,7 @@ Trilateration is a localisation technique that uses the geometric properties of 
 An important requirement for every location system is to estimate positions consistently and accurately. Hightower \cite{Hightower2001c} proposed criteria for the classification of such systems based on properties including accuracy, precision, and distribution of erroneous positions to the true one. Such metrics can be used when evaluating a location system's performance in terms of how often it locates an object within some distance of its true location. For instance, if a GPS receiver can locate its position within five meters for 90 percent of the time, then its accuracy is five meters and has a precision of 90 percent for that accuracy \cite{Hightower2001}. There is a trade-off between accuracy and precision. To achieve a higher precision, one might have to sacrifice accuracy. As a result, in order to arrive at a concise quantitative summary of these attributes, Hightower proposed to assess the error distribution accumulated during a system's operation \cite{Hightower2001}. In addition, this should be combined with other parameters such as the number of nodes in the system, the density of the infrastructure, and the size of the indoor space. In this work, these metrics are used to evaluate the localisation performance of the resulting system.
 
 \section{Previous work}
+\label{sec:prevwork}
 
 The RFID technology is of substantial interest to researchers. Location sensing using active RFID devices is a specific subcategory of this field. Nevertheless, there have been a number of important research efforts to construct localisation systems using the available RFID hardware at that time. This section presents some of the previous work that directly relates to this project.
 
