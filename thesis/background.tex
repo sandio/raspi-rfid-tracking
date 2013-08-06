@@ -103,7 +103,7 @@ This project combines three types of hardware. The first is active RFID devices,
 \subsection{RF9315R-u Active RFID 8 Meters Receiver with RSSI Module}
 \label{subsec:receiver}
 
-The project uses three active RFID readers containing RSSI modules. Figure \ref{fig:projread} shows the three readers, where each is connected to a serial to USB converter that offers a convenient interface to any computer with USB ports. For a discussion of the problems encountered while using the converters refer to \textbf{REF}. 
+The project uses three active RFID readers containing RSSI modules. Figure \ref{fig:projread} shows the three readers, where each is connected to a serial to USB converter that offers a convenient interface to any computer with USB ports. For a discussion of the problems encountered while using the converters refer to \ref{subsec:sertousb}. 
 
 The readers are superheterodyne receivers meaning they convert received signals to an intermediate frequency that is more convenient to process and gives a more stable design. The readers operate at 315 MHz, which lies in the lower band of Ultra High Frequency (UHF). Such waves propagate mainly by line-of-sight. They are blocked by large objects such as buildings, but can penetrate through a few building walls, which is enough for indoor location sensing. UHF are also sensitive to antenna orientations \cite[p. 15]{Hunt2007}.
 
@@ -154,7 +154,7 @@ The integrated RSSI module measures the received radio frequency signal over a r
 		Operating Frequency		& 315 MHz	\\ \hline
 		Incoming signal range	& 60 dBm \\ \hline
 		Power source			& Serial / USB port, DC 9V socket \\ \hline
-		Communication			& R-232 serial port \\ \hline
+		Communication			& RS-232 serial port \\ \hline
 		Watchdog timer			& 2.3 seconds \\ \hline
 		Simultaneous reads		& 80 tags	\\ \hline
 		Reader control			& No control protocol \\ \hline
@@ -172,7 +172,7 @@ The integrated RSSI module measures the received radio frequency signal over a r
 
 The active tag is a radio transmitting device that sends out its unique four character identification every 2.5 $\pm$ 0.5 seconds. Figure \ref{fig:tag} shows the active RFID tag used in this work. Its transmission time is around 11ms giving a small probability of tags' signals colliding. The tag can use CR2025 and CR2032 batteries as a power supply. It can operate between 5,000 and 7,000 hours with a single battery. The tag consumes most of its power (4mA) while transmitting. During the rest of the time, the tag stays into hibernation mode using only 18uA.
 
-The effective transmission range of the tag is estimated at eight meters by the manufacturer. For range measurements conducted during this project refer to \textbf{REF}. The tag arrived without an antenna. According to the specifications, to achieve its effective range, the antenna should have a 8mm coil diameter and 2cm coil length. The construction of the antenna is discussed in section \ref{sec:antdes}. The tag specifications described above are summarised in Table \ref{tbl:tag}. This RFID tag was chosen for this project because of its low price, transmission range, portable size, low power consumption, and matching operating frequency to the readers.
+The effective transmission range of the tag is estimated at eight meters by the manufacturer. For range measurements conducted during this project refer to \textbf{REF}. The tag arrived without an antenna. According to the specifications, to achieve its effective range, the antenna should have a 8mm coil diameter and 2cm coil length. The construction of the antenna is discussed in section \ref{subsec:antdes}. The tag specifications described above are summarised in Table \ref{tbl:tag}. This RFID tag was chosen for this project because of its low price, transmission range, portable size, low power consumption, and matching operating frequency to the readers.
 
 \begin{table}[h]
 	\centering

@@ -1,0 +1,27 @@
+seqdiag {
+span_width = 110
+span_height = 5
+
+NetworkServer; NetworkClient; ReceiveThread; DatabaseHandler
+
+NetworkServer -> NetworkServer [label = "socket(streaming)", leftnote = "Initialise server\nstreaming socket"]
+
+NetworkClient -> NetworkClient [label = "c = socket(streaming)", leftnote = "Initialise client\nstreaming socket"]
+
+NetworkServer -> NetworkServer [label = "s.bind(address, port)", leftnote = "Bind socket to\naddress and port"]
+
+NetworkServer -> NetworkServer [label = "s.listen()", leftnote = "Listen for incoming\nconnections"]
+
+NetworkClient => NetworkServer [label = "c.connect(address, port)", note = "Connect to server"] {
+NetworkServer -> NetworkServer [label = "c2 = s.accept()", leftnote = "Accept connection\ncreating a client\nsocket at server"]
+NetworkServer => ReceiveThread [label = "ReceiveThread(c2)"] {
+NetworkClient -> ReceiveThread [label = "c.send(data)", note = "Send data to server thread"] {
+ReceiveThread -> ReceiveThread [label = "data = c2.recv()", leftnote = "Receive incoming data"]
+ReceiveThread => DatabaseHandler [label = "insert_reading(data)", note = "Insert reading\ninto database"]
+}
+}
+}
+
+NetworkServer => ReceiveThread [label = "join(timeout)", return = "Terminated", leftnote = "Stop thread"]
+
+}

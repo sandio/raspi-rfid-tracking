@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 1020.36 665.09"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="network.pdf">
+  <metadata
+     id="metadata291">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>blockdiag</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1054"
+     inkscape:window-height="1063"
+     id="namedview289"
+     showgrid="false"
+     inkscape:zoom="0.87089986"
+     inkscape:cx="531"
+     inkscape:cy="442.96638"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     width="1052.36px" />
+  <defs
+     id="defs_block">
+    <filter
+       height="1.5039999"
+       id="filter_blur"
+       inkscape:collect="always"
+       width="1.1575"
+       x="-0.078749999"
+       y="-0.252"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3780"
+         inkscape:collect="always"
+         stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title
+     id="title7">blockdiag</title>
+  <desc
+     id="desc9">seqdiag {
+span_width = 110
+span_height = 5
+
+NetworkServer; NetworkClient; ReceiveThread; DatabaseHandler
+
+NetworkServer -&gt; NetworkServer [label = &quot;socket(streaming)&quot;, leftnote = &quot;Initialise server\nstreaming socket&quot;]
+
+NetworkClient -&gt; NetworkClient [label = &quot;c = socket(streaming)&quot;, leftnote = &quot;Initialise client\nstreaming socket&quot;]
+
+NetworkServer -&gt; NetworkServer [label = &quot;s.bind(address, port)&quot;, leftnote = &quot;Bind socket to\naddress and port&quot;]
+
+NetworkServer -&gt; NetworkServer [label = &quot;s.listen()&quot;, leftnote = &quot;Listen for incoming\nconnections&quot;]
+
+NetworkClient =&gt; NetworkServer [label = &quot;c.connect(address, port)&quot;, note = &quot;Connect to server&quot;] {
+NetworkServer -&gt; NetworkServer [label = &quot;c2 = s.accept()&quot;, leftnote = &quot;Accept connection\ncreating a client\nsocket at server&quot;]
+NetworkServer =&gt; ReceiveThread [label = &quot;ReceiveThread(c2)&quot;] {
+NetworkClient -&gt; ReceiveThread [label = &quot;c.send(data)&quot;, note = &quot;Send data to server thread&quot;] {
+ReceiveThread -&gt; ReceiveThread [label = &quot;data = c2.recv()&quot;, leftnote = &quot;Receive incoming data&quot;]
+ReceiveThread =&gt; DatabaseHandler [label = &quot;insert_reading(data)&quot;, note = &quot;Insert reading\ninto database&quot;]
+}
+}
+}
+
+NetworkServer =&gt; ReceiveThread [label = &quot;join(timeout)&quot;, return = &quot;Terminated&quot;, leftnote = &quot;Stop thread&quot;]
+
+}
+</desc>
+  <rect
+     height="572"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="161"
+     y="84.089996"
+     id="rect11" />
+  <rect
+     height="270"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="165"
+     y="288.09"
+     id="rect13" />
+  <rect
+     height="272"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="637"
+     y="384.09"
+     id="rect15" />
+  <rect
+     height="124"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="641"
+     y="419.09"
+     id="rect17" />
+  <rect
+     height="35"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="641"
+     y="593.08997"
+     id="rect19" />
+  <rect
+     height="24"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
+     width="8"
+     x="875"
+     y="504.08997"
+     id="rect21" />
+  <polygon
+     points="153,57 161,65 161,95 57,95 57,57 57,57 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     id="polygon23"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="391,108 399,116 399,146 295,146 295,108 295,108 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     id="polygon25"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="153,159 161,167 161,197 56,197 56,159 56,159 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     id="polygon27"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="44,210 44,210 153,210 161,218 161,248 44,248 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.9531886;filter:url(#filter_blur)"
+     id="polygon29"
+     transform="matrix(1.1006325,0,0,1,-29.216207,8.089998)" />
+  <polygon
+     points="431,270 431,270 535,270 543,278 543,290 431,290 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.95420188;filter:url(#filter_blur)"
+     id="polygon31"
+     transform="matrix(1.0982962,0,0,1,-53.374837,8.089998)" />
+  <polygon
+     points="153,295 161,303 161,351 47,351 47,295 47,295 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     id="polygon33"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="669,401 817,401 825,409 825,421 669,421 669,401 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.92979735;filter:url(#filter_blur)"
+     id="polygon35"
+     transform="matrix(1.156707,0,0,1,-115.25738,8.089998)" />
+  <polygon
+     points="637,444 637,456 504,456 504,436 504,436 629,436 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.92464364;filter:url(#filter_blur)"
+     id="polygon37"
+     transform="matrix(1.1696373,0,0,1,-121.76892,8.089998)" />
+  <polygon
+     points="998,485 998,515 907,515 907,477 907,477 990,477 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.96536553;filter:url(#filter_blur)"
+     id="polygon39"
+     transform="matrix(1.0730413,0,0,1,-77.512165,8.089998)" />
+  <polygon
+     points="153,575 161,583 161,595 78,595 78,575 78,575 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     id="polygon41"
+     transform="translate(-12,8.089998)" />
+  <rect
+     height="40"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     width="128"
+     x="101"
+     y="19.089996"
+     id="rect43" />
+  <rect
+     height="40"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     width="128"
+     x="339"
+     y="19.089996"
+     id="rect45" />
+  <rect
+     height="40"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     width="128"
+     x="577"
+     y="19.089996"
+     id="rect47" />
+  <rect
+     height="40"
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
+     width="128"
+     x="815"
+     y="19.089996"
+     id="rect49" />
+  <path
+     d="m 162,53.09 0,613"
+     id="path51"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:8, 4" />
+  <rect
+     height="572"
+     width="8"
+     x="158"
+     y="76.089996"
+     id="rect53"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <rect
+     height="270"
+     width="8"
+     x="162"
+     y="282.09"
+     id="rect55"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 400,53.09 0,613"
+     id="path57"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:8, 4" />
+  <rect
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:0.99999994"
+     height="529.77985"
+     width="8"
+     x="396.83484"
+     y="123.39275"
+     id="rect53-3" />
+  <path
+     d="m 638,53.09 0,613"
+     id="path59"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:8, 4" />
+  <rect
+     height="272"
+     width="8"
+     x="634"
+     y="378.09"
+     id="rect61"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <rect
+     height="124"
+     width="8"
+     x="638"
+     y="413.09"
+     id="rect63"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <rect
+     height="35"
+     width="8"
+     x="638"
+     y="587.08997"
+     id="rect65"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 876,53.09 0,613"
+     id="path67"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:8, 4" />
+  <rect
+     height="24"
+     width="8"
+     x="872"
+     y="498.08997"
+     id="rect69"
+     style="fill:#ffe4b5;stroke:#000000;stroke-width:1" />
+  <rect
+     height="40"
+     width="128"
+     x="98"
+     y="13.090004"
+     id="rect71"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="114"
+     y="39.089996"
+     id="text73"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">NetworkServer</text>
+  <rect
+     height="40"
+     width="128"
+     x="336"
+     y="13.090004"
+     id="rect75"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="354"
+     y="39.089996"
+     id="text77"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">NetworkClient</text>
+  <rect
+     height="40"
+     width="128"
+     x="574"
+     y="13.090004"
+     id="rect79"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="593"
+     y="39.089996"
+     id="text81"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">ReceiveThread</text>
+  <rect
+     height="40"
+     width="128"
+     x="812"
+     y="13.090004"
+     id="rect83"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="821"
+     y="37.089996"
+     id="text85"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">DatabaseHandler</text>
+  <path
+     d="m 170,78.09 111,0"
+     id="path87"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,78.09 0,16"
+     id="path89"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,94.09 -111,0"
+     id="path91"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="182,86 190,90 190,82 "
+     id="polygon93"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="150,51 158,59 158,89 54,89 54,51 54,51 "
+     id="polygon95"
+     transform="matrix(1.1327188,0,0,1.2563979,-32.969566,-4.986296)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.83825344" />
+  <path
+     d="m 138,59.09 0,8"
+     id="path97"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 138,69.09 8,0"
+     id="path99"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="34"
+     y="79.089996"
+     id="text101"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Initialise server</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="34"
+     y="93.089996"
+     id="text103"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">streaming socket</text>
+  <path
+     d="m 408,129.09 111,0"
+     id="path105"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 519,129.09 0,16"
+     id="path107"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 519,145.09 -111,0"
+     id="path109"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="420,137 428,141 428,133 "
+     id="polygon111"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="292,102 292,102 388,102 396,110 396,140 292,140 "
+     id="polygon113"
+     transform="matrix(1.1717537,0,0,1.1068324,-80.014468,-2.8069121)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.87809378" />
+  <path
+     d="m 374.62597,110.08999 0,8.85466"
+     id="path115"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 374.62597,118.94465 9.37403,0"
+     id="path117"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="270"
+     y="128.09"
+     id="text119"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Initialise client</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="270"
+     y="142.09"
+     id="text121"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">streaming socket</text>
+  <path
+     d="m 170,180.09 111,0"
+     id="path123"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,180.09 0,16"
+     id="path125"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,196.09 -111,0"
+     id="path127"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="182,188 190,192 190,184 "
+     id="polygon129"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="158,161 158,191 53,191 53,153 53,153 150,153 "
+     id="polygon131"
+     transform="matrix(1.1159895,0,0,1.0640995,-30.326344,-4.153003)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.91765374" />
+  <path
+     d="m 137.07208,158.65422 0,8.5128"
+     id="path133"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 137.07208,167.16702 8.92792,0"
+     id="path135"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="31"
+     y="177.09"
+     id="text137"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Bind socket to</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="31"
+     y="191.09"
+     id="text139"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">address and port</text>
+  <path
+     d="m 170,231.09 111,0"
+     id="path141"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,231.09 0,16"
+     id="path143"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,247.09 -111,0"
+     id="path145"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="182,239 190,243 190,235 "
+     id="polygon147"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="41,204 41,204 150,204 158,212 158,242 41,242 "
+     id="polygon149"
+     transform="matrix(1.1734886,0,0,1.042733,-39.411198,-0.62753203)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.90401161" />
+  <path
+     d="m 136.61209,212.09 0,8.34187"
+     id="path151"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 136.61209,220.43187 9.38791,0"
+     id="path153"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="13"
+     y="230.09"
+     id="text155"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Listen for incoming</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="13"
+     y="244.09"
+     id="text157"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">connections</text>
+  <path
+     d="m 174,282.09 218,0"
+     id="path159"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="186,274 194,278 194,270 "
+     id="polygon161"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="540,272 540,284 428,284 428,264 428,264 532,264 "
+     id="polygon163"
+     transform="matrix(1.188483,0,0,1.2029817,-92.670709,-45.497161)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.83632296" />
+  <path
+     d="m 539.60225,272.09001 0,9.62386"
+     id="path165"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 539.60225,281.71387 9.50786,0"
+     id="path167"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="420"
+     y="288.09"
+     id="text169"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Connect to server</text>
+  <path
+     d="m 174,325.09 107,0"
+     id="path171"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,325.09 0,16"
+     id="path173"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 281,341.09 -107,0"
+     id="path175"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="186,333 194,337 194,329 "
+     id="polygon177"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="44,289 44,289 150,289 158,297 158,345 44,345 "
+     id="polygon179"
+     transform="matrix(1.1638098,0,0,1.1304882,-37.881941,-29.621096)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.8718183" />
+  <path
+     d="m 136.68953,297.09 0,9.0439"
+     id="path181"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 136.68953,306.1339 9.31048,0"
+     id="path183"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="18"
+     y="319.09"
+     id="text185"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Accept connection</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="18"
+     y="333.09"
+     id="text187"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">creating a client</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="18"
+     y="349.09"
+     id="text189"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">socket at server</text>
+  <path
+     d="m 174,378.09 456,0"
+     id="path191"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="642,370 634,374 634,366 "
+     id="polygon193"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <path
+     d="m 408,413.09 222,0"
+     id="path195"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="642,405 634,409 634,401 "
+     id="polygon197"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="666,395 814,395 822,403 822,415 666,415 666,395 "
+     id="polygon199"
+     transform="matrix(1.2290049,0,0,1,-164.51729,8.089998)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.90203458" />
+  <path
+     d="m 835.8927,403.09 0,8"
+     id="path201"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 835.8927,411.09 9.83204,0"
+     id="path203"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="656"
+     y="417.09"
+     id="text205"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Send data to server thread</text>
+  <path
+     d="m 650,448.09 107,0"
+     id="path207"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 757,448.09 0,16"
+     id="path209"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 757,464.09 -107,0"
+     id="path211"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="662,456 670,460 670,452 "
+     id="polygon213"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="501,430 501,430 626,430 634,438 634,450 501,450 "
+     id="polygon215"
+     transform="matrix(1.2136649,0,0,1,-147.46355,8.089998)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.90771729" />
+  <path
+     d="m 612.29068,438.09 0,8"
+     id="path217"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 612.29068,446.09 9.70932,0"
+     id="path219"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="465"
+     y="452.08997"
+     id="text221"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Receive incoming data</text>
+  <path
+     d="m 650,498.09 218,0"
+     id="path223"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="880,490 872,494 872,486 "
+     id="polygon225"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="904,471 904,471 987,471 995,479 995,509 904,509 "
+     id="polygon227"
+     transform="matrix(1.19629,0,0,0.97863351,-189.44612,18.15362)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.92421228" />
+  <path
+     d="m 991.2921,479.09 0,7.82907"
+     id="path229"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 991.2921,486.91907 9.5703,0"
+     id="path231"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="900"
+     y="497.08997"
+     id="text233"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Insert reading</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="900"
+     y="511.08997"
+     id="text235"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">into database</text>
+  <path
+     d="m 650,522.09 218,0"
+     id="path237"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4" />
+  <polygon
+     points="662,514 670,518 670,510 "
+     id="polygon239"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <path
+     d="m 415.5353,537.09 218.64042,0"
+     id="path241"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4.00000001" />
+  <polygon
+     points="194,533 194,525 186,529 "
+     id="polygon243"
+     transform="translate(220,8.089998)"
+     style="fill:#000000;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 170,552.09 222,0"
+     id="path245"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4" />
+  <polygon
+     points="404,544 396,548 396,540 "
+     id="polygon247"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <path
+     d="m 170,587.09 460,0"
+     id="path249"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <polygon
+     points="642,579 634,583 634,575 "
+     id="polygon251"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <polygon
+     points="158,577 158,589 75,589 75,569 75,569 150,569 "
+     id="polygon253"
+     transform="matrix(1.0293467,0,0,1.0405963,-16.636786,-15.821243)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.96622443" />
+  <path
+     d="m 137.76522,576.27806 0,8.32477"
+     id="path255"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 137.76522,584.60283 8.23477,0"
+     id="path257"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="63"
+     y="593.08997"
+     id="text259"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Stop thread</text>
+  <path
+     d="m 170,622.09 460,0"
+     id="path261"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4" />
+  <polygon
+     points="182,614 190,618 190,610 "
+     id="polygon263"
+     style="fill:#000000;stroke:#000000;stroke-width:1"
+     transform="translate(-12,8.089998)" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="170"
+     y="74.089996"
+     id="text265"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">s = socket(streaming)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="408"
+     y="125.09"
+     id="text267"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">c = socket(streaming)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="172"
+     y="176.09"
+     id="text269"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">s.bind(address, port)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="170"
+     y="229.09"
+     id="text271"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">s.listen()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="236"
+     y="278.09"
+     id="text273"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">c.connect(address, port)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="321.09"
+     id="text275"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">c2 = s.accept()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="178"
+     y="376.09"
+     id="text277"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">ReceiveThread(c2)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="412"
+     y="411.09"
+     id="text279"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">c.send(data)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="650"
+     y="446.08997"
+     id="text281"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">data = c2.recv()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="654"
+     y="496.08997"
+     id="text283"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">insert_reading(data)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="174"
+     y="585.08997"
+     id="text285"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">join(timeout)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="547"
+     y="618.08997"
+     id="text287"
+     style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Terminated</text>
+</svg>

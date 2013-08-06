@@ -1,46 +1,78 @@
 \chapter{Methodology}
 \label{ch:methodology}
 
-This project explores the possibility of developing an RFID location sensing system using cost-effective hardware. This chapter details the software engineering tools and mathematical techniques that were employed to achieve this goal.
+This project explores the possibility of developing an RFID location sensing system using cost-effective hardware. This chapter gives the reader a detailed overview of the system components and approach to the problem. Section \ref{sec:hardset} presents the hardware setup of the system. Section \ref{sec:probdef} describes the problem this project is trying to solve. Then, the overall software architecture is discussed in section \ref{sec:softarch}. Section \ref{sec:rssitodist} details the methods for converting RSSI to distance measurements. Finally, section \ref{sec:trilatmeth} describes trilateration, a mathematical technique that computes the relative position of an unknown object to three reference objects.
 
-\section{Project management}
+\section{Hardware Setup}
+\label{sec:hardset}
 
-A number of considerations were taken into account when deciding how to manage this project. First, the system operates using a server-client model. This means that different software components are executing on multiple processing nodes. As a result, changes in one node need to be propagated in the whole system ensuring the consistency of the software.  Second, the software implementation is making use of different programming languages, multiple programming libraries, and a database management system. In order to ensure an iterative development process, where software components are constructed, debugged, and packaged together, it was decided to use the \textsc{Git} version control system\footnote{\textsc{Git} version control system - \url{http://git-scm.com/}}. This system keeps a distributed repository of all software and database files so that each node stores a copy of not only the whole software system, but also a complete history of changes. In addition, the use of a version control system stimulates the developer to merge a number of important changes into versions of the software. In this way, it becomes easy to track and monitor the project progress. The source code and documentation were hosted in a private repository on \textsc{GitHub}\footnote{The private project repository - \url{https://github.com/sandio/raspi-rfid-tracking}} with access granted to the people involved in developing and supervising the project.
+The devices used in this project were connected together to form the hardware setup of the system. These components and their specifications are described in detail in section \ref{sec:projhard}. Figure \ref{fig:hardset} is a diagram illustrating how the hardware devices were attached to each other.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/blockdiag/hardwaredesign}
+		\caption{Hardware setup of the project.}
+		\label{fig:hardset}
+	\end{center}
+\end{figure}
+
+\subsection{Reader nodes}
+
+The building blocks of the system are the reader nodes. Each consists of an RFID reader connected to a Raspberry Pi using USB. The project plan had provisioned extra time to account for the possible complications when interfacing between serial devices and single-board computers. The Raspberry Pis have USB ports that cannot power all kinds of USB devices. Another issue was whether the computers were capable of recognising and communicating with these specific RFID readers. Fortunately, these potential problems did not occur during this project. The RFID devices read identification data from the RFID tag over the air.
+
+\subsection{Computer Network}
+
+The Raspberry Pis were connected in a local area computer network (LAN) using Ethernet cables and a network switch. This allowed them to communicate readings to each other. The Raspberry Pi network provided means for remotely accessing, programming, and controlling the reader nodes. Remote access was established by connecting to the network using the network switch or through a wide area network, such as the Internet.
 
 
-\section{Software Engineering Practices}
+\subsection{Alternative connectivity using Wi-Fi}
 
-A number of software engineering practices were of significant help when developing the RFID location sensing system. This section presents them and explains the problems that they solve.  
+During the project planning phase, an alternative connectivity method was considered. The Raspberry Pis have two USB ports. One of them was occupied by a RFID reader. The spare one could have been used for a wireless network adapter. Then, all reader nodes could connect to a wireless router or form an ad hoc network in order to communicate measurements. This way all Ethernet cabling and the network switch are not required giving a greater flexibility when positioning the reader nodes. Figure \ref{fig:hardsetwifi} in Appendix \ref{sec:hardsetwifi} shows this alternative hardware setup.
 
-\subsection{Project decomposition}
+There are two matters that complicate this choice of connectivity. First, there is a high probability that the power fed to the USB ports is not enough to supply both an RFID reader and a Wi-Fi adapter. In which case, three powered USB hubs were needed to be purchased. Second, the Raspberry Pis have integrated Ethernet ports. Buying three wireless USB dongles is an unjustifiable expense in case these might not get powered by the single-board computers.
 
-It would have been a serious challenge to approach the project's task directly. The system consists of pieces of hardware that had to be orchestrated to solve a common problem. Therefore, it was very important to identify the system's components from early on. Hierarchical relationships between these parts were also defined. These steps ensured that the project could be divided into stages in order to systematically solve the main task. Regular deliveries of working components provided a more manageable way of constructing the final solution. For example, the work plan, devised before the start of the project, consisted of the following key activities:
+\section{Problem Definition}
+\label{sec:probdef}
 
-\begin{enumerate}
- 	\item Prepare the single-board computers
- 	\item Construct functional RFID reader nodes
- 	\item Receive information from the active RFID tag
- 	\item Establish a network communication between nodes
- 	\item Develop the localisation algorithm
- \end{enumerate}
+Given the hardware setup of the system consisting of three reader nodes connected into a computer network, the problem it is trying to solve is to estimate the relative position of an RFID tag to three RFID readers. The system should accept the following inputs:
+\begin{itemize}
+	\item identification information received from the RFID tag,
+	\item RSSI measurements computed at the RFID readers,
+	\item and positions of the reader nodes in three dimensions.
+\end{itemize}
+The system should output the location of the RFID tag relative to the reader nodes. The system should be able to estimate the tag's position when it is:
 
-Iterative construction of the system aided the development process. Problems and challenges were appearing gradually which helped solving them one at a time. 
+\begin{itemize}
+ 	\item stationary,
+ 	\item in motion,
+ 	\item unobstructed from any objects,
+ 	\item occluded by a single or multiple objects. 
+\end{itemize}
+ 
+Combinations of the above cases provide a basis for experiments to check whether the problem is solved by the system. To determine how well the system performs, the accuracy of localisation is compared to previous systems described in section \ref{sec:prevwork}.
 
-\subsection{Object-oriented design}
+\section{Software Architecture}
+\label{sec:softarch}
 
-This location sensing system is a combination of different software technologies. For instance, the system required an interface between a single-board computer and an RFID receiver. It also required means of communication between processing nodes. Logically, these and other requirements could be grouped into sets of functions, which is a motivation for employing an object-oriented design. This software methodology was used from the beginning of the project. Similar functionality is organised in a class. A class is responsible for all procedures concerning a particular part of the system. As a result, software is split into categories of functions, which makes it easy to address the class in charge of certain functionality.
+The system consists of three network nodes that need to aggregate reader measurements on a single computer in order to process the data. A server-client model was chosen because the measurements are collected in one place, which is convenient for converting RSSI values to distance and computing the tag's position. Figure \ref{fig:sercli} shows a conceptual diagram of the server-client model used in this project. Every Raspberry Pi is capable of being both a server and a client. A disadvantage of this model is the single point of failure of the system. If the server fails, then another node needs to become an aggregator of data otherwise the system would not function as intended.
 
-Another benefit of the object-oriented design is modularity. For example, once input data is collected from all nodes it could be processed by a localisation algorithm in order to estimate the tag's position. Trilateration was chosen as the technique for computing locations. Object-oriented software development provides an easy way to experiment with different algorithms by substituting one class with another.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/blockdiag/serverclient}
+		\caption{Conceptual diagram of the server-client model.}
+		\label{fig:sercli}
+	\end{center}
+\end{figure}
 
-\subsection{System scalability}
+Client nodes have two main responsibilities. First, they read the identity and RSSI of the tag. Second, clients send this data on the network to the server. A server node provides the following functionality. It receives measurements from other nodes. A server also reads the tag's identity and RSSI. Then, this computer converts the RSSI values into distance. Distance measurements together with the positions of the reader nodes are input into a localisation algorithm. These steps are illustrated on Figure \ref{fig:sercliresp}.
 
-In this project, three single-board computers collaborate by exchanging RFID readings to localise a tagged object. Three reference points are needed in order to use trilateration in two dimensions  \cite{Zhang2009}. Nevertheless, more reader nodes could be used, in case multileration is implemented, to give a better approximation of a tag's position. Another scenario involves nodes disconnecting and later reappearing into the network. These possible cases show the dynamic nature of the system. It could scale up as the system grows, but also scale down if a reader node is faulty. This is an important property of the system, which was noted at the start of the project. To ensure scalability of the server-client model, the multi-threading programming model was used. It allows multiple threads to exist within the context of a single process. As a result, the system could concurrently receive RFID measurements from multiple reader nodes, update data structures, and compute the location of the unknown object.
-
-\subsection{Documentation}
-
-Writing documentation was an important part of this project. The source code of the system has been systematically documented throughout the development process. Using the inline comments specifying how the software components work, an Application Programming Interface (API) was constructed using \textsc{Sphinx}\footnote{\textsc{Sphinx} - a Python documentation generator - \url{http://sphinx-doc.org/index.html}}, a \textsc{Python} documentation generator. The API contains specifications of data structures, variables, and functions. It is a valuable source of information that provides a quick reference of how the system's components work and interact with each other. In addition, a manual for future users of the system was written. It gives a quick introduction of how to set up and use the system. The API and user manual can be viewed in Appendix \textbf{REF}  \textbf{TODO}.
-
-This project consists of both hardware and software components. In order to clearly understand how hardware components are connected and how software objects interact, a number of diagrams were used in Chapter \textbf{REF} and in the user manual. These diagrams were generated using \textsc{Blockdiag} \footnote{\textsc{Blockdiag} - simple diagram images generator - \url{http://blockdiag.com/en/}} , a diagram image generator written in \textsc{Python}.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/blockdiag/serverclientresp}
+		\caption{Diagram of the general server and client responsibilities.}
+		\label{fig:sercliresp}
+	\end{center}
+\end{figure}
 
 \section{Converting RSSI to distance}
 \label{sec:rssitodist}

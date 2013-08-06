@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 655 490"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="serial.pdf">
+  <metadata
+     id="metadata201">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>blockdiag</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1054"
+     inkscape:window-height="1063"
+     id="namedview199"
+     showgrid="false"
+     inkscape:zoom="1.3622629"
+     inkscape:cx="327.5"
+     inkscape:cy="245"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs_block">
+    <filter
+       height="1.504"
+       id="filter_blur"
+       inkscape:collect="always"
+       width="1.1575"
+       x="-0.07875"
+       y="-0.252">
+      <feGaussianBlur
+         id="feGaussianBlur3780"
+         inkscape:collect="always"
+         stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title
+     id="title7">blockdiag</title>
+  <desc
+     id="desc9">seqdiag {
+span_width = 100
+span_height = 5
+
+Main; SerialConnection
+
+Main =&gt; SerialConnection [label = &quot;SerialConnection(port, timeout)&quot;, return = &quot;&quot;, note = &quot;Initialise a serial connection&quot;]
+
+Main =&gt; SerialConnection [label = &quot;open()&quot;, return = &quot;True/False&quot;, note = &quot;Open the port for communication&quot;]
+
+Main -&gt; SerialConnection [label = &quot;flush_input()&quot;, note = &quot;Flush the input buffer&quot;] {
+	SerialConnection -&gt; SerialConnection [note = &quot;Clear buffer until\nconverter flood stops&quot;]
+}
+Main &lt;-- SerialConnection [label = &quot;print buffer contents&quot;]
+
+Main -&gt; SerialConnection [label = &quot;read()&quot;, note = &quot;Read data from RFID reader&quot;] {
+	SerialConnection -&gt; SerialConnection [note = &quot;Read characters until\na space separator is seen&quot;]
+}
+Main &lt;-- SerialConnection [label = &quot;read data&quot;]
+
+Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/False&quot;, note = &quot;Close communication port&quot;]
+}
+</desc>
+  <rect
+     fill="rgb(0,0,0)"
+     height="409"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="163"
+     y="76"
+     id="rect11" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="15"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="391"
+     y="76"
+     id="rect13" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="35"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="391"
+     y="126"
+     id="rect15" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="78"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="391"
+     y="196"
+     id="rect17" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="78"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="391"
+     y="309"
+     id="rect19" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="35"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="391"
+     y="422"
+     id="rect21" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="411,66 562,66 570,74 570,86 411,86 411,66"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon23" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="411,116 592,116 600,124 600,136 411,136 411,116"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon25" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="411,186 533,186 541,194 541,206 411,206 411,186"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon27" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="499,211 618,211 626,219 626,249 499,249 499,211"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon29" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="411,299 570,299 578,307 578,319 411,319 411,299"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon31" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="499,324 634,324 642,332 642,362 499,362 499,324"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon33" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="411,412 555,412 563,420 563,432 411,432 411,412"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon35" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="128"
+     x="103"
+     y="11"
+     id="rect37" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="128"
+     x="331"
+     y="11"
+     id="rect39" />
+  <path
+     d="M 164 45 L 164 495"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="8 4"
+     id="path41" />
+  <rect
+     fill="moccasin"
+     height="409"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="160"
+     y="70"
+     id="rect43" />
+  <path
+     d="M 392 45 L 392 495"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="8 4"
+     id="path45" />
+  <rect
+     fill="moccasin"
+     height="15"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="388"
+     y="70"
+     id="rect47" />
+  <rect
+     fill="moccasin"
+     height="35"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="388"
+     y="120"
+     id="rect49" />
+  <rect
+     fill="moccasin"
+     height="78"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="388"
+     y="190"
+     id="rect51" />
+  <rect
+     fill="moccasin"
+     height="78"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="388"
+     y="303"
+     id="rect53" />
+  <rect
+     fill="moccasin"
+     height="35"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="388"
+     y="416"
+     id="rect55" />
+  <rect
+     fill="rgb(255,255,255)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     width="128"
+     x="100"
+     y="5"
+     id="rect57" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="151"
+     y="33"
+     id="text59"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Main</text>
+  <rect
+     fill="rgb(255,255,255)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     width="128"
+     x="328"
+     y="5"
+     id="rect61" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="350"
+     y="33"
+     id="text63"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">SerialConnection</text>
+  <path
+     d="M 172 70 L 384 70"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path65" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="376,66 384,70 376,74"
+     stroke="rgb(0,0,0)"
+     id="polygon67" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="408,60 559,60 567,68 567,80 408,80 408,60"
+     stroke="rgb(0,0,0)"
+     id="polygon69" />
+  <path
+     d="M 559 60 L 559 68"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path71" />
+  <path
+     d="M 559 68 L 567 68"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path73" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="414"
+     y="76"
+     id="text75"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Initialise a serial connection</text>
+  <path
+     d="M 172 85 L 384 85"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path77" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="180,81 172,85 180,89"
+     stroke="rgb(0,0,0)"
+     id="polygon79" />
+  <path
+     d="M 172 120 L 384 120"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path81" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="376,116 384,120 376,124"
+     stroke="rgb(0,0,0)"
+     id="polygon83" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="408,110 589,110 597,118 597,130 408,130 408,110"
+     stroke="rgb(0,0,0)"
+     id="polygon85" />
+  <path
+     d="M 589 110 L 589 118"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path87" />
+  <path
+     d="M 589 118 L 597 118"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path89" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="410"
+     y="126"
+     id="text91"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Open the port for communication</text>
+  <path
+     d="M 172 155 L 384 155"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path93" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="180,151 172,155 180,159"
+     stroke="rgb(0,0,0)"
+     id="polygon95" />
+  <path
+     d="M 172 190 L 384 190"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path97" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="376,186 384,190 376,194"
+     stroke="rgb(0,0,0)"
+     id="polygon99" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="408,180 530,180 538,188 538,200 408,200 408,180"
+     stroke="rgb(0,0,0)"
+     id="polygon101" />
+  <path
+     d="M 530 180 L 530 188"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path103" />
+  <path
+     d="M 530 188 L 538 188"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path105" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="414"
+     y="196"
+     id="text107"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Flush the input buffer</text>
+  <path
+     d="M 400 224 L 480 224"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path109" />
+  <path
+     d="M 480 224 L 480 240"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path111" />
+  <path
+     d="M 480 240 L 400 240"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path113" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="408,236 400,240 408,244"
+     stroke="rgb(0,0,0)"
+     id="polygon115" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="496,205 615,205 623,213 623,243 496,243 496,205"
+     stroke="rgb(0,0,0)"
+     id="polygon117" />
+  <path
+     d="M 615 205 L 615 213"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path119" />
+  <path
+     d="M 615 213 L 623 213"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path121" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="504"
+     y="223"
+     id="text123"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Clear buffer until</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="502"
+     y="239"
+     id="text125"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">converter flood stops</text>
+  <path
+     d="M 172 268 L 384 268"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path127" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="180,264 172,268 180,272"
+     stroke="rgb(0,0,0)"
+     id="polygon129" />
+  <path
+     d="M 172 303 L 384 303"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path131" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="376,299 384,303 376,307"
+     stroke="rgb(0,0,0)"
+     id="polygon133" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="408,293 567,293 575,301 575,313 408,313 408,293"
+     stroke="rgb(0,0,0)"
+     id="polygon135" />
+  <path
+     d="M 567 293 L 567 301"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path137" />
+  <path
+     d="M 567 301 L 575 301"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path139" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="414"
+     y="309"
+     id="text141"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Read data from RFID reader</text>
+  <path
+     d="M 400 337 L 480 337"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path143" />
+  <path
+     d="M 480 337 L 480 353"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path145" />
+  <path
+     d="M 480 353 L 400 353"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path147" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="408,349 400,353 408,357"
+     stroke="rgb(0,0,0)"
+     id="polygon149" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="496,318 631,318 639,326 639,356 496,356 496,318"
+     stroke="rgb(0,0,0)"
+     id="polygon151" />
+  <path
+     d="M 631 318 L 631 326"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path153" />
+  <path
+     d="M 631 326 L 639 326"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path155" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="504"
+     y="336"
+     id="text157"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Read characters until</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="502"
+     y="352"
+     id="text159"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">a space separator is seen</text>
+  <path
+     d="M 172 381 L 384 381"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path161" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="180,377 172,381 180,385"
+     stroke="rgb(0,0,0)"
+     id="polygon163" />
+  <path
+     d="M 172 416 L 384 416"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path165" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="376,412 384,416 376,420"
+     stroke="rgb(0,0,0)"
+     id="polygon167" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="408,406 552,406 560,414 560,426 408,426 408,406"
+     stroke="rgb(0,0,0)"
+     id="polygon169" />
+  <path
+     d="M 552 406 L 552 414"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path171" />
+  <path
+     d="M 552 414 L 560 414"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path173" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="414"
+     y="422"
+     id="text175"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">Close communication port</text>
+  <path
+     d="M 172 451 L 384 451"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path177" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="180,447 172,451 180,455"
+     stroke="rgb(0,0,0)"
+     id="polygon179" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="68"
+     id="text181"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">SerialConnection(port, timeout)</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="118"
+     id="text183"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">open()</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="329"
+     y="153"
+     id="text185"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">True/False</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="188"
+     id="text187"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">flush_input()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="272"
+     y="266"
+     id="text189"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">print buffer contents</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="301"
+     id="text191"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">read()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="333"
+     y="379"
+     id="text193"
+     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">read data</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="176"
+     y="414"
+     id="text195"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">close()</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="329"
+     y="449"
+     id="text197"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">True/False</text>
+</svg>

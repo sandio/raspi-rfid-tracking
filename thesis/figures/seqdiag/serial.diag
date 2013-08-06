@@ -1,0 +1,22 @@
+seqdiag {
+span_width = 100
+span_height = 5
+
+Main; SerialConnection
+
+Main => SerialConnection [label = "SerialConnection(port, timeout)", return = "", note = "Initialise a serial connection"]
+
+Main => SerialConnection [label = "open()", return = "True/False", note = "Open the port for communication"]
+
+Main -> SerialConnection [label = "flush_input()", note = "Flush the input buffer"] {
+	SerialConnection -> SerialConnection [note = "Clear buffer until\nconverter flood stops"]
+}
+Main <-- SerialConnection [label = "print buffer contents"]
+
+Main -> SerialConnection [label = "read()", note = "Read data from RFID reader"] {
+	SerialConnection -> SerialConnection [note = "Read characters until\na space separator is seen"]
+}
+Main <-- SerialConnection [label = "read data"]
+
+Main => SerialConnection [label = "close()", return = "True/False", note = "Close communication port"]
+}

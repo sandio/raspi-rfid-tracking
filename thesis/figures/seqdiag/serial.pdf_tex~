@@ -1,0 +1,74 @@
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'serial.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{524bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.7480916)%
+    \put(0,0){\includegraphics[width=\unitlength]{figures/seqdiag/serial.pdf}}%
+    \put(0.23053435,0.69770992){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Main}}}%
+    \put(0.53435115,0.69770992){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{SerialConnection}}}%
+    \put(0.63206107,0.63206107){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Initialise a serial connection}}}%
+    \put(0.6259542,0.55572519){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Open the port for communication}}}%
+    \put(0.63206107,0.44885496){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Flush the input buffer}}}%
+    \put(0.76946565,0.40763359){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Clear buffer until}}}%
+    \put(0.76641221,0.38320611){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{converter flood stops}}}%
+    \put(0.63206107,0.27633588){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Read data from RFID reader}}}%
+    \put(0.76946565,0.2351145){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Read characters until}}}%
+    \put(0.76641221,0.21068702){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a space separator is seen}}}%
+    \put(0.63206107,0.10381679){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Close communication port}}}%
+    \put(0.26870229,0.64427481){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{SerialConnection(port, timeout)}}}%
+    \put(0.26870229,0.56793893){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{open()}}}%
+    \put(0.50229008,0.51450382){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{True/False}}}%
+    \put(0.26870229,0.4610687){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{flush_input()}}}%
+    \put(0.41526718,0.34198473){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{print buffer contents}}}%
+    \put(0.26870229,0.28854962){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{read()}}}%
+    \put(0.50839695,0.16946565){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{read data}}}%
+    \put(0.26870229,0.11603053){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{close()}}}%
+    \put(0.50229008,0.06259542){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{True/False}}}%
+  \end{picture}%
+\endgroup%

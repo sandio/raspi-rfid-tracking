@@ -1,7 +1,7 @@
 \chapter{Methodology}
 \label{ch:methodology}
 
-This project explores the possibility of developing an RFID location sensing system using cost-effective hardware. This chapter gives the reader a detailed overview of the system components and approach to the problem. Section \ref{sec:hardset} presents the hardware setup of the system. Section \ref{sec:probdef} describes the problem this project is trying to solve. Then, the overall software architecture is discussed in section \ref{sec:softarch}. Section \ref{sec:rssitodist} details the methods for converting RSSI to distance measurements. Finally, section \ref{sec:trilatmeth} describes trilateration, a mathematical technique that computes the relative position of an unknown object to three reference objects.
+This chapter gives the reader a detailed overview of the system components and approach to the problem. Section \ref{sec:hardset} presents the hardware setup of the system. Section \ref{sec:probdef} describes the problem this project is trying to solve. Then, the overall software architecture is discussed in section \ref{sec:softarch}. Section \ref{sec:rssitodist} details the methods for converting RSSI to distance measurements. Finally, section \ref{sec:trilatmeth} describes trilateration, a mathematical technique that computes the relative position of an unknown object to three reference objects.
 
 \section{Hardware Setup}
 \label{sec:hardset}
@@ -98,6 +98,7 @@ Section \ref{subsec:rssiandrss} discussed the relationship between RSSI and rece
 There are three problems with this approach. First, it models how the signal strength decreases in a line-of-sight propagation in a free from obstacles environments. This project is concerned with location sensing in indoor spaces making the free-space path loss formula inappropriate for this setting. Second, computing the distance for the minimum ($0dB$) and maximum ($60dB$) values of the signal strength range results in distances $0.075$ and $75.716$ meters, which is beyond the practical range of the RFID devices. Third, the conversion from RSSI to RSS might not be appropriate in this case. The RFID equipment for this project is more affordable compared to commercial RFID equipment\footnote{How much do RFID readers cost today? - \url{http://www.rfidjournal.com/faq/show?86}}. As a result, the online support and specifications are scarce, which raises the question to what extent these can be trusted. Moreover, the manufacturer claims a RSSI resolution of eight bits outputting values between 0 and 255. During the range experiments with this hardware a much smaller resolution was recorded. Consequently, converting RSSI unitless values to received signal strength in $dBm$ cannot be relied upon. For details on the evaluation of the RFID devices refer to \textbf{REF}. 
 
 \subsection{Translation table}
+\label{subsec:transtbl}
 
 Rather than relying on the physical relationship between electromagnetic waves and distance, a simpler and more direct approach was taken. For each RFID reader, a translation table was constructed mapping RSSI to distance. According to the manufacturer, but also observed in hardware experiments, reader measurements vary between different devices. There are two reasons for this. First, the RFID readers are handmade, which introduces small differences in their circuits. Second, the devices are not calibrated to each other when being built.   
 
@@ -114,10 +115,10 @@ The methodology for constructing these translation tables relies entirely on RSS
 	\label{tbl:trans}
 \end{table}
 
-As an example, the first two columns of Table \ref{tbl:trans} have the following meaning. When the reader and tag antennas were touching the average RSSI value from all experiments was 80. When the tag was one meter away from the reader, the average RSSI value of all experiment measurements was 65. RSSI values between 80 and 65 are linearly converted to the new range from zero to one meters as follows: 
+As an example, the first two columns of Table \ref{tbl:trans} have the following meaning. When the reader and tag antennas were touching the average RSSI value from all experiments was 80. When the tag was one meter away from the reader, the average RSSI value of all experiment measurements was 65. RSSI values between 80 and 65 are linearly converted to the new range from zero to one meters as follows:
 
-\[Old.range = old.min - old.max \\\]
-\[New.value = new.min + (old.min - old.value) / old.range\]
+\[RSSI \ range \ = \ RSSI \ min \ - \ RSSI \ max \\\]
+\[Distance \ = \ Distance \ min \ + \ (RSSI \ min \ - \ RSSI \ value) \ / \ RSSI \ range\]
 
 An obvious limitation of these conversions is the size of the RSSI ranges. For example, there are 15 possible values that the first reader could measure when the tag is between zero and one meters away from it. In contrast, for a distance between six and seven meters the RSSI values change only by one unit. Following from that, the granularity of the distance estimation changes depending on the range of the RSSI measurements. This is caused by a hardware limitation of the readers when measuring RSSI and has been found during the range experiments presented in \textbf{REF}.
 
@@ -177,7 +178,16 @@ where $\hat e_x$, $\hat e_y$, and $\hat e_z$ are the basis unit vectors in the $
 	& d = \| \vec p_2 - \vec p_1 \|, &&  i = \hat e_x \cdot ( \vec p_3 - \vec p_1 ), && j = \hat e_y \cdot ( \vec p_3 - \vec p_1 ) \\
 	& \hat e_x = \frac{ \vec p_2 - \vec p_1 }{ d }, && \hat e_y = \frac{ \vec p_3 - \vec p_1 - \hat e_x i}{ \| \vec p_3 - \vec p_1 - \hat e_x i \| }, && \hat e_z = \hat e_x \times \hat e_y
 \end{align*}
-Thus, the intersection point of the three spheres, which is the solution of the problem, is:
+Thus, the intersection point of the three spheres is:
 \[\vec p_{1,2} = \vec p_1 \ + \ \hat e_x x \ + \ \hat e_y y \ \pm \hat e_z z\]
+The number of solutions to this problem depend on the $z$ component. Recall that $z=\pm \sqrt{r_1^2-x^2-y^2}$. Consequently, there is only one intersection point when $z$ equals zero. If $z$ equals to plus or minus the square root of a positive number, then there are two intersection points. In case $z$ equals to the square root of a negative number, no solutions exist.
 
-This mathematical method is used to estimate the position of an RFID tag. It is efficient because trigonometric functions are not used. Instead, this method relies on elementary arithmetic operations \cite{Manolakis1996}. When implementing this method, one needs to account for some specific cases, for instance, when $d$ equals $0$. In this case, the sphere centres $\vec p_1$ and $\vec p_2$ share the same coordinates, which means that these two spheres are concentric. Consequently, no solution to the problem exists because these spheres cannot intersect when they have different radii and are the same sphere if they have equal radii. Section \textbf{REF} is concerned with the implementation details and conditions guarding for specific cases. 
+There are a number of special cases that need to be taken into account. For instance, when $d$ is zero, the sphere centres $\vec p_1$ and $\vec p_2$ share the same coordinates, which means that these two spheres are concentric. Consequently, no solution to the problem exists because these spheres cannot intersect when they have different radii and are the same sphere if they have equal radii. In another case, if the three reader nodes are positioned in a line  ($j = 0$), then their spheres are collinear, which violates one of the requirements of the technique. Nevertheless, an intersection point $\vec p_1 \pm \hat e_x r_1$ exists, if:
+
+\[ \| \frac{\vec p_2}{\vec p_1 \pm \hat e_x r_1} \| - r_2 = 0, \quad \| \frac{\vec p_3}{\vec p_1 \pm \hat e_x r_1} \| - r_3 = 0 \]
+
+This mathematical method is used to estimate the position of an RFID tag. It is efficient because trigonometric functions are not used. Instead, this method relies on elementary arithmetic operations \cite{Manolakis1996}. Section \ref{subsec:trilatimpl} is concerned with the implementation details of this method.
+
+\section{Summary}
+
+This chapter presented the overall hardware and software architecture of the system. It also described the methodology for converting RSSI to disntace and computing the relative position of an unknown object to three reference points and their distance estimations to this object. The next chapter details the hardware issues that were faced. In addition, it explains how the system was implemented in software.
