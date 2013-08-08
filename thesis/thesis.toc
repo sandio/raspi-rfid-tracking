@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Alternative connectivity using Wi-Fi}{18}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Problem Definition}{19}{section.3.2}
 \contentsline {section}{\numberline {3.3}Software Architecture}{19}{section.3.3}
-\contentsline {section}{\numberline {3.4}Converting RSSI to distance}{20}{section.3.4}
+\contentsline {section}{\numberline {3.4}Converting RSSI to distance}{19}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Free-space Path Loss}{20}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Translation table}{21}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}Trilateration}{23}{section.3.5}
@@ -64,23 +64,24 @@
 \contentsline {subsection}{\numberline {4.7.2}Trilateration}{35}{subsection.4.7.2}
 \contentsline {section}{\numberline {4.8}Web Interface}{35}{section.4.8}
 \contentsline {section}{\numberline {4.9}Summary}{36}{section.4.9}
-\contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Hardware Evaluation}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Orientation}{37}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Range}{39}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Elevation}{40}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Line-of-sight Grid RSSI}{41}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}System evaluation}{42}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Line-of-sight Grid Error}{42}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}Discussion}{43}{section.5.3}
-\contentsline {section}{\numberline {5.4}Summary}{43}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contribution}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{45}{section.6.2}
-\contentsline {section}{\numberline {6.3}Summary}{45}{section.6.3}
-\contentsline {chapter}{\numberline {A}Supplementary Information}{47}{appendix.A}
-\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{47}{section.A.1}
-\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{48}{section.A.2}
-\contentsline {section}{\numberline {A.3}Orientation}{49}{section.A.3}
-\contentsline {section}{\numberline {A.4}Grid}{51}{section.A.4}
-\contentsline {chapter}{Bibliography}{53}{appendix*.42}
+\contentsline {chapter}{\numberline {5}Evaluation}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Hardware Evaluation}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Range}{39}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Line-of-sight Grid RSSI}{41}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Orientation of tag to reader}{41}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Elevation}{44}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Wall penetration}{44}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}System evaluation}{44}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Line-of-sight Grid Error}{45}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Discussion}{47}{section.5.3}
+\contentsline {section}{\numberline {5.4}Summary}{47}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contribution}{49}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{49}{section.6.2}
+\contentsline {section}{\numberline {6.3}Summary}{49}{section.6.3}
+\contentsline {chapter}{\numberline {A}Supplementary Information}{51}{appendix.A}
+\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{51}{section.A.1}
+\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{52}{section.A.2}
+\contentsline {section}{\numberline {A.3}Orientation}{53}{section.A.3}
+\contentsline {section}{\numberline {A.4}Grid}{56}{section.A.4}
+\contentsline {chapter}{Bibliography}{59}{appendix*.45}

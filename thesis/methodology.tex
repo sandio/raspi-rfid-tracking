@@ -41,14 +41,13 @@ Given the hardware setup of the system consisting of three reader nodes connecte
 	\item and positions of the reader nodes in three dimensions.
 \end{itemize}
 The system should output the location of the RFID tag relative to the reader nodes. The system should be able to estimate the tag's position when it is:
-
 \begin{itemize}
  	\item stationary,
  	\item in motion,
  	\item unobstructed from any objects,
  	\item occluded by a single or multiple objects. 
 \end{itemize}
- 
+
 Combinations of the above cases provide a basis for experiments to check whether the problem is solved by the system. To determine how well the system performs, the accuracy of localisation is compared to previous systems described in section \ref{sec:prevwork}.
 
 \section{Software Architecture}
@@ -190,4 +189,4 @@ This mathematical method is used to estimate the position of an RFID tag. It is 
 
 \section{Summary}
 
-This chapter presented the overall hardware and software architecture of the system. It also described the methodology for converting RSSI to disntace and computing the relative position of an unknown object to three reference points and their distance estimations to this object. The next chapter details the hardware issues that were faced. In addition, it explains how the system was implemented in software.
+This chapter presented the overall hardware and software architecture of the system. It also described the methodology for converting RSSI to disntace and computing the relative position of an unknown object to three reference points using their distance estimations to this object. The next chapter details the hardware issues that were faced. In addition, it explains how the system was implemented in software.

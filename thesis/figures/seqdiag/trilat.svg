@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 667 562"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="trilat.svg">
+  <metadata
+     id="metadata227">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1054"
+     inkscape:window-height="1063"
+     id="namedview225"
+     showgrid="false"
+     inkscape:zoom="1.1877381"
+     inkscape:cx="333.5"
+     inkscape:cy="281"
+     inkscape:window-x="0"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs_block">
+    <filter
+       height="1.504"
+       id="filter_blur"
+       inkscape:collect="always"
+       width="1.1575"
+       x="-0.07875"
+       y="-0.252">
+      <feGaussianBlur
+         id="feGaussianBlur3780"
+         inkscape:collect="always"
+         stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title
+     id="title7">blockdiag</title>
+  <desc
+     id="desc9">seqdiag {
+span_height = 5
+Trilateration; Converter; DatabaseHandler
+
+Trilateration =&gt; DatabaseHandler [label = &quot;get_positions()&quot;, return = &quot;node_positions&quot;, leftnote = &quot;Get node positions\nfrom database&quot;]
+Trilateration =&gt; Converter [label = &quot;convert_readings()&quot;, return = &quot;distances&quot;, leftnote = &quot;Convert RSSI\nto distance&quot;] {
+Converter =&gt; DatabaseHandler [label = &quot;get_readings()&quot;, return = &quot;rssi_readings&quot;, leftnote = &quot;Get rssi readings\nfrom database&quot;]
+Converter -&gt; Converter [label = &quot;rssi_to_dist\n(node, rssi)&quot;, leftnote = &quot;Convert RSSI to distance\ngiven a specific reader\nnode and an rssi value&quot;]
+Converter =&gt; DatabaseHandler [label = &quot;update_dist(node, distance)&quot;, leftnote = &quot;Update the distance\nfrom a node to the tag&quot;]
+}
+Trilateration -&gt; Trilateration [label = &quot;trilateration\n(positions,distances)&quot;, leftnote = &quot;Trilateration\nalgorithm&quot;]
+Trilateration =&gt; DatabaseHandler [label = &quot;update_tag_position(tag_position)&quot;, leftnote = &quot;Update the\ntag position&quot;]
+}
+</desc>
+  <rect
+     fill="rgb(0,0,0)"
+     height="482"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="154"
+     y="75"
+     id="rect11" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="249"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="346"
+     y="153"
+     id="rect13" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="44"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="538"
+     y="75"
+     id="rect15" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="44"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="538"
+     y="196"
+     id="rect17" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="24"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="538"
+     y="343"
+     id="rect19" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="24"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="8"
+     x="538"
+     y="505"
+     id="rect21" />
+  <polygon
+     points="134,56 142,64 142,94 27,94 27,56 27,56 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
+     id="polygon23"
+     transform="translate(0,14)" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="47,134 134,134 142,142 142,172 47,172 47,134"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon25" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="229,177 326,177 334,185 334,215 229,215 229,177"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon27" />
+  <polygon
+     points="334,273 334,321 182,321 182,265 182,265 326,265 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
+     id="polygon29"
+     transform="translate(2,-2)" />
+  <polygon
+     points="200,324 326,324 334,332 334,362 200,362 200,324 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
+     id="polygon31"
+     transform="translate(-6,6)" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="55,436 134,436 142,444 142,474 55,474 55,436"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     id="polygon33" />
+  <polygon
+     points="61,486 134,486 142,494 142,524 61,524 61,486 "
+     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
+     id="polygon35"
+     transform="translate(-4,4)" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="128"
+     x="94"
+     y="11"
+     id="rect37" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="128"
+     x="286"
+     y="11"
+     id="rect39" />
+  <rect
+     fill="rgb(0,0,0)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
+     width="128"
+     x="478"
+     y="11"
+     id="rect41" />
+  <path
+     d="M 155 45 L 155 567"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="8 4"
+     id="path43" />
+  <rect
+     fill="moccasin"
+     height="482"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="151"
+     y="69"
+     id="rect45" />
+  <path
+     d="M 347 45 L 347 567"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="8 4"
+     id="path47" />
+  <rect
+     fill="moccasin"
+     height="249"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="343"
+     y="147"
+     id="rect49" />
+  <path
+     d="M 539 45 L 539 567"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="8 4"
+     id="path51" />
+  <rect
+     fill="moccasin"
+     height="44"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="535"
+     y="69"
+     id="rect53" />
+  <rect
+     fill="moccasin"
+     height="44"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="535"
+     y="190"
+     id="rect55" />
+  <rect
+     fill="moccasin"
+     height="24"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="535"
+     y="337"
+     id="rect57" />
+  <rect
+     fill="moccasin"
+     height="24"
+     stroke="rgb(0,0,0)"
+     width="8"
+     x="535"
+     y="499"
+     id="rect59" />
+  <rect
+     fill="rgb(255,255,255)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     width="128"
+     x="91"
+     y="5"
+     id="rect61" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="118"
+     y="33"
+     id="text63"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Trilateration</text>
+  <rect
+     fill="rgb(255,255,255)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     width="128"
+     x="283"
+     y="5"
+     id="rect65" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="316"
+     y="33"
+     id="text67"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Converter</text>
+  <rect
+     fill="rgb(255,255,255)"
+     height="40"
+     stroke="rgb(0,0,0)"
+     width="128"
+     x="475"
+     y="5"
+     id="rect69" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="490"
+     y="33"
+     id="text71"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">DatabaseHandler</text>
+  <path
+     d="M 163 69 L 531 69"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path73" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="523,65 531,69 523,73"
+     stroke="rgb(0,0,0)"
+     id="polygon75" />
+  <polygon
+     points="139,58 139,88 24,88 24,50 24,50 131,50 "
+     id="polygon77"
+     transform="translate(0,16)"
+     style="fill:#ffb6c1;stroke:#000000" />
+  <path
+     d="m 131,66 0,8"
+     id="path79"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <path
+     d="m 131,74 8,0"
+     id="path81"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="24"
+     y="84"
+     id="text83"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Get node positions</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="26"
+     y="100"
+     id="text85"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">from database</text>
+  <path
+     d="M 163 113 L 531 113"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path87" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="171,109 163,113 171,117"
+     stroke="rgb(0,0,0)"
+     id="polygon89" />
+  <path
+     d="M 163 147 L 339 147"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path91" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="331,143 339,147 331,151"
+     stroke="rgb(0,0,0)"
+     id="polygon93" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="44,128 131,128 139,136 139,166 44,166 44,128"
+     stroke="rgb(0,0,0)"
+     id="polygon95" />
+  <path
+     d="M 131 128 L 131 136"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path97" />
+  <path
+     d="M 131 136 L 139 136"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path99" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="48"
+     y="146"
+     id="text101"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Convert RSSI</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="50"
+     y="162"
+     id="text103"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">to distance</text>
+  <path
+     d="M 355 190 L 531 190"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path105" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="523,186 531,190 523,194"
+     stroke="rgb(0,0,0)"
+     id="polygon107" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="226,171 323,171 331,179 331,209 226,209 226,171"
+     stroke="rgb(0,0,0)"
+     id="polygon109" />
+  <path
+     d="M 323 171 L 323 179"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path111" />
+  <path
+     d="M 323 179 L 331 179"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path113" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="226"
+     y="189"
+     id="text115"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Get rssi readings</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="226"
+     y="203"
+     id="text117"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">from database</text>
+  <path
+     d="M 355 234 L 531 234"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path119" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="363,230 355,234 363,238"
+     stroke="rgb(0,0,0)"
+     id="polygon121" />
+  <path
+     d="m 355,279 88,0"
+     id="path123"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <path
+     d="m 443,279 0,16"
+     id="path125"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <path
+     d="m 443,295 -88,0"
+     id="path127"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <polygon
+     points="355,303 363,307 363,299 "
+     id="polygon129"
+     transform="translate(0,-8)"
+     style="fill:#000000;stroke:#000000" />
+  <polygon
+     points="179,315 179,259 179,259 323,259 331,267 331,315 "
+     id="polygon131"
+     transform="matrix(1.0443124,0,0,1,-12.667419,-2)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.97855395" />
+  <path
+     d="m 324.64549,257 0,8"
+     id="path133"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 324.64549,265 8.3545,0"
+     id="path135"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="175"
+     y="275"
+     id="text137"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Convert RSSI to distance</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="177"
+     y="291"
+     id="text139"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">given a specific reader</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="177"
+     y="309"
+     id="text141"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">node and an rssi value</text>
+  <path
+     d="M 355 337 L 531 337"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path143" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="523,333 531,337 523,341"
+     stroke="rgb(0,0,0)"
+     id="polygon145" />
+  <polygon
+     points="197,318 197,318 323,318 331,326 331,356 197,356 "
+     id="polygon147"
+     transform="matrix(1.056548,0,0,1,-24.717379,8)"
+     style="fill:#ffb6c1;stroke:#000000;stroke-width:0.9728713" />
+  <path
+     d="m 316.54763,326 0,8"
+     id="path149"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <path
+     d="m 316.54763,334 8.45238,0"
+     id="path151"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:1" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="185"
+     y="342"
+     id="text153"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Update the distance</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="185"
+     y="358"
+     id="text155"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">from a node to the tag</text>
+  <path
+     d="M 355 361 L 531 361"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path157" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="363,357 355,361 363,365"
+     stroke="rgb(0,0,0)"
+     id="polygon159" />
+  <path
+     d="M 163 396 L 339 396"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path161" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="171,392 163,396 171,400"
+     stroke="rgb(0,0,0)"
+     id="polygon163" />
+  <path
+     d="M 163 449 L 264 449"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path165" />
+  <path
+     d="M 264 449 L 264 465"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path167" />
+  <path
+     d="M 264 465 L 163 465"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path169" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="171,461 163,465 171,469"
+     stroke="rgb(0,0,0)"
+     id="polygon171" />
+  <polygon
+     fill="rgb(255,182,193)"
+     points="52,430 131,430 139,438 139,468 52,468 52,430"
+     stroke="rgb(0,0,0)"
+     id="polygon173" />
+  <path
+     d="M 131 430 L 131 438"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path175" />
+  <path
+     d="M 131 438 L 139 438"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path177" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="60"
+     y="448"
+     id="text179"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Trilateration</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="60"
+     y="462"
+     id="text181"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">algorithm</text>
+  <path
+     d="M 163 499 L 531 499"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     id="path183" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="523,495 531,499 523,503"
+     stroke="rgb(0,0,0)"
+     id="polygon185" />
+  <polygon
+     points="58,480 131,480 139,488 139,518 58,518 58,480 "
+     id="polygon187"
+     transform="translate(-6,6)"
+     style="fill:#ffb6c1;stroke:#000000" />
+  <path
+     d="m 125,486 0,8"
+     id="path189"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <path
+     d="m 125,494 8,0"
+     id="path191"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000" />
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="56"
+     y="504"
+     id="text193"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">Update the</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="58"
+     y="518"
+     id="text195"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">tag position</text>
+  <path
+     d="M 163 523 L 531 523"
+     fill="none"
+     stroke="rgb(0,0,0)"
+     stroke-dasharray="4"
+     id="path197" />
+  <polygon
+     fill="rgb(0,0,0)"
+     points="171,519 163,523 171,527"
+     stroke="rgb(0,0,0)"
+     id="polygon199" />
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="167"
+     y="67"
+     id="text201"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">get_positions()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="475"
+     y="111"
+     id="text203"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">positions</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="167"
+     y="145"
+     id="text205"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">convert_readings()</text>
+  <text
+     fill="rgb(0,0,0)"
+     font-family="sansserif"
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="359"
+     y="188"
+     id="text207"
+     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     sodipodi:linespacing="125%">get_readings()</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="449"
+     y="232"
+     id="text209"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">rssi_readings</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="355"
+     y="275"
+     id="text211"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">rssi_to_dist</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="433.61621"
+     y="274.16129"
+     id="text213"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">(node, rssi)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="359"
+     y="333"
+     id="text215"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">update_dist(node, distance)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="283"
+     y="394"
+     id="text217"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">distances</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="167"
+     y="443"
+     id="text219"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">trilateration</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="241"
+     y="443"
+     id="text221"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">(positions,distances)</text>
+  <text
+     font-size="11"
+     font-style="normal"
+     font-weight="normal"
+     x="167"
+     y="495"
+     id="text223"
+     style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
+     sodipodi:linespacing="125%">update_tag_position(tag_position)</text>
+</svg>

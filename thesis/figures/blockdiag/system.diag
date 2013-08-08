@@ -1,0 +1,67 @@
+blockdiag {
+	default_fontsize = 15
+	
+	group server {
+		label = "Server Node"
+		fontsize = 17
+		color = gray
+		shape = line
+
+		group frontend {
+			label = "Front End"
+			orientation = portrait
+			color = lightgray
+			
+			web [label = "PHP Web\nInterface"]
+			apache [label = "Apache Server"]
+			
+			web -- apache
+		}
+
+		group dbms {
+			label = "DBMS"
+			color = lightgray
+
+			db [label = "SQLite Database", shape = flowchart.database]
+		}
+		
+		web <-> db [style = dotted]
+		
+		group backend {
+			label = "Back End"
+			color = lightgray
+
+			tri [label = "Trilateration"]
+			con [label = "RSSI to distance"]
+			loc [label = "Localisation\nAlgorithm"]
+			ser [label = "SerialConection"]
+			rcv [label = "Receive Thread"]
+			rcv2 [shape = dots]
+			nets [label = "Network Server"]
+			main [label = "Launcher"]
+			
+			nets -- main
+			rcv2 -- nets
+			rcv -- nets
+			ser -- main
+			loc -- main
+			con, tri -- loc
+		}
+
+		db <- rcv, tri, ser, con [style = dotted]
+	}
+
+	group client {
+		label = "Client Node"
+		fontsize = 17
+		color = gray
+		shape = line
+
+		main2 [label = "Launcher"]
+		netc [label = "Network Client"]
+		ser2 [label = "SerialConnection"]
+
+		main2 -- netc, ser2
+	}
+	netc -> rcv [folded, style = dashed]
+}

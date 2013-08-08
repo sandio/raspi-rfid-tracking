@@ -1,0 +1,13 @@
+seqdiag {
+span_height = 5
+Trilateration; Converter; DatabaseHandler
+
+Trilateration => DatabaseHandler [label = "get_positions()", return = "node_positions", leftnote = "Get node positions\nfrom database"]
+Trilateration => Converter [label = "convert_readings()", return = "distances", leftnote = "Convert RSSI\nto distance"] {
+Converter => DatabaseHandler [label = "get_readings()", return = "rssi_readings", leftnote = "Get rssi readings\nfrom database"]
+Converter -> Converter [label = "rssi_to_dist\n(node, rssi)", leftnote = "Convert RSSI to distance\ngiven a specific reader\nnode and an rssi value"]
+Converter => DatabaseHandler [label = "update_dist(node, distance)", leftnote = "Update the distance\nfrom a node to the tag"]
+}
+Trilateration -> Trilateration [label = "trilateration\n(positions,distances)", leftnote = "Trilateration\nalgorithm"]
+Trilateration => DatabaseHandler [label = "update_tag_position(tag_position)", leftnote = "Update the\ntag position"]
+}
