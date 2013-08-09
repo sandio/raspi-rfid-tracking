@@ -68,20 +68,22 @@
 \contentsline {section}{\numberline {5.1}Hardware Evaluation}{47}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Range}{48}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Orientation of tag to reader}{49}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Elevation}{51}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Line-of-sight Grid RSSI}{53}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Wall penetration}{53}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}System evaluation}{54}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Line-of-sight Grid Error}{54}{subsection.5.2.1}
-\contentsline {section}{\numberline {5.3}Discussion}{56}{section.5.3}
-\contentsline {section}{\numberline {5.4}Summary}{56}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contribution}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{57}{section.6.2}
-\contentsline {section}{\numberline {6.3}Summary}{57}{section.6.3}
-\contentsline {chapter}{\numberline {A}Supplementary Information}{59}{appendix.A}
-\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{59}{section.A.1}
-\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{60}{section.A.2}
-\contentsline {section}{\numberline {A.3}Orientation of tag to reader}{61}{section.A.3}
-\contentsline {section}{\numberline {A.4}Grid}{67}{section.A.4}
-\contentsline {chapter}{Bibliography}{69}{appendix*.51}
+\contentsline {subsection}{\numberline {5.1.3}Grid of positions}{51}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Elevation from floor}{53}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Wall penetration}{54}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}System evaluation}{55}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Grid of positions with line-of-sight propagation}{55}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Second Experiment}{58}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Third Experiment}{58}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Discussion}{58}{section.5.3}
+\contentsline {section}{\numberline {5.4}Summary}{58}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contribution}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{59}{section.6.2}
+\contentsline {section}{\numberline {6.3}Summary}{59}{section.6.3}
+\contentsline {chapter}{\numberline {A}Supplementary Information}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{61}{section.A.1}
+\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{62}{section.A.2}
+\contentsline {section}{\numberline {A.3}Orientation of tag to reader}{63}{section.A.3}
+\contentsline {section}{\numberline {A.4}Grid of positions}{65}{section.A.4}
+\contentsline {chapter}{Bibliography}{67}{appendix*.45}

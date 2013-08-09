@@ -1,48 +1,92 @@
 \chapter{Evaluation}
 \label{ch:evaluation}
 
+This chapter describes the experiments conducted to evaluate the RFID hardware and localisation accuracy of the system. Each experiment description consists of justification, setup, results, and analysis. Section \ref{sec:hardeval} presents tests of the RFID hardware that provide an understanding of the mapping between RSSI and distance. Then, section \ref{sec:syseval} details the experiments that check whether the problem, described in section \ref{sec:probdef}, is solved by the system. It also provides results in terms of localisation accuracy and how these compare to results of the related work.
+
 \section{Hardware Evaluation}
+\label{sec:hardeval}
 
-\subsection{Orientation}
+This section presents the experiments conducted in attempt to correlate received signal strength indicator (RSSI) and distance. This was accomplished by positioning the RFID tag at increasing distances and recording RSSI measurements from the RFID readers. Distance measurements were marked by a tape measure and RSSI values were recorded using the \textsf{SerialConnection} class, described in section \ref{sec:constread}. All experiments had taken place in two indoor environments, an apartment and a university computer laboratory. These places differ in the amount of open space and the number and placement of objects.
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_0deg}
-		\caption{Two plots of RSSI measurements at increasing distances with the readers at 0 degrees (antennas facing the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_45deg}
-		\caption{Two plots of RSSI measurements at increasing distances with the readers at 45 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_90deg}
-		\caption{Two plots of RSSI measurements at increasing distances with the readers at 90 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
-	\end{center}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_135deg}
-		\caption{Two plots of RSSI measurements at increasing distances with the readers at 135 degrees (antennas at an angle to the tag). The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
-	\end{center}
-\end{figure}
+In indoor environments, the attenuation of a radio signal is strongly influenced by the physical effects of reflection, refraction, multipath and shadow fading. Following from that, in order to construct a more complete notion of the relationship between RSSI and distance, a number of experiments were carried out. These include how RSSI changed as distance increased at different orientations of the tag to the readers and elevations of the tag from the floor. In addition, the wall penetration and range capabilities of the hardware were evaluated. The following subsections describe these experiments.
 
 \subsection{Range}
+\label{subsec:range}
 
-\begin{figure}[H]
+The aim of this experiment was to measure the range capabilities of the RFID equipment in an indoor environment. In addition, RSSI values were recorded as distance between the readers and tag increased. The devices were keeping a line of sight between each other. Then, the test was repeated by obscuring the tag with an object, in this case a large whiteboard, to determine if it was affecting the communication range of the devices and the RSSI values reported by the readers. The experiments were carried out for each of the readers in a computer laboratory that had a 13-meter-long stretch of open space. The results of these experiments are illustrated on Figure \ref{fig:13m}.
+
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{figures/rssi_distance_13m}
-		\caption{Two plots of RSSI measurements at increasing distances with the readers facing the tag. The left graph show how RSSI values change with a line-of-sight signal propagation. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation (there is an obstacle between the reader and the tag).}
+		\caption{Two plots of RSSI measurements at increasing distances. On the $x$-axis, the distances from one to 13 meters are shown. The $y$-axis is the RSSI range. Notice how the RSSI ranges differ between the plots. The left graph shows RSSI value changes with a line-of-sight signal propagation between devices. The right graph illustrates the same experiment but with a non-line-of-sight signal propagation, that is the tag was occluded by an object.}
+		\label{fig:13m}
 	\end{center}
 \end{figure}
 
+Three observations could be made by looking at the above results. First, in both experiments all three readers were able to detect the tag when located 13 meters away. The manufacturer reported a transmission range of 8 meters. Consequently, the antenna, designed in this project, had definitely increased the transmission range of the RFID tag. 
+
+Second, these experiments confirm that the readers measure different RSSI at equal distances. As distance increases, the average difference of RSSI values is 4.93. RSSI ranges on the $y$-axis are between 20 and 30. Following from that, if the measurements reported by the readers differ in an average of around five units given the above ranges, then these readers are not calibrated to each other. This was observed in subsequent experiments as well. It was the motivation for constructing separate translation tables when mapping RSSI to distance.
+
+Third, it is known that radio signals suffer from the effects of various physical phenomena when propagating in indoor environments. Figure \ref{fig:13m} shows that RSSI measurements do not decrease steadily and often fluctuate as the distance increases. This could be contributed to the characteristics of indoor spaces, where the shape of the space and the objects in it could cause reflection, refraction, and absorption of radio signals. Introducing an object that occluded the RFID tag had definitely decreased the RSSI values reported by the readers. It also caused the measurements to vary in unexpected ways.
+
+
+\subsection{Orientation of tag to reader}
+
+This experiment investigated whether placing the tag at different positions around the readers, would affect RSSI measurements as distance increases. Outcomes of this test contributed to the understanding of the factors that determine how RSSI changes in different cases. The experiment started by placing the tag so that it touched antennas with a reader. Then, the tag was moved away at half a meter marks until the distance was three meters. Next, the tag was rotated counterclockwise around a reader at 45-degree steps. The experiment was done for each reader. In addition, the tests were repeated by placing a filled suitcase in front of the tag to simulate the tag being carried by a human or attached to an object. The concept of the experiments is illustrated on Figure \ref{fig:ori}.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{figures/exp/orientation}
+		\caption{Examples positions of the tag and obstacle around one of the readers.}
+		\label{fig:ori}
+	\end{center}
+\end{figure}
+
+The results from the experiments are illustrated on Figures \ref{fig:oril} and \ref{fig:orin}. Figure \ref{fig:oril} shows the changes in RSSI as distance increases for different orientations of the tag with respect to the first reader in a line-of-sight radio propagation. Figure \ref{fig:orin} is a plot of a similar experiment but with the tag being obscured by an object. Notice that the minimum distance between devices is half a meter, which is needed to place the obstacle. Plots of the results using the other two readers are shown in Appendix \ref{sec:oriap}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_los_r1}
+		\caption{Plot of RSSI measurements of different orientations of the tag with respect to the first reader. There was  a line of sight between the RFID devices.}
+		\label{fig:oril}
+	\end{center}
+\end{figure}
+
+The first thing to notice is that when the tag touches antennas with any of the readers, they reported RSSI values of around 80 units. This was unfortunate because the manufacturer had advertised an RSSI resolution from zero to 255. Clearly, the maximum values was much lower, which certainly had an impact on the localisation accuracy of the system. Nevertheless, the aim of the experiment was different. It tried to test whether the position of the tag around any of the readers had any significance on the measured received signal strength indicator. Figure \ref{fig:oril} is hard to follow but it is evident that regardless of the orientation of the tag, the first reader had measured similar RSSI values as distance increased. There are some points that lie outside of the main areas of values, which might be attributed to physical conditions in the indoor environment or in voltage variations in the battery of the tag. Another observation is that along opposite orientations of the tag, such as 90 and 270 degrees, measurements follow similar paths and have small differences in their RSSI values. This had no real significance for this project but is surely a pattern that could be spotted. 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_nlos_r1}
+		\caption{Plot of RSSI measurements of different orientations of the tag with respect to the first reader. The tag was obscured by an object.}
+		\label{fig:orin}
+	\end{center}
+\end{figure}
+
+As explained above, the experiment was repeated by positioning an object in front of the tag to determine the impact of such occlusion on the RSSI measurements. Similar to the range experiments in section \ref{subsec:range}, lower RSSI values were recorded at close distances but the overall range of values on Figure \ref{fig:orin} is very similar to the one in the previous experiment. However, RSSI measurements are more spread out at most distances, which is an indication that obstructing bodies do have an effect on the amount at which RSSI varies.
+
+
+\subsection{Grid of positions}
+
+The purpose of this experiment was to obtain further information on the relationship between RSSI and distance. More specifically, it was checked how RSSI would change when the tag was rotated around itself while being moved on a four by four grid of positions. Each reader was placed at the upper left corner (\verb!position(0,0)!) and the distance between adjacent points on the grid was one meter. The tag was rotated at 90 degree intervals starting by facing the right side of the grid. The results from this experiment using the first reader are shown on Figure \ref{fig:rssigrid}. Results obtained from the other readers are plotted in Appendix \ref{sec:rssigridap}.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/rssi_distance_grid_r1}
+		\caption{Sixteen plots organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{first} reader when the tag was placed at different positions on the x and y axes of the grid. The positions of the tag were  measured in meters. The four bars in each plot show the RSSI readings when the tag was facing right (0\textdegree), up (90\textdegree), left (180\textdegree), and down (270\textdegree).}
+		\label{fig:rssigrid}
+	\end{center}
+\end{figure}
+
+Using the knowledge obtained from previous experiments, the range of RSSI values on the $y$-axis was limited between 30 and 80 RSSI. In this way, the differences in the measurements from various tag orientations are easier to spot. It also tells the reader that there are around 50 units of resolution provided by the RSSI module of the RFID readers. The manufacturer had claimed 256 steps of RSSI sensitivity, which was never achieved in this project. The leftmost column on Figure \ref{fig:rssigrid} illustrates the change in RSSI when the tag was placed in front of the reader. It can be seen that regardless of the rotation of the tag around its base, the RSSI values gradually drop. In contrast, the top row contains bar plots showing that as the tag was moved to the right of the reader facing up (90\textdegree) and down (270\textdegree), the reader was detecting it with up to 10 units less than in the other two orientations. The reason for this might have been that the radio waves emitted by the tag had to first bounce of walls or objects before being received by the reader. The conclusion that can be made is that although the devices were situated only one to three meters away, certain orientations of the tag might be perceived by the reader as the tag being further that it really was. Consequently, the orientation of the tag had an impact in some cases, which ultimately influences the localisation accuracy of the system.
+
+
 \subsection{Elevation}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{figures/exp/elevation}
+		\caption{Elevation of the tag to the three readers from the floor.}
+		\label{fig:ele}
+	\end{center}
+\end{figure}
+
+Conducted an experiment with the 3 readers and the active tag. Goal: to measure if the position of the tag in height from the ground affects the RSSI. Experimental setup: The readers are positioned at floor level (6cm), at desk level (60 cm), and at 130cm. The tag is placed at the same heights at distances 1m, 1.5m, 2.0m, 2.5m, 3.0m, 3.5m, 4.0m. This results in a table with RSSI with 9 columns (3x for each reader at different heights) and 7 columns for each distance.
 
 \begin{figure}[H]
 	\begin{center}
@@ -51,19 +95,19 @@
 	\end{center}
 \end{figure}
 
-\subsection{Line-of-sight Grid RSSI}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/rssi_distance_grid_r1}
-		\caption{Sixteen plots are organised into a four by four grid. Each plot represents the RSSI measurements of the \textbf{first} reader when the tag is placed at different positions on the x and y axes of the grid. The positions of the tag are all measured in meters. Every four bars in each plot show the RSSI readings when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree).}
-	\end{center}
-\end{figure}
+\subsection{Wall penetration}
 
+Conducted an experiment with one reader and the active tag. Goal: to see the penetration capabilities of the tag/transmitter. Experimental setup: The reader was placed in one room, the tag in the adjacent room separated by a thin wall. The distance apart was 3m and RSSI: 41. Then I moved the tag in the next room adjacent to the previous so that the straight line between tag and reader is preserved. The tag was read at 4.8m distance with RSSI: 51. In the same room the tag was moved at the furthest possible position in the room at 8.2m with RSSI: 40. Then I got outside and went behind the building. The tag was read behind a 3rd thicker wall at distance 8.6m with RSSI: 32.
 
 \section{System evaluation}
+\label{sec:syseval}
+
+By "mapping" I meant that the experiments check whether the problem is solved by the system, i.e. whether they give us a reliable way of checking the hypothesis. 
 
 \subsection{Line-of-sight Grid Error}
+
+Conducted a experiment in AT 3.01 (Robotics Lab). I took all the equipment, which fits into my backpack. I cleared a space 3 by 3 meters with no obstacles (line-of-sight propagation). Placed the reader nodes at 3 of the sides of the forming grid. Then I connected the whole system and powered it up. In this space, I placed markers every meter, thus forming a grid with 16 possible positions to place the tag. I did RSSI measurements at each position and also rotating the tag by 90 degrees. This resulted in 3 tables of RSSI measurements, one per reader. Each table consists of 16 cells, one for every position. Every cell has four RSSI values for different orientations of the tag. I also constructed a table with error measurements for every orientation of the tag. The error is a positive value in meters for both x and y axes reflecting the difference between real and estimated positions. 
 
 \begin{figure}[H]
 	\begin{center}
