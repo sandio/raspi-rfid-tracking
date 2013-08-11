@@ -1,0 +1,18 @@
+d1 = read.table("error.distance.3d")
+
+pdf("error_boxplot_3d.pdf", width=10, height=7)
+
+names = c("8cm","75cm", "170cm")
+
+#reps = c(rep("#4D4D4D", 3), rep("#969696", 3), rep("#C3C3C3", 3))
+reps = c(rep("red", 3), rep("green", 3), rep("blue", 3))
+
+boxplot(d1, col=reps, names=c("x","y","z","x","y","z","x","y","z"), 
+	main="Accumulated errors for different tag elevations for all grid positions", 
+	xlab="X, Y, and Z accumulated errors", ylab="Error (meters)")
+
+abline(h=mean(as.matrix(d1)))
+
+legend("topright", names, fill=c(reps[1],reps[4],reps[7]), title="Elevation of tag")
+
+dev.off()

@@ -1,0 +1,13 @@
+grid = read.table("grid", header=TRUE)
+
+pdf("grid.pdf", width=10, height=7)
+
+names = c("8cm","75cm", "170cm")
+
+scatterplot3d(grid, xlim=c(0,4), ylim=c(0,6), zlim=c(0,2), lab=c(8, 12, 1),
+	angle=21, pch=17, grid=TRUE, xlab="X (m)", ylab="Y (m)", zlab = "Z (m)",
+	main="Experimetal setup for three-dimensional localisation", y.margin.add=0)
+
+legend("topleft", names, fill=c("red","green","blue"), title="Elevation of tag")
+
+dev.off()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  9 AUG 2013 20:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  11 AUG 2013 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,7 +676,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 11.
- <figures/rfidtags.png, id=502, 1329.96875pt x 1224.575pt>
+ <figures/rfidtags.png, id=497, 1329.96875pt x 1224.575pt>
 File: figures/rfidtags.png Graphic file (type png)
 
 <use figures/rfidtags.png>
@@ -688,14 +688,14 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 34.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [5]
-<figures/rfidsys.png, id=529, 521.95pt x 491.8375pt>
+<figures/rfidsys.png, id=524, 521.95pt x 491.8375pt>
 File: figures/rfidsys.png Graphic file (type png)
  <use figures/rfidsys.png>
 Package pdftex.def Info: figures/rfidsys.png used on input line 47.
 (pdftex.def)             Requested size: 206.28249pt x 194.38249pt.
 
 [6 <./figures/rfidsys.png>] [7]
-<figures/readers.jpg, id=565, 3308.36pt x 2481.27pt>
+<figures/readers.jpg, id=560, 3308.36pt x 2481.27pt>
 File: figures/readers.jpg Graphic file (type jpg)
  <use figures/readers.jpg>
 Package pdftex.def Info: figures/readers.jpg used on input line 89.
@@ -703,7 +703,7 @@ Package pdftex.def Info: figures/readers.jpg used on input line 89.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 90.
 
-<figures/tag.jpg, id=566, 3308.36pt x 2481.27pt>
+<figures/tag.jpg, id=561, 3308.36pt x 2481.27pt>
 File: figures/tag.jpg Graphic file (type jpg)
  <use figures/tag.jpg>
 Package pdftex.def Info: figures/tag.jpg used on input line 94.
@@ -717,13 +717,13 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 88--98
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./figures/readers.jpg> <./figures/tag.jpg>]
-<figures/com.png, id=589, 663.47874pt x 184.69pt>
+<figures/com.png, id=584, 663.47874pt x 184.69pt>
 File: figures/com.png Graphic file (type png)
  <use figures/com.png>
 Package pdftex.def Info: figures/com.png used on input line 131.
 (pdftex.def)             Requested size: 412.56497pt x 114.84477pt.
 
-<figures/rssi.png, id=592, 803.0pt x 491.8375pt>
+<figures/rssi.png, id=587, 803.0pt x 491.8375pt>
 File: figures/rssi.png Graphic file (type png)
  <use figures/rssi.png>
 Package pdftex.def Info: figures/rssi.png used on input line 141.
@@ -749,13 +749,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/pis.jpg, id=625, 3308.36pt x 2481.27pt>
+<figures/pis.jpg, id=619, 3308.36pt x 2481.27pt>
 File: figures/pis.jpg Graphic file (type jpg)
  <use figures/pis.jpg>
 Package pdftex.def Info: figures/pis.jpg used on input line 232.
 (pdftex.def)             Requested size: 206.28249pt x 154.70038pt.
 
-<figures/switch.jpg, id=626, 3308.36pt x 2481.27pt>
+<figures/switch.jpg, id=620, 3308.36pt x 2481.27pt>
 File: figures/switch.jpg Graphic file (type jpg)
  <use figures/switch.jpg>
 Package pdftex.def Info: figures/switch.jpg used on input line 237.
@@ -772,7 +772,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-[13] <figures/trilat.png, id=647, 699.61375pt x 478.78876pt>
+[13] <figures/trilat.png, id=642, 699.61375pt x 478.78876pt>
 File: figures/trilat.png Graphic file (type png)
 
 <use figures/trilat.png>
@@ -798,7 +798,7 @@ iden-ti-fied [[]].
 
 ]
 Chapter 3.
-<figures/blockdiag/hardwaredesign.pdf, id=720, 642.4pt x 441.65pt>
+<figures/blockdiag/hardwaredesign.pdf, id=715, 642.4pt x 441.65pt>
 File: figures/blockdiag/hardwaredesign.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/hardwaredesign.pdf>
@@ -810,7 +810,7 @@ e 13.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21] [22 <./figures/blockdiag/hardwaredesign.pdf>] [23]
-<figures/blockdiag/serverclient.pdf, id=755, 783.92876pt x 281.05pt>
+<figures/blockdiag/serverclient.pdf, id=750, 783.92876pt x 281.05pt>
 File: figures/blockdiag/serverclient.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/serverclient.pdf>
@@ -818,7 +818,7 @@ Package pdftex.def Info: figures/blockdiag/serverclient.pdf used on input line
 60.
 (pdftex.def)             Requested size: 412.56497pt x 147.91368pt.
 
-<figures/blockdiag/serverclientresp.pdf, id=757, 642.4pt x 281.05pt>
+<figures/blockdiag/serverclientresp.pdf, id=752, 642.4pt x 281.05pt>
 File: figures/blockdiag/serverclientresp.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/serverclientresp.pdf>
@@ -834,7 +834,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./figures/blockdiag/serverclient.pdf>] [25 <./figures/blockdiag/servercli
 entresp.pdf>] [26] [27] [28] (./figures/trilat2.pdf_tex
-<figures/trilat2.pdf, id=827, 499.73903pt x 496.74384pt>
+<figures/trilat2.pdf, id=822, 499.73903pt x 496.74384pt>
 File: figures/trilat2.pdf Graphic file (type pdf)
 
 <use figures/trilat2.pdf>
@@ -865,7 +865,7 @@ Overfull \hbox (1.03096pt too wide) in paragraph at lines 65--66
 ni-ca-tion ex-per-i-ments. When
  []
 
-<figures/converter2.jpg, id=904, 183.98738pt x 147.55125pt>
+<figures/converter2.jpg, id=899, 183.98738pt x 147.55125pt>
 File: figures/converter2.jpg Graphic file (type jpg)
 
 <use figures/converter2.jpg>
@@ -876,7 +876,7 @@ Package pdftex.def Info: figures/converter2.jpg used on input line 71.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [37] [38 <./figures/converter2.jpg>]
-<figures/seqdiag/serial.pdf, id=920, 525.965pt x 393.47pt>
+<figures/seqdiag/serial.pdf, id=915, 525.965pt x 393.47pt>
 File: figures/seqdiag/serial.pdf Graphic file (type pdf)
 
 <use figures/seqdiag/serial.pdf>
@@ -889,14 +889,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 Underfull \vbox (badness 4713) has occurred while \output is active []
 
  [40]
-[41] <figures/seqdiag/network.pdf, id=1126, 819.3491pt x 534.06729pt>
+[41] <figures/seqdiag/network.pdf, id=1121, 819.3491pt x 534.06729pt>
 File: figures/seqdiag/network.pdf Graphic file (type pdf)
 
 <use figures/seqdiag/network.pdf>
 Package pdftex.def Info: figures/seqdiag/network.pdf used on input line 155.
 (pdftex.def)             Requested size: 412.56497pt x 268.91545pt.
  [42 <./figures/seqdiag/network.pdf>]
-<figures/seqdiag/trilat.pdf, id=1365, 535.60098pt x 451.28601pt>
+<figures/seqdiag/trilat.pdf, id=1360, 535.60098pt x 451.28601pt>
 File: figures/seqdiag/trilat.pdf Graphic file (type pdf)
 
 <use figures/seqdiag/trilat.pdf>
@@ -906,7 +906,7 @@ Package pdftex.def Info: figures/seqdiag/trilat.pdf used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43] <figures/sim.png, id=1372, 1216.545pt x 1042.89626pt>
+[43] <figures/sim.png, id=1367, 1216.545pt x 1042.89626pt>
 File: figures/sim.png Graphic file (type png)
 
 <use figures/sim.png>
@@ -916,7 +916,7 @@ Package pdftex.def Info: figures/sim.png used on input line 202.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/blockdiag/system.pdf, id=1373, 1027.84pt x 602.25pt>
+<figures/blockdiag/system.pdf, id=1368, 1027.84pt x 602.25pt>
 File: figures/blockdiag/system.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/system.pdf>
@@ -936,14 +936,14 @@ iag/system.pdf>]
 
 ]
 Chapter 5.
-[47] <figures/rssi_distance_13m.pdf, id=1597, 867.24pt x 361.35pt>
+[47] <figures/rssi_distance_13m.pdf, id=1592, 867.24pt x 361.35pt>
 File: figures/rssi_distance_13m.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_13m.pdf>
 Package pdftex.def Info: figures/rssi_distance_13m.pdf used on input line 20.
 (pdftex.def)             Requested size: 412.56497pt x 171.90218pt.
  [48 <./figures/rssi_distance_13m.pdf>]
-<figures/exp/orientation.pdf, id=1612, 318.98405pt x 307.12912pt>
+<figures/exp/orientation.pdf, id=1607, 318.98405pt x 307.12912pt>
 File: figures/exp/orientation.pdf Graphic file (type pdf)
 
 <use figures/exp/orientation.pdf>
@@ -953,7 +953,7 @@ Package pdftex.def Info: figures/exp/orientation.pdf used on input line 38.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/rssi_distance_3m_los_r1.pdf, id=1618, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_los_r1.pdf, id=1613, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r1.pdf>
@@ -964,7 +964,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_los_r1.pdf used on input line
 Underfull \vbox (badness 3460) has occurred while \output is active []
 
  [49]
-<figures/rssi_distance_3m_nlos_r1.pdf, id=1627, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r1.pdf, id=1622, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r1.pdf>
@@ -972,7 +972,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_nlos_r1.pdf used on input lin
 e 56.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
  [50 <./figures/exp/orientation.pdf> <./figures/rssi_distance_3m_los_r1.pdf>]
-<figures/rssi_distance_grid_r1.pdf, id=1658, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r1.pdf, id=1653, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r1.pdf>
@@ -985,28 +985,28 @@ LaTeX Font Info:    Try loading font information for TS1+phv on input line 71.
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 ) [51 <./figures/rssi_distance_3m_nlos_r1.pdf>] [52 <./figures/rssi_distance_gr
 id_r1.pdf>]
-<figures/exp/elevation.pdf, id=1684, 197.39618pt x 176.73546pt>
+<figures/exp/elevation.pdf, id=1679, 197.39618pt x 176.73546pt>
 File: figures/exp/elevation.pdf Graphic file (type pdf)
 
 <use figures/exp/elevation.pdf>
 Package pdftex.def Info: figures/exp/elevation.pdf used on input line 84.
 (pdftex.def)             Requested size: 165.02347pt x 147.7529pt.
 
-<figures/rssi_distance_4m.pdf, id=1686, 722.7pt x 361.35pt>
+<figures/rssi_distance_4m.pdf, id=1681, 722.7pt x 361.35pt>
 File: figures/rssi_distance_4m.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_4m.pdf>
 Package pdftex.def Info: figures/rssi_distance_4m.pdf used on input line 93.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
  [53 <./figures/exp/elevation.pdf>]
-<figures/exp/penetration.pdf, id=1701, 224.38222pt x 64.4049pt>
+<figures/exp/penetration.pdf, id=1696, 224.38222pt x 64.4049pt>
 File: figures/exp/penetration.pdf Graphic file (type pdf)
 
 <use figures/exp/penetration.pdf>
 Package pdftex.def Info: figures/exp/penetration.pdf used on input line 105.
 (pdftex.def)             Requested size: 247.54149pt x 71.05392pt.
  [54 <./figures/rssi_distance_4m.pdf>]
-<figures/error_distance_grid.pdf, id=1715, 722.7pt x 722.7pt>
+<figures/error_distance_grid.pdf, id=1710, 722.7pt x 722.7pt>
 File: figures/error_distance_grid.pdf Graphic file (type pdf)
 
 <use figures/error_distance_grid.pdf>
@@ -1014,40 +1014,71 @@ Package pdftex.def Info: figures/error_distance_grid.pdf used on input line 123
 .
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
  [55 <./figures/exp/penetration.pdf>]
-<figures/error_boxplot.pdf, id=1729, 722.7pt x 505.89pt>
+<figures/error_boxplot.pdf, id=1724, 722.7pt x 505.89pt>
 File: figures/error_boxplot.pdf Graphic file (type pdf)
 
 <use figures/error_boxplot.pdf>
 Package pdftex.def Info: figures/error_boxplot.pdf used on input line 132.
 (pdftex.def)             Requested size: 330.05322pt x 231.03714pt.
  [56 <./figures/error_distance_grid.pdf>]
-[57 <./figures/error_boxplot.pdf>]) [58]
+[57 <./figures/error_boxplot.pdf>]
+<figures/grid.pdf, id=1754, 687.78152pt x 443.53705pt>
+File: figures/grid.pdf Graphic file (type pdf)
+ <use figures/grid.pdf>
+Package pdftex.def Info: figures/grid.pdf used on input line 151.
+(pdftex.def)             Requested size: 412.56497pt x 266.06337pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+<figures/error_boxplot_3d.pdf, id=1760, 722.7pt x 505.89pt>
+File: figures/error_boxplot_3d.pdf Graphic file (type pdf)
+
+<use figures/error_boxplot_3d.pdf>
+Package pdftex.def Info: figures/error_boxplot_3d.pdf used on input line 160.
+(pdftex.def)             Requested size: 330.05322pt x 231.03714pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59 <./figures/grid.pdf>] <figures/tall.pdf, id=1805, 722.7pt x 505.89pt>
+File: figures/tall.pdf Graphic file (type pdf)
+
+<use figures/tall.pdf>
+Package pdftex.def Info: figures/tall.pdf used on input line 168.
+(pdftex.def)             Requested size: 412.56497pt x 288.79256pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60 <./figures/error_boxplot_3d.pdf>]
+Underfull \vbox (badness 5077) has occurred while \output is active []
+
+ [61 <./figures/tall.pdf>]) [62]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 Chapter 6.
-) [59
+) [63
 
 
 
 ]
 \openout2 = `appendix1.aux'.
 
- (./appendix1.tex [60
+ (./appendix1.tex [64
 
 
 
 ]
 Appendix A.
-<figures/blockdiag/hardwaredesignwifi.pdf, id=1771, 642.4pt x 441.65pt>
+<figures/blockdiag/hardwaredesignwifi.pdf, id=1843, 642.4pt x 441.65pt>
 File: figures/blockdiag/hardwaredesignwifi.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/hardwaredesignwifi.pdf>
 Package pdftex.def Info: figures/blockdiag/hardwaredesignwifi.pdf used on input
  line 9.
 (pdftex.def)             Requested size: 412.56497pt x 283.64566pt.
- [61 <./figures/blockdiag/hardwaredesignwifi.pdf>] [62]
-<figures/rssi_distance_3m_los_r2.pdf, id=1795, 722.7pt x 361.35pt>
+ [65 <./figures/blockdiag/hardwaredesignwifi.pdf>] [66]
+<figures/rssi_distance_3m_los_r2.pdf, id=1867, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r2.pdf>
@@ -1055,7 +1086,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_los_r2.pdf used on input line
  58.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
 
-<figures/rssi_distance_3m_nlos_r2.pdf, id=1796, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r2.pdf, id=1868, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r2.pdf>
@@ -1063,7 +1094,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_nlos_r2.pdf used on input lin
 e 65.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
 
-<figures/rssi_distance_3m_los_r3.pdf, id=1797, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_los_r3.pdf, id=1869, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r3.pdf>
@@ -1073,18 +1104,18 @@ Package pdftex.def Info: figures/rssi_distance_3m_los_r3.pdf used on input line
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63 <./figures/rssi_distance_3m_los_r2.pdf> <./figures/rssi_distance_3m_nlos_r
+ [67 <./figures/rssi_distance_3m_los_r2.pdf> <./figures/rssi_distance_3m_nlos_r
 2.pdf>]
-<figures/rssi_distance_3m_nlos_r3.pdf, id=1819, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r3.pdf, id=1890, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r3.pdf>
 Package pdftex.def Info: figures/rssi_distance_3m_nlos_r3.pdf used on input lin
 e 79.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
- [64 <./figures/rssi_distance_3m_los_r3.pdf> <./figures/rssi_distance_3m_nlos_r
+ [68 <./figures/rssi_distance_3m_los_r3.pdf> <./figures/rssi_distance_3m_nlos_r
 3.pdf>]
-<figures/rssi_distance_grid_r2.pdf, id=1840, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r2.pdf, id=1912, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r2.pdf>
@@ -1092,7 +1123,7 @@ Package pdftex.def Info: figures/rssi_distance_grid_r2.pdf used on input line 9
 8.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
 
-<figures/rssi_distance_grid_r3.pdf, id=1841, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r3.pdf, id=1913, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r3.pdf>
@@ -1102,12 +1133,12 @@ Package pdftex.def Info: figures/rssi_distance_grid_r3.pdf used on input line 1
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65 <./figures/rssi_distance_grid_r2.pdf>] [66 <./figures/rssi_distance_grid_r
+ [69 <./figures/rssi_distance_grid_r2.pdf>] [70 <./figures/rssi_distance_grid_r
 3.pdf>]
-(./thesis.bbl [67
+(./thesis.bbl [71
 
 
-] [68]
+] [72]
 Underfull \hbox (badness 10000) in paragraph at lines 141--146
 []\OT1/ptm/m/n/12 Wikipedia (2013).  Tri-lat-er-a-tion --- Wikipedia, The
  []
@@ -1120,21 +1151,21 @@ kipedia . org / w / index . php ? title =
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
- [69]
+ [73]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./thesis.aux (./introduction.aux) (./background.aux) (./methodology.aux) (./i
 mplementation.aux) (./evaluation.aux) (./conclusion.aux) (./appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2F4D18C98859D5FE6CACA981436F85BD;5477.
+(rerunfilecheck)             Checksum: 45CA8521856BB380DDD9BE1257D21693;5425.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 10228 strings out of 495059
- 154149 string characters out of 3182030
- 265784 words of memory out of 3000000
- 12885 multiletter control sequences out of 15000+200000
+ 10251 strings out of 495059
+ 154572 string characters out of 3182030
+ 266784 words of memory out of 3000000
+ 12899 multiletter control sequences out of 15000+200000
  67603 words of font info for 125 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,16n,41p,1506b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1150,10 +1181,10 @@ texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (79 pages, 11994903 bytes).
+Output written on thesis.pdf (83 pages, 12076548 bytes).
 PDF statistics:
- 1982 PDF objects out of 2073 (max. 8388607)
- 1518 compressed objects within 16 object streams
- 264 named destinations out of 1000 (max. 500000)
- 829 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2052 PDF objects out of 2073 (max. 8388607)
+ 1569 compressed objects within 16 object streams
+ 270 named destinations out of 1000 (max. 500000)
+ 836 words of extra memory for PDF output out of 10000 (max. 10000000)
 
