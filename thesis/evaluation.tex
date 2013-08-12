@@ -130,7 +130,7 @@ Figure \ref{fig:errorlos} illustrates the results of this experiment. Every posi
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=.8\textwidth]{figures/error_boxplot}
-		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in the x and y axes for a particular orientation of the tag. The horizontal line across the plot is the mean of all errors regardless of the tag orientation.}
+		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in $x$ and $y$ for a particular orientation of the tag. The horizontal line across the plot is the mean (0.943) of all errors regardless of the tag orientation.}
 		\label{fig:errorlosbox}
 	\end{center}
 \end{figure}
@@ -142,10 +142,12 @@ Figure \ref{fig:errorlosbox} is an alternative visualisation of the experimental
 
 \subsection{Three-dimensional grid of positions}
 
-The purpose of this experiment was to test the localisation performance of the system in a three-dimensional setting. In a university computer laboratory, a space, that was four meters wide, six meters long, and two meters high, was selected. The walls of the room were lined with desks, chair, and computers. One of the corners, where desks met, was marking the start of the coordinate system used by the system. The reader nodes were positioned on the sides of this space. They were also elevated at three different height from the room floor. The first reader was set up at 2.4 meters to the right and 1.7 meters above ground from the point marking the origin. The second reader had the following coordinates (3.4m , 5.7m , 0.75m), which was the furthest from the origin and its receiver was placed on a table. The last reader was 3.2 meters down from the start of the coordinate system and eight centimetres above the floor.
+The purpose of this experiment was to test the localisation performance of the system in a three-dimensional setting. In a university computer laboratory, a space, that was four meters wide, six meters long, and two meters high, was selected. The walls of the room were lined with desks, chairs, and computers. One of the corners, where desks met, was marking the start of the coordinate system used by the system. The reader nodes were positioned on the sides of this space. They were also elevated at three different heights from the room floor. The first reader was set up at 2.4 meters to the right and 1.7 meters above ground from the point marking the origin. The second reader had the following coordinates (3.4m , 5.7m , 0.75m), which was the furthest from the origin and its receiver was placed on a table. The last reader was 3.2 meters down from the start of the coordinate system and eight centimetres above the floor.
 
-After the readers were set up, the tag was repeatedly moved in a three-dimensional grid of positions. The $x$ and $y$ coordinates of the grid were starting half a meter from the origin in order to avoid obstacles that were in the way of the stand, used to elevate the tag above the floor. The three heights at which the readers were positioned determined the $z$ component of the grid. This experimental setup is visualised on Figure \ref{fig:lastgrid}. It shows the positions of the readers and tag.
+After the readers were set up, the tag was repeatedly moved in a three-dimensional grid of positions. The $x$ and $y$ coordinates of the grid were starting half a meter from the origin in order to avoid obstacles that were in the way of the stand, used to lift the tag off the floor. The three heights at which the readers were positioned determined the $z$ component of the grid. This experimental setup is visualised on Figure \ref{fig:lastgrid}. It shows the positions of the readers and tag.
 
+In order to produce a three-dimensional position for the tag, the system had to be modified slightly. Section \ref{sec:trilatmeth} described how trilateration worked. In three dimensions, the number of solutions is determined by the $z$ component. In rare cases when the sphere surfaces touch in one point, there is a single solution to the positioning problem. In most cases, however, the three spheres intersect, which results in two points of intersection, as shown on Figure \ref{fig:inter}. In this experiment, the middle point of the line segment formed by the two intersection points was used as the estimated position of the tag. Then, it was subtracted from the real position of the tag, manually inputted into the system. This gave the localisation error in three dimensions:
+\[error = (|x_{real} - \frac{x_1 + x_2}{2}|, \ |y_{real} - \frac{y_1 + y_2}{2}|, \ |z_{real} - \frac{z_1 + z_2}{2}|)\]
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{figures/grid}
@@ -153,31 +155,42 @@ After the readers were set up, the tag was repeatedly moved in a three-dimension
 		\label{fig:lastgrid}
 	\end{center}
 \end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.35\textwidth]{figures/intersect}
+		\caption{The intersection of two spheres is a circle. A third sphere narrows down the intersection to two points\protect\footnotemark.}
+		\label{fig:inter}
+	\end{center}
+\end{figure}
+\footnotetext{Global Positioning System - \url{http://pegasus.cc.ucf.edu/~jweisham/pcb5937/GPS/GPS.html}.}
 
-Mean 0.8895182 of boxplot.
+The results from this experiment are plotted on Figures \ref{fig:errorbox3d} and \ref{fig:errortall}. Figure \ref{fig:errorbox3d} is a plot of the errors in $x$, $y$, and $z$ for every elevation of the tag from the room floor. The data was visualised in this way in order to investigate which horizontal plane in a room provides the best propagation medium. The first three boxes in the plot illustrate the three-dimensional localisation error for the positions of the tag when it was eight centimetres from the ground. It can be seen that the spread of the errors in both $x$ and $y$ was significant, although its mean was close to one meter. The reason for this might be that there are a lot of obstacles in the lower parts of an indoor space, such as chairs and tables. These objects decrease the signal strength of the radio signal emitted from the tag. Another factor is the vertical distance between a reader and transmitter. Looking at diagram \ref{fig:ele} used in a previous experiment, it is evident that radio signals have to travel greater distances to reach receivers positioned at a different height.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=.8\textwidth]{figures/error_boxplot_3d}
-		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in the x and y axes for a particular orientation of the tag. The horizontal line across the plot is the mean of all errors regardless of the tag orientation.}
+		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in three groups. Each group consists of errors in the $x$, $y$, and $z$ for a particular elevation of the tag. The horizontal line across the plot is the mean (0.8895182) of all errors regardless of the tag elevation.}
 		\label{fig:errorbox3d}
 	\end{center}
 \end{figure}
-
+The same reasoning can be applied to the case when the tag was high above ground (170cm). The last three columns of figure \ref{fig:errorbox3d} show the distribution of the localisation error for this elevation. Again, the errors in $x$ and $y$ had a substantial spread. The error in $z$ appeared to be low regardless of the elevation. Although, the upper parts of an indoor space are usually free from obstacles, this experiment showed that the system produced a considerable localisation error. By placing the tag at desk level (75cm), the system demonstrated the least deviation from the real positions of the tag. A possible explanation is that the tag was in the middle of the grid of positions, which enabled it to be read from below, middle, and above. These RSSI values provided a better estimation of the distance between the devices.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/tall}
-		\caption{}
+		\includegraphics[width=1\textwidth]{figures/tall2}
+		\caption{A three-dimensional scatter plot of the average error for every position in the grid regardless of the elevation of the tag. The $x$ and $y$ axes are the coordinates of the space and the $z$-axis is the average error in meters. The numbers to the right of every position are the mean errors. Three green triangles mark the positions of the readers, which are roughly on the front, back, and left faces of the rectangular parallelepiped.}
 		\label{fig:errortall}
 	\end{center}
 \end{figure}
+
+Figure \ref{fig:errortall} is a three-dimensional scatter plot of the mean error for every position in the grid regardless of the elevation of the tag. This data visualisation shows the places where the system estimated the location of the tag with a certain accuracy. Recall that the walls of this indoor environment were lined with objects and that the readers were set up at three of the sides of the test space. These obstacles were a contributing factor that increased the localisation error at the boundaries of the grid. Similar to the results of the previous experiment, lower errors were observed in the central parts of the grid, where tag was at similar distances from the receivers. When the transmitter was close to one but far from the other readers, the errors spiked due to inaccuracies in the conversion of RSSI to distance as the gap between devices increased.
+
+
+\section{Discussion}
+
 
 Pi0 x:2.4, y:0.0, z:1.7
 Pi1 x:3.4, y:5.7, z:0.75
 Pi2 x:0.0, y:3.2, z:0.08
 
-definitely take midpoint of the 2 points of intersection to get the real result
-
-error = midpoint of x,y,z minus the real position
 
 Rss battery factor adjusted during experiment to correct when a reader was misbehaving. Automate as future work
 
@@ -196,8 +209,6 @@ if high good, not many objects
 also readers better be in middle of room on y to have spread of propagation \/
 
 Future work: average the last 10 readings from readers to gain a better position
-
-\section{Discussion}
 
 Not only overall RSSI resolution of the devices is around 50 units, but also the RSSI does not change evenly throughout the localisation range of the receivers. 
 

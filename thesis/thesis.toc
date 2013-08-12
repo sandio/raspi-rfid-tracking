@@ -85,4 +85,4 @@
 \contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{66}{section.A.2}
 \contentsline {section}{\numberline {A.3}Orientation of tag to reader}{67}{section.A.3}
 \contentsline {section}{\numberline {A.4}Grid of positions}{69}{section.A.4}
-\contentsline {chapter}{Bibliography}{71}{appendix*.48}
+\contentsline {chapter}{Bibliography}{71}{appendix*.49}
