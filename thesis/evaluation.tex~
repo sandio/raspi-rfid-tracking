@@ -50,7 +50,7 @@ The results from the experiments are illustrated on Figures \ref{fig:oril} and \
 	\end{center}
 \end{figure}
 
-The first thing to notice is that when the tag touches antennas with any of the readers, they reported RSSI values of around 80 units. This was unfortunate because the manufacturer had advertised an RSSI resolution from zero to 255. Clearly, the maximum values was much lower, which certainly had an impact on the localisation accuracy of the system. Nevertheless, the aim of the experiment was different. It tried to test whether the position of the tag around any of the readers had any significance on the measured received signal strength indicator. Figure \ref{fig:oril} is hard to follow but it is evident that regardless of the orientation of the tag, the first reader had measured similar RSSI values as distance increased. There are some points that lie outside of the main areas of values, which might be attributed to physical conditions in the indoor environment or in voltage variations in the battery of the tag. Another observation is that along opposite orientations of the tag, such as 90 and 270 degrees, measurements follow similar paths and have small differences in their RSSI values. This had no real significance for this project but is surely a pattern that could be spotted. 
+The first thing to notice is that when the tag touches antennas with any of the readers, they reported RSSI values of around 80 units. This was unfortunate because the manufacturer had advertised an RSSI resolution from zero to 255. Clearly, the maximum values were much lower, which certainly had an impact on the localisation accuracy of the system. Nevertheless, the aim of the experiment was different. It tried to test whether the position of the tag around any of the readers had any significance on the measured received signal strength indicator. Figure \ref{fig:oril} is hard to follow but it is evident that regardless of the orientation of the tag, the first reader had measured similar RSSI values as distance increased. There are some points that lie outside of the main areas of values, which might be attributed to physical conditions in the indoor environment or in voltage variations in the battery of the tag. Another observation is that along opposite orientations of the tag, such as 90 and 270 degrees, measurements follow similar paths and have small differences in their RSSI values. This had no real significance for this project but is surely a pattern that could be spotted. 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{figures/rssi_distance_3m_nlos_r1}
@@ -59,7 +59,7 @@ The first thing to notice is that when the tag touches antennas with any of the 
 	\end{center}
 \end{figure}
 
-As explained above, the experiment was repeated by positioning an object in front of the tag to determine the impact of such occlusion on the RSSI measurements. Similar to the range experiments in section \ref{subsec:range}, lower RSSI values were recorded at close distances but the overall range of values on Figure \ref{fig:orin} is very similar to the one in the previous experiment. However, RSSI measurements are more spread out at most distances, which is an indication that obstructing bodies do have an effect on the amount at which RSSI varies.
+As explained above, the experiment was repeated by positioning an object in front of the tag to determine the impact of such occlusion on the RSSI measurements. Similar to the range experiments in section \ref{subsec:range}, lower RSSI values were recorded at close distances but the overall range of values on Figure \ref{fig:orin} is very similar to the one in the previous experiment. In contrast, RSSI measurements are more spread out at most distances, which is an indication that obstructing bodies do have an effect on the amount at which RSSI varies.
 
 
 \subsection{Grid of positions}
@@ -73,56 +73,149 @@ The purpose of this experiment was to obtain further information on the relation
 	\end{center}
 \end{figure}
 
-Using the knowledge obtained from previous experiments, the range of RSSI values on the $y$-axis was limited between 30 and 80 RSSI. In this way, the differences in the measurements from various tag orientations are easier to spot. It also tells the reader that there are around 50 units of resolution provided by the RSSI module of the RFID readers. The manufacturer had claimed 256 steps of RSSI sensitivity, which was never achieved in this project. The leftmost column on Figure \ref{fig:rssigrid} illustrates the change in RSSI when the tag was placed in front of the reader. It can be seen that regardless of the rotation of the tag around its base, the RSSI values gradually drop. In contrast, the top row contains bar plots showing that as the tag was moved to the right of the reader facing up (90\textdegree) and down (270\textdegree), the reader was detecting it with up to 10 units less than in the other two orientations. The reason for this might have been that the radio waves emitted by the tag had to first bounce of walls or objects before being received by the reader. The conclusion that can be made is that although the devices were situated only one to three meters away, certain orientations of the tag might be perceived by the reader as the tag being further that it really was. Consequently, the orientation of the tag had an impact in some cases, which ultimately influences the localisation accuracy of the system.
+Using the knowledge obtained from previous experiments, the range of RSSI values on the $y$-axis was limited between 30 and 80 RSSI. In this way, the differences in the measurements from various tag orientations are easier to spot. It also tells the reader that there were around 50 units of resolution provided by the RSSI module of the RFID readers. The manufacturer had claimed 256 steps of RSSI sensitivity, which was never achieved in this project. The leftmost column on Figure \ref{fig:rssigrid} illustrates the change in RSSI when the tag was placed in front of the reader. It can be seen that regardless of the rotation of the tag around its base, the RSSI values gradually drop. In contrast, the top row contains bar plots showing the tag being moved to the right of the reader. When it was facing up (90\textdegree) and down (270\textdegree), the tag was detected with up to 10 units less than in the other two orientations. The reason for this might have been that the radio waves emitted by the tag had to first bounce of walls or objects before being received by the reader. The conclusion that can be made is that although the devices were situated only one to three meters away, certain orientations of the tag might be perceived by the reader as the tag being further that it really was. Consequently, the orientation of the tag had an impact in some cases, which ultimately influences the localisation accuracy of the system.
 
 
-\subsection{Elevation}
+\subsection{Elevation from floor}
 
+The aim of this experiment was to investigate how RSSI would change if the tag was positioned at different heights relative to the room floor. The readers were placed at 6, 60, and 130 centimetres from the ground. Measurements were taken at these heights as the distance between the devices increased from one to four meters in half a meter steps. The setup of this experiment is illustrated on Figure \ref{fig:ele}.
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=.5\textwidth]{figures/exp/elevation}
-		\caption{Elevation of the tag to the three readers from the floor.}
+		\includegraphics[width=.4\textwidth]{figures/exp/elevation}
+		\caption{Positions of the tag when being elevated from the floor as distance increased. The readers were located at 6, 60, and 130 centimetres from the floor.}
 		\label{fig:ele}
 	\end{center}
 \end{figure}
 
-Conducted an experiment with the 3 readers and the active tag. Goal: to measure if the position of the tag in height from the ground affects the RSSI. Experimental setup: The readers are positioned at floor level (6cm), at desk level (60 cm), and at 130cm. The tag is placed at the same heights at distances 1m, 1.5m, 2.0m, 2.5m, 3.0m, 3.5m, 4.0m. This results in a table with RSSI with 9 columns (3x for each reader at different heights) and 7 columns for each distance.
-
+Experimental results can be seen on Figure \ref{fig:eler}. Each plot represents the RSSI measurements of the three readers with the tag being elevated at a specific height from the floor. On the first plot, the tag is very close to the ground (6cm). Logically, the third reader, which is also at the same height, generally measured higher RSSI values as the tag was being moved away. The other readers scored similar results with certain fluctuations in the measurements, which might be caused by the batteries, motion in the indoor environment, or simply by the quality of the devices. Similar trends are observed in the other two plots. It is interesting to note that as the tag is elevated higher in a room, reader measurements become more stable and large variations occur less often. An explanation might be that the upper parts of indoor spaces are usually free from obstacles, which provides a more reliable propagation medium.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{figures/rssi_distance_4m}
-		\caption{Three plots of RSSI measurements at increasing distances with the readers at different elevation from the floor in an indoor environment. The first graph shows how RSSI measurements change as the distance grows when the tag is placed at 6cm above floor level. The second and third graph show the same experiment but the tag is at 60cm and 130cm above the floor level.}
+		\caption{Three plots of RSSI measurements at increasing distances with the readers at different elevation from the floor. The first graph shows readings when the tag is placed 6cm above the floor level. The second and third graph show the same experiment but the tag is at 60cm and 130cm from the ground.}
+		\label{fig:eler}
 	\end{center}
 \end{figure}
 
 
 \subsection{Wall penetration}
 
-Conducted an experiment with one reader and the active tag. Goal: to see the penetration capabilities of the tag/transmitter. Experimental setup: The reader was placed in one room, the tag in the adjacent room separated by a thin wall. The distance apart was 3m and RSSI: 41. Then I moved the tag in the next room adjacent to the previous so that the straight line between tag and reader is preserved. The tag was read at 4.8m distance with RSSI: 51. In the same room the tag was moved at the furthest possible position in the room at 8.2m with RSSI: 40. Then I got outside and went behind the building. The tag was read behind a 3rd thicker wall at distance 8.6m with RSSI: 32.
+This last experiment of the RFID hardware involved testing the wall penetration capabilities of the radio signal emitted from the tag. The setup for this test is shown on Figure \ref{fig:pene}. One of the readers was placed in a room. The tag was first positioned in the adjacent room and reported 41 RSSI. Then, it was moved in the next room, where it was detected with 51 and 40 RSSI in the nearest and furthest points of this space. Finally, the transmitter was carried outside the building. The reader was being able to detect it through two thinner inside and one thicker outside walls. This experiment was conducted to get an idea of the range capabilities of these RFID devices. This simple test showed that if the readers are positioned in different rooms they might be able to detect transmitters. 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=.6\textwidth]{figures/exp/penetration}
+		\caption{Experimental setup of the wall penetration test. The tag was positioned at 3, 4.8, 7.5, and 8.6 metres from one of the readers. The numbers above the tag are the measured RSSI.}
+		\label{fig:pene}
+	\end{center}
+\end{figure}
+
 
 \section{System evaluation}
 \label{sec:syseval}
 
-By "mapping" I meant that the experiments check whether the problem is solved by the system, i.e. whether they give us a reliable way of checking the hypothesis. 
+This section presents the experiments conducted to test the localisation system developed in this project. They tried to check the hypothesis, which is to evaluate the possibility of building a system capable of estimating the position of an unknown object with a certain accuracy using affordable RFID equipment and Raspberry Pi computers. The results of these experiments consist of the errors in meters between the computed and real positions of the tag. At the end of this chapter, the average localisation error is compared to the results of the related work. The following subsections describe the experiments carried out to evaluate this system.
 
-\subsection{Line-of-sight Grid Error}
 
-Conducted a experiment in AT 3.01 (Robotics Lab). I took all the equipment, which fits into my backpack. I cleared a space 3 by 3 meters with no obstacles (line-of-sight propagation). Placed the reader nodes at 3 of the sides of the forming grid. Then I connected the whole system and powered it up. In this space, I placed markers every meter, thus forming a grid with 16 possible positions to place the tag. I did RSSI measurements at each position and also rotating the tag by 90 degrees. This resulted in 3 tables of RSSI measurements, one per reader. Each table consists of 16 cells, one for every position. Every cell has four RSSI values for different orientations of the tag. I also constructed a table with error measurements for every orientation of the tag. The error is a positive value in meters for both x and y axes reflecting the difference between real and estimated positions. 
+\subsection{Grid of positions with line-of-sight propagation}
 
+The aim of this experiment was to investigate the performance of the system when all readers had a line of sight to the tag and the devices were lying on the same plane, thus working in two dimensions. This was the case where the system was expected to output its best results because the setup had omitted obstacles sitting in between the devices. A grid of 16 positions was marked on the floor of an indoor space. The distance between any of the adjacent points was one meter, hence forming a three by three meter square. The RFID readers were positioned at the upper left, upper right, and bottom left corners of the grid. These were positions (0,0), (3,0), and (0,3) if all points of the grid had coordinates starting from the upper left corner with $x$ positive to the right and $y$ positive down. The tag was consequently placed in all positions. In addition, it was rotated around itself at 90 degree steps. This was done check if the orientation of the tag had an impact on the accuracy of the system. For every orientation, the localisation error in $x$ and $y$ was recorded.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=1\textwidth]{figures/error_distance_grid}
-		\caption{Sixteen plots are organised into a four by four grid. The readers are placed at positions (0,0), (0,3), and (3,0). Each plot represents the error in meters between measured and estimated location when the tag is placed at different positions on the grid. Each plot consists of four ellipses that illustrate the x and y error when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree). The colours of the ellipses are red, green, blue, and black, respectively.}
+		\caption{Sixteen plots are organised into a four by four grid. The readers are placed at positions (0,0), (3,0), and (0,3). Each plot represents the error in meters between measured and estimated location when the tag is placed at different positions on the grid. Each plot consists of four ellipses that illustrate the x and y error when the tag is facing right (0\textdegree), up(90\textdegree), left (180\textdegree), and down (270\textdegree). The colours of the ellipses are red, green, blue, and black, respectively.}
+		\label{fig:errorlos}
 	\end{center}
 \end{figure}
 
+Figure \ref{fig:errorlos} illustrates the results of this experiment. Every position of the grid is represented as a plot of the error in $x$ and $y$ for the four possible orientations. The centres of the plots mark a zero localisation error. Errors are drawn as ellipses that are stretched in the direction of the error. Different colours label the orientation of the tag when the measurements were recorded. For instance, when the tag was at position (1,3) and was looking to the right (0\textdegree), the error, coloured in red, was around two and half meters in $x$ and around a meter in $y$. 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=1\textwidth]{figures/error_boxplot}
-		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in the x and y axes for a particular orientation of the tag. The horizontal line across the plot is the mean of all errors regardless of the tag orientation.}
+		\includegraphics[width=.8\textwidth]{figures/error_boxplot}
+		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in four groups. Each group consists of errors in $x$ and $y$ for a particular orientation of the tag. The horizontal line across the plot is the mean (0.943) of all errors regardless of the tag orientation.}
+		\label{fig:errorlosbox}
 	\end{center}
 \end{figure}
+
+In general, by looking at a plot for a certain position, one could tell the overall amount of error. Using this approach, it is evident that the system was localising the tag with a sub meter accuracy when the tag was placed equidistantly from the three readers. In positions where the tag was close to one reader but far from the other receivers, the system seemed to perform worse. The reason for this is in the way RSSI is converted to distance, rather the performance of the localisation algorithm. Section \ref{subsec:transtbl}, discussed a drawback of the translation tables. As the distance grows, RSSI values decrease at a slower rate. For example, for distances between zero and one meters, the second reader would measure 14 different RSSI values. In contrast, if the tag is five to six meters away, the RSSI changes by one unit (data from Appendix \ref{sec:trans}). Consequently, as distance increases, the accuracy of the RSSI to distance conversion decreases.
+
+Figure \ref{fig:errorlosbox} is an alternative visualisation of the experimental results. It is a plot of the errors in $x$ and $y$ grouped by orientation disregarding the position of the tag on the grid. The plot shows that different orientations produce various amounts of error. For instance, when the tag was facing to the left (180\textdegree) in all positions, the mean error was under one meter in both $x$ and $y$. This figure also contains a horizontal line marking the average error (0.943m) of all measurements of this experiment.
+
+
+\subsection{Three-dimensional grid of positions}
+\label{sec:3d}
+
+The purpose of this experiment was to test the localisation performance of the system in a three-dimensional setting. In a university computer laboratory, a space, that was four meters wide, six meters long, and two meters high, was selected. The walls of the room were lined with desks, chairs, and computers. One of the corners, where desks met, was marking the start of the coordinate system used by the system. The reader nodes were positioned on the sides of this space. They were also elevated at three different heights from the room floor. The first reader was set up at 2.4 meters to the right and 1.7 meters above ground from the point marking the origin. The second reader had the following coordinates (3.4m , 5.7m , 0.75m), which was the furthest from the origin and its receiver was placed on a table. The last reader was 3.2 meters down from the start of the coordinate system and eight centimetres above the floor.
+
+After the readers were set up, the tag was repeatedly moved in a three-dimensional grid of positions. The $x$ and $y$ coordinates of the grid were starting half a meter from the origin in order to avoid obstacles that were in the way of the stand, used to lift the tag off the floor. The three heights at which the readers were positioned determined the $z$ component of the grid. This experimental setup is visualised on Figure \ref{fig:lastgrid}. It shows the positions of the readers and tag.
+
+In order to produce a three-dimensional position for the tag, the system had to be modified slightly. Section \ref{sec:trilatmeth} described how trilateration worked. In three dimensions, the number of solutions is determined by the $z$ component. In rare cases when the sphere surfaces touch in one point, there is a single solution to the positioning problem. In most cases, however, the three spheres intersect, which results in two points of intersection, as shown on Figure \ref{fig:inter}. In this experiment, the middle point of the line segment formed by the two intersection points was used as the estimated position of the tag. Then, it was subtracted from the real position of the tag, manually inputted into the system. This gave the localisation error in three dimensions:
+\[error = (|x_{real} - \frac{x_1 + x_2}{2}|, \ |y_{real} - \frac{y_1 + y_2}{2}|, \ |z_{real} - \frac{z_1 + z_2}{2}|)\]
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/grid}
+		\caption{Experimental setup for testing the localisation system in three dimensions. The positions of the readers are shown as black triangles. Their coordinates are (2.4, 0.0, 1.7), (3.4, 5.7, 0.75), and (0.0, 3.2, 0.08). Three tag elevations are marked by colours to visualise the grid of positions better.}
+		\label{fig:lastgrid}
+	\end{center}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.35\textwidth]{figures/intersect}
+		\caption{The intersection of two spheres is a circle. A third sphere narrows down the intersection to two points\protect\footnotemark.}
+		\label{fig:inter}
+	\end{center}
+\end{figure}
+\footnotetext{Global Positioning System - \url{http://pegasus.cc.ucf.edu/~jweisham/pcb5937/GPS/GPS.html}.}
+
+The results from this experiment are plotted on Figures \ref{fig:errorbox3d} and \ref{fig:errortall}. Figure \ref{fig:errorbox3d} is a plot of the errors in $x$, $y$, and $z$ for every elevation of the tag from the room floor. The data was visualised in this way in order to investigate which horizontal plane in a room provides the best propagation medium. The first three boxes in the plot illustrate the three-dimensional localisation error for the positions of the tag when it was eight centimetres from the ground. It can be seen that the spread of the errors in both $x$ and $y$ was significant, although its mean was close to one meter. The reason for this might be that there are a lot of obstacles in the lower parts of an indoor space, such as chairs and tables. These objects decrease the signal strength of the radio signal emitted from the tag. Another factor is the vertical distance between a reader and transmitter. Looking at diagram \ref{fig:ele} used in a previous experiment, it is evident that radio signals have to travel greater distances to reach receivers positioned at a different height.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{figures/error_boxplot_3d}
+		\caption{A box plot showing errors between measured and estimated locations. The boxes are organised in three groups. Each group consists of errors in the $x$, $y$, and $z$ for a particular elevation of the tag. The horizontal line across the plot is the mean (0.8895182) of all errors regardless of the tag elevation.}
+		\label{fig:errorbox3d}
+	\end{center}
+\end{figure}
+The same reasoning can be applied to the case when the tag was high above ground (170cm). The last three columns of figure \ref{fig:errorbox3d} show the distribution of the localisation error for this elevation. Again, the errors in $x$ and $y$ had a substantial spread. The error in $z$ appeared to be low regardless of the elevation. Although, the upper parts of an indoor space are usually free from obstacles, this experiment showed that the system produced a considerable localisation error. By placing the tag at desk level (75cm), the system demonstrated the least deviation from the real positions of the tag. A possible explanation is that the tag was in the middle of the grid of positions, which enabled it to be read from below, middle, and above. These RSSI values provided a better estimation of the distance between the devices.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{figures/tall2}
+		\caption{A three-dimensional scatter plot of the average error for every position in the grid regardless of the elevation of the tag. The $x$ and $y$ axes are the coordinates of the space and the $z$-axis is the average error in meters. The numbers to the right of every position are the mean errors. Three green triangles mark the positions of the readers, which are on the front, back, and left faces of the rectangular parallelepiped.}
+		\label{fig:errortall}
+	\end{center}
+\end{figure}
+
+Figure \ref{fig:errortall} is a three-dimensional scatter plot of the mean error for every position in the grid regardless of the elevation of the tag. This data visualisation shows the places where the system estimated the location of the tag with a certain accuracy. Recall that the walls of this indoor environment were lined with objects and that the readers were set up at three of the sides of the test space. These obstacles were a contributing factor that increased the localisation error at the boundaries of the grid. Similar to the results of the previous experiment, lower errors were observed in the central parts of the grid, where tag was at similar distances from the receivers. When the transmitter was close to one but far from the other readers, the errors spiked due to inaccuracies in the conversion from RSSI to distance as the gap between devices increased.
+
+In this experiment, the mean error of all positions in the grid was 0.89 meters. It was brought down mainly due to the low localisation errors of the $z$ component. Although the overall error was low, the system computed locations that were usually off by at least a meter in one dimension. In a real situation, this means that a person searching for an object tagged with a transmitter has to scan a spherical area determined by the amount of error to locate the true position of the object of interest.
 
 \section{Discussion}
 
+This section provides a discussion of the system's performance. In particular, the outcomes from the hardware evaluation are summarised. Also, the results of the experiments with the system are analysed.
+
+\subsection{RFID Hardware}
+
+The RFID devices used in this project had a very affordable price. They provided a great value for money. The receivers had an RSSI module and the tag was emitting a strong signal. The range of the system was bigger (13m) than advertised. The readers could also detect the transmitter through walls.
+
+Nevertheless, there were a number of disadvantages that came with the price of the devices. First, the receivers were not calibrated to each other, which resulted in different RSSI measurements for equal distances. Second, the resolution of the RSSI modules was smaller than expected, which had a serious impact on the localisation accuracy of the system. Third, RSSI values were often changing unpredictably as the distance grew. In addition, the battery of the tag was a factor that was varying the RSSI measurements.
+
+A number of observations that were made during the experimentation with the hardware. Generally, if the readers had a line of sight to the tag, the RSSI readings were more reliable compared to cases when the receivers were facing away from the transmitter. In addition, the placement of the devices in an indoor space determined the quality of the localisation. As it was found in section \ref{sec:3d}, the best elevation for a tag was at 75 centimetres from the floor. In this way the tag is not obscured by furniture. The positions of the readers in a three-dimensional space also played a role in the behaviour of the system.
+
 \section{Summary}
+
+Rss battery factor adjusted during experiment to correct when a reader was misbehaving. Automate as future work
+
+better place readers in middle in 3d, better as distance in 3d is smaller than if at 0.8 to 1.7m.
+
+also readers better be in middle of room on y to have spread of propagation \/
+
+readers close to walls where are desks furniture... 
+
+tag if too low in 3d, many objects (tables, chairs).
+
+if at desk level good,but there might be people.
+
+if high good, not many objects
+
+also readers better be in middle of room on y to have spread of propagation \/
+
+Future work: average the last 10 readings from readers to gain a better position
+
+Not only overall RSSI resolution of the devices is around 50 units, but also the RSSI does not change evenly throughout the localisation range of the receivers. 
