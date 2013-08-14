@@ -1,91 +1,91 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Hypothesis}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Contribution}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Thesis Outline}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Summary}{2}{section.1.4}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Radio Frequency Identification (RFID)}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}RFID tags}{4}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Passive and active tags}{4}{subsubsection.2.1.1.1}
-\contentsline {subsection}{\numberline {2.1.2}RFID readers}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}RFID controllers}{5}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}RFID applications}{6}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Received Signal Strength Indicator (RSSI)}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}RSSI and RSS}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}RSSI and distance}{7}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}How RSSI fits in this project}{8}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Project Hardware}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}RF9315R-u Active RFID 8 Meters Receiver with RSSI Module}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}RF8315T Active RFID 8 Meters Transmitting Module}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}The Raspberry Pi}{12}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Location sensing}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Trilateration}{13}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Evaluating an estimated position}{14}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Previous work}{15}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}SpotON}{16}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.1.1}Operation}{16}{subsubsection.2.5.1.1}
-\contentsline {subsubsection}{\numberline {2.5.1.2}Limitations}{16}{subsubsection.2.5.1.2}
-\contentsline {subsubsection}{\numberline {2.5.1.3}Results}{17}{subsubsection.2.5.1.3}
-\contentsline {subsection}{\numberline {2.5.2}LANDMARC}{17}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.2.1}Operation}{17}{subsubsection.2.5.2.1}
-\contentsline {subsubsection}{\numberline {2.5.2.2}Limitations}{17}{subsubsection.2.5.2.2}
-\contentsline {subsubsection}{\numberline {2.5.2.3}Results}{18}{subsubsection.2.5.2.3}
-\contentsline {subsubsection}{\numberline {2.5.2.4}Extension systems}{18}{subsubsection.2.5.2.4}
-\contentsline {section}{\numberline {2.6}Summary}{18}{section.2.6}
-\contentsline {chapter}{\numberline {3}Methodology}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Hardware Setup}{21}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Reader nodes}{21}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Computer Network}{22}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Alternative connectivity using Wi-Fi}{22}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Problem Definition}{23}{section.3.2}
-\contentsline {section}{\numberline {3.3}Software Architecture}{23}{section.3.3}
-\contentsline {section}{\numberline {3.4}Converting RSSI to distance}{24}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Free-space Path Loss}{25}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Translation table}{26}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Trilateration}{28}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Special case}{28}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}General solution}{29}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Summary}{31}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementation}{33}{chapter.4}
-\contentsline {section}{\numberline {4.1}Project management}{33}{section.4.1}
-\contentsline {section}{\numberline {4.2}Software Engineering Practices}{34}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Project decomposition}{34}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Object-oriented design}{35}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}System scalability}{35}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Documentation}{35}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Hardware Issues}{36}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Antenna Design}{36}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Serial to USB converters}{37}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Reader nodes construction}{38}{section.4.4}
-\contentsline {section}{\numberline {4.5}Data store and management}{39}{section.4.5}
-\contentsline {section}{\numberline {4.6}Network communication}{41}{section.4.6}
-\contentsline {section}{\numberline {4.7}Location estimation}{42}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}RSSI to distance conversion}{42}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Trilateration}{43}{subsection.4.7.2}
-\contentsline {section}{\numberline {4.8}Web Interface}{43}{section.4.8}
-\contentsline {section}{\numberline {4.9}Summary}{44}{section.4.9}
-\contentsline {chapter}{\numberline {5}Evaluation}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Hardware Evaluation}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Range}{48}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Orientation of tag to reader}{49}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Grid of positions}{51}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Elevation from floor}{53}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Wall penetration}{54}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}System evaluation}{55}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Grid of positions with line-of-sight propagation}{55}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Three-dimensional grid of positions}{58}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Discussion}{62}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}RFID Hardware}{62}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Localisation performance}{63}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Applications}{64}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Summary}{65}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Contribution}{67}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{67}{section.6.2}
-\contentsline {section}{\numberline {6.3}Summary}{67}{section.6.3}
-\contentsline {chapter}{\numberline {A}Supplementary Information}{69}{appendix.A}
-\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{69}{section.A.1}
-\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{70}{section.A.2}
-\contentsline {section}{\numberline {A.3}Orientation of tag to reader}{71}{section.A.3}
-\contentsline {section}{\numberline {A.4}Grid of positions}{73}{section.A.4}
-\contentsline {chapter}{Bibliography}{75}{appendix*.49}
+\contentsline {section}{\numberline {1.2}Results}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Thesis Outline}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Summary}{3}{section.1.4}
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Radio Frequency Identification (RFID)}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}RFID tags}{6}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Passive and active tags}{6}{subsubsection.2.1.1.1}
+\contentsline {subsection}{\numberline {2.1.2}RFID readers}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}RFID controllers}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}RFID applications}{8}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Received Signal Strength Indicator (RSSI)}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}RSSI and RSS}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}RSSI and distance}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}How RSSI fits in this project}{10}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Project Hardware}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}RF9315R-u Active RFID 8 Meters Receiver with RSSI Module}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}RF8315T Active RFID 8 Meters Transmitting Module}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}The Raspberry Pi}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Location sensing}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Trilateration}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Evaluating an estimated position}{16}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Previous work}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}SpotON}{18}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.1.1}Operation}{18}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Limitations}{18}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.1.3}Results}{19}{subsubsection.2.5.1.3}
+\contentsline {subsection}{\numberline {2.5.2}LANDMARC}{19}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.2.1}Operation}{19}{subsubsection.2.5.2.1}
+\contentsline {subsubsection}{\numberline {2.5.2.2}Limitations}{19}{subsubsection.2.5.2.2}
+\contentsline {subsubsection}{\numberline {2.5.2.3}Results}{20}{subsubsection.2.5.2.3}
+\contentsline {subsubsection}{\numberline {2.5.2.4}Extension systems}{20}{subsubsection.2.5.2.4}
+\contentsline {section}{\numberline {2.6}Summary}{20}{section.2.6}
+\contentsline {chapter}{\numberline {3}Methodology}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hardware Setup}{23}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Reader nodes}{23}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Computer Network}{24}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Alternative connectivity using Wi-Fi}{24}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Problem Definition}{25}{section.3.2}
+\contentsline {section}{\numberline {3.3}Software Architecture}{25}{section.3.3}
+\contentsline {section}{\numberline {3.4}Converting RSSI to distance}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Free-space Path Loss}{27}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Translation table}{28}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Trilateration}{30}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Special case}{30}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}General solution}{31}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{33}{section.3.6}
+\contentsline {chapter}{\numberline {4}Implementation}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Project management}{35}{section.4.1}
+\contentsline {section}{\numberline {4.2}Software Engineering Practices}{36}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Project decomposition}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Object-oriented design}{37}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}System scalability}{37}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Documentation}{37}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Hardware Issues}{38}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Antenna Design}{38}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Serial to USB converters}{39}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Reader nodes construction}{40}{section.4.4}
+\contentsline {section}{\numberline {4.5}Data store and management}{41}{section.4.5}
+\contentsline {section}{\numberline {4.6}Network communication}{43}{section.4.6}
+\contentsline {section}{\numberline {4.7}Location estimation}{44}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}RSSI to distance conversion}{44}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Trilateration}{45}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.8}Web Interface}{45}{section.4.8}
+\contentsline {section}{\numberline {4.9}Summary}{46}{section.4.9}
+\contentsline {chapter}{\numberline {5}Evaluation}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Hardware Evaluation}{49}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Range}{50}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Orientation of tag to reader}{51}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Grid of positions}{53}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Elevation from floor}{55}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Wall penetration}{56}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}System evaluation}{57}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Grid of positions with line-of-sight propagation}{57}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Three-dimensional grid of positions}{60}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Discussion}{64}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}RFID Hardware}{64}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Localisation performance}{65}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Applications}{66}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Summary}{67}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Contribution}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{70}{section.6.2}
+\contentsline {section}{\numberline {6.3}Summary}{70}{section.6.3}
+\contentsline {chapter}{\numberline {A}Supplementary Information}{71}{appendix.A}
+\contentsline {section}{\numberline {A.1}Hardware setup using Wi-Fi connectivity}{71}{section.A.1}
+\contentsline {section}{\numberline {A.2}Translation tables from RSSI to distance}{72}{section.A.2}
+\contentsline {section}{\numberline {A.3}Orientation of tag to reader}{73}{section.A.3}
+\contentsline {section}{\numberline {A.4}Grid of positions}{75}{section.A.4}
+\contentsline {chapter}{Bibliography}{77}{appendix*.49}
