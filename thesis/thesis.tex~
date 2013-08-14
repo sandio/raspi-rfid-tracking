@@ -37,7 +37,7 @@
 \author{Aleksandar Krastev}
 
 \abstract{
-To Do
+Radio frequency identification (RFID) is a technology that remotely identifies objects tagged with radio transmitters. Previous research efforts have used RFID to estimate the positions of RFID tags in indoor environments. The price of RFID components and the limited spread of the technology have kept back its development. The recent emergence of affordable RFID hardware, but also cheap single-board computer, creates an exiting opportunity to build a cost-effective RFID sensor network capable of localising RFID tags in an indoor environment. This is done in an effort to show that an affordable location sensing system can be constructed to achieve similar performance to previous research projects. The system developed in this project operated in an average localisation error of 0.916 meters, an accuracy comparable to the results of the previous work in this research field.
 }
 
 \begin{document}

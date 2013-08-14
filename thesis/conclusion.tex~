@@ -1,8 +1,24 @@
 \chapter{Conclusion}
 \label{ch:conclusion}
 
+This chapter summarises the goals of this project and provides a description of its contributions. Then, section \ref{sec:future} gives ideas how to further develop and extend the location sensing system created in this project.
+
 \section{Contribution}
 
+The main aim of this project was to explore the possibility of developing a location sensing system using cost-effective RFID hardware and single-board computers. The system had to be able to estimate the position of an unknown object in three-dimensions with a localisation accuracy comparable to similar systems in this research field.
+
+Such a system was successfully developed in the duration of this project. It consisted of three RFID readers connected to  Raspberry Pi computers, forming the reader nodes of the system. Communication was established using Ethernet network cables. The object that had to be localised was an RFID tag, a small transmitter operating on battery power. This system was being able to estimate the position of the tag with an average localisation error of 0.916 meters. This performance is similar to the results of the previous work in this field. This is a positive indication because the RFID hardware employed in this project had a lower price and quality compared to commercial solutions costing ten to fifteen times more \footnote{BuyRFID online store - Prices of active RFID readers - \url{http://goo.gl/XTGsLA}}.
+
+There are some general advantages of the system developed in this project. The software was written in a modular way making it easy to change the localisation algorithm and wireless technology. For example, Bluetooth or WiFi devices can be used for location sensing. Furthermore, the system was developed with scalablility in mind, which means that more affordable computer nodes can be connected to the network to expand the system. The system's hardware is very portable and consumes little power. The reader nodes can be positioned in various places occupying little space. The Raspberry Pi computers possess substantial processing power that speed the computations performed by the localisation algorithm. This also enabled the use of threads to concurrently execute multiple tasks of the system.
+
 \section{Future Work}
+\label{sec:future}
+
+The system developed in this project could be extended and modified in many ways. As mentioned above different wireless technologies can be used as the basis for localisation. In addition, a bigger system consisting of many reader nodes can be constructed to cover the indoor area of a building. Moreover, according to the manufacturer specifications, the receivers can simultaneously read up to 80 tags. This issue can be investigated so that equipment or personnel can be tracked on a campus, for instance. 
+
+This project used Raspberry Pi computers as the processing units of the system. In the current implementation, most tasks are concentrated on a single computer. Future work might involve the distribution of tasks among nodes so that the resources are utilised more efficiently. Moreover, this can alleviate the single point of failure introduced by employing a server-client model.
+
+Potential improvements of the distance and localisation estimation might be implemented in order to solve some of the current problems of the system. In dynamic environments with people and objects occluding the transmitters, the RSSI measurements reported by the RFID readers are often fluctuating and unreliable. In order to stabilise the readings, multiple RSSI values might be collected and averaged before passing them to the localisation algorithm. In addition, the batteries of tags introduced further inaccuracies in the measurements. An integer factor was added to the incoming readings to compensate for the power lost in continuous transmissions. This parameter might be automated to eliminate manual changes of its value.
 
 \section{Summary}
+This chapter presented the contributions of the project. In addition, directions for future work were given that could lead to improvements of the current system.

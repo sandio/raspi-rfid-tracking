@@ -52,16 +52,15 @@
 \contentsline {subsection}{\numberline {4.2.1}Project decomposition}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Object-oriented design}{37}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}System scalability}{37}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Documentation}{37}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Hardware Issues}{38}{section.4.3}
+\contentsline {section}{\numberline {4.3}Hardware Issues}{37}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Antenna Design}{38}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Serial to USB converters}{39}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Serial to USB converters}{38}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Reader nodes construction}{40}{section.4.4}
-\contentsline {section}{\numberline {4.5}Data store and management}{41}{section.4.5}
-\contentsline {section}{\numberline {4.6}Network communication}{43}{section.4.6}
-\contentsline {section}{\numberline {4.7}Location estimation}{44}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}RSSI to distance conversion}{44}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Trilateration}{45}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.5}Data store and management}{40}{section.4.5}
+\contentsline {section}{\numberline {4.6}Network communication}{42}{section.4.6}
+\contentsline {section}{\numberline {4.7}Location estimation}{43}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}RSSI to distance conversion}{43}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Trilateration}{44}{subsection.4.7.2}
 \contentsline {section}{\numberline {4.8}Web Interface}{45}{section.4.8}
 \contentsline {section}{\numberline {4.9}Summary}{46}{section.4.9}
 \contentsline {chapter}{\numberline {5}Evaluation}{49}{chapter.5}
