@@ -43,9 +43,11 @@ class DatabaseHandler:
 		self.cur.execute('UPDATE positions SET r = ? ' \
 			'WHERE node_name = ?', (dist, node_name))
 
-	def update_pnt(self, pnt):
+	def update_pnt(self, pnt1, pnt2):
 		self.cur.execute('UPDATE positions SET x = ?, ' \
-			'y = ?, z = ? WHERE node_name = 3', pnt)
+			'y = ?, z = ? WHERE node_name = 3', pnt1)
+		self.cur.execute('UPDATE positions SET x = ?, ' \
+			'y = ?, z = ? WHERE node_name = 4', pnt2)
 
 	def update_rsl(self, name, values):
 		self.cur.execute('UPDATE results SET x = ? ' \

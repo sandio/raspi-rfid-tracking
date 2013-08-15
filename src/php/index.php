@@ -15,28 +15,46 @@ try {
 	$dbh = new PDO('sqlite:/home/pi/raspi-rfid-tracking/src/measurements.db');
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);	
 	
-	$result = $dbh->query('SELECT x, y, r FROM positions GROUP BY node_name');
+	$result = $dbh->query('SELECT x, y, z, r FROM positions GROUP BY node_name');
 	$c = 0;
 	foreach($result as $row) {
 		$data .= 'Pi'.$c.': x<input type="text" size=5 
 			name="x'.$c.'" value="'.$row['x'].'">
 			y<input type="text" size=5
 			name="y'.$c.'" value="'.$row['y'].'">
+			z<input type="text" size=5
+			name="z'.$c.'" value="'.$row['z'].'">
 			<b>d = '.$row['r'].'</b> ';
-			$x = $row['x'];
-			$y = $row['y'];
 		$c ++;
 	}
 	$data .= '<input type="submit"></form><hr>';
-	$errx = abs(0 - $x);
-	$erry = abs(0 - $y);
-	$data .= '<p>'.$errx.' | '.$erry.'</p>';
+	
+	$result = $dbh->query('SELECT x, y, z, r FROM positions WHERE node_name=3 OR node_name=4');
+	$c =0;
+	foreach($result as $row) {
+		$data .= '<p>x:'.$row['x'].' y:'.$row['y'].' z:'.$row['z'].'</p>';
+		if ($c == 0) {
+			$x1 = $row['x'];
+			$y1 = $row['y'];
+			$z1 = $row['z'];
+		} else {
+			$x2 = $row['x'];
+			$y2 = $row['y'];
+			$z2 = $row['z'];
+		}
+		$c ++;
+	}
+	
+	$errx = abs(3.5 - ($x1 + $x2)/2);
+	$erry = abs(5.5 - ($y1 + $y2)/2);
+	$errz = abs(1.7 - ($z1 + $z2)/2);
+	$data .= '<p>'.$errx.' | '.$erry.' | '.$errz.'</p>';
 	$dbh = NULL;
 } catch(PDOException $e) {
 	echo 'Exception: '.$e->getMessage();
 }
 
-$data .= '<img src="graph.php" alt="Graph"><hr>';
+$data .= '<img src="graph.php" alt="Graph">';
 
 $data .= '<table><tr><td>';
 

@@ -36,9 +36,9 @@ class Trilateration(threading.Thread):
 			#dist = 1 / math.sqrt(rss)
 			if rss <= 61: 
 				if node_name == 0:
-					rss += 12
+					rss += 3
 				elif node_name == 1:
-					rss += 17
+					rss += 6
 				else:
 					rss += 12
 			dist = self.rss_to_dist(node_name, rss)
@@ -117,7 +117,7 @@ class Trilateration(threading.Thread):
 					print 'p1, p2, p3 are collinear'
 					print 'p1 +/- ex*r1 is the only intersection point'
 					print 'p', p
-					self.db_hdlr.update_pnt(p)
+					self.db_hdlr.update_pnt(p,p)
 					return
 			print 'p1, p2, p3 are collinear but no solution exists'
 			return
@@ -143,30 +143,31 @@ class Trilateration(threading.Thread):
 		
 		print 'y', y
 		
-		"""
+		
 		# z = r1^2 - x^2 - y^2
 		z = math.pow(r1, 2) - math.pow(x, 2) - math.pow(y, 2)
 
 		# Check the sign of the z dimension
 		if z < -maxzero:
-			print 'The solution is invalid (z)'
-			return
+			print 'z < 0'
+			#return
 		elif z > maxzero:
 			z = math.sqrt(z)
+			print 'z > 0'
 		else:
 			z = 0
-		"""
+			print 'z = 0'
+
 	
-		z = 0
+		#z = 0
 		print 'z', z
 		
 		t = p1 + x*ex + y*ey
 		
-		p = t + z*ez
-		print 'p', p
+		p1 = t + z*ez
+		print 'p1', p1
 		
-		self.db_hdlr.update_pnt(p)
-		
-		p = t - z*ez
-		print 'p', p
+		p2 = t - z*ez
+		print 'p2', p2
 
+		self.db_hdlr.update_pnt(p1,p2)
