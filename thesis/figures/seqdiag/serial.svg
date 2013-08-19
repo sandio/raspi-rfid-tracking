@@ -13,7 +13,7 @@
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="serial.pdf">
+   sodipodi:docname="serial.svg">
   <metadata
      id="metadata201">
     <rdf:RDF>
@@ -35,13 +35,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1054"
+     inkscape:window-width="1918"
      inkscape:window-height="1063"
      id="namedview199"
      showgrid="false"
-     inkscape:zoom="1.3622629"
-     inkscape:cx="327.5"
-     inkscape:cy="245"
+     inkscape:zoom="1.7881874"
+     inkscape:cx="369.5"
+     inkscape:cy="240"
      inkscape:window-x="0"
      inkscape:window-y="15"
      inkscape:window-maximized="0"
@@ -87,114 +87,6 @@ Main &lt;-- SerialConnection [label = &quot;read data&quot;]
 Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/False&quot;, note = &quot;Close communication port&quot;]
 }
 </desc>
-  <rect
-     fill="rgb(0,0,0)"
-     height="409"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="163"
-     y="76"
-     id="rect11" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="15"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="391"
-     y="76"
-     id="rect13" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="35"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="391"
-     y="126"
-     id="rect15" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="78"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="391"
-     y="196"
-     id="rect17" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="78"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="391"
-     y="309"
-     id="rect19" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="35"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="391"
-     y="422"
-     id="rect21" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="411,66 562,66 570,74 570,86 411,86 411,66"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon23" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="411,116 592,116 600,124 600,136 411,136 411,116"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon25" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="411,186 533,186 541,194 541,206 411,206 411,186"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon27" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="499,211 618,211 626,219 626,249 499,249 499,211"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon29" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="411,299 570,299 578,307 578,319 411,319 411,299"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon31" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="499,324 634,324 642,332 642,362 499,362 499,324"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon33" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="411,412 555,412 563,420 563,432 411,432 411,412"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon35" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="40"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="128"
-     x="103"
-     y="11"
-     id="rect37" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="40"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="128"
-     x="331"
-     y="11"
-     id="rect39" />
   <path
      d="M 164 45 L 164 495"
      fill="none"
@@ -322,10 +214,10 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="414"
+     x="412"
      y="76"
      id="text75"
-     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">Initialise a serial connection</text>
   <path
      d="M 172 85 L 384 85"
@@ -367,10 +259,10 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="410"
+     x="408"
      y="126"
      id="text91"
-     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">Open the port for communication</text>
   <path
      d="M 172 155 L 384 155"
@@ -512,10 +404,10 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="414"
+     x="410"
      y="309"
      id="text141"
-     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">Read data from RFID reader</text>
   <path
      d="M 400 337 L 480 337"
@@ -612,10 +504,10 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="414"
+     x="410"
      y="422"
      id="text175"
-     style="font-size:11px;font-style:normal;font-weight:bold;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">Close communication port</text>
   <path
      d="M 172 451 L 384 451"
@@ -651,15 +543,13 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
      sodipodi:linespacing="125%">open()</text>
   <text
-     fill="rgb(0,0,0)"
-     font-family="sansserif"
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="329"
+     x="327"
      y="153"
      id="text185"
-     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">True/False</text>
   <text
      fill="rgb(0,0,0)"
@@ -713,14 +603,12 @@ Main =&gt; SerialConnection [label = &quot;close()&quot;, return = &quot;True/Fa
      style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
      sodipodi:linespacing="125%">close()</text>
   <text
-     fill="rgb(0,0,0)"
-     font-family="sansserif"
      font-size="11"
      font-style="normal"
      font-weight="normal"
-     x="329"
+     x="327"
      y="449"
      id="text197"
-     style="-inkscape-font-specification:CMU Serif Bold;font-family:CMU Serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:CMU Serif;-inkscape-font-specification:CMU Serif Bold"
      sodipodi:linespacing="125%">True/False</text>
 </svg>

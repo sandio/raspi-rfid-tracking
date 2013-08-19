@@ -34,13 +34,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1054"
+     inkscape:window-width="1918"
      inkscape:window-height="1063"
      id="namedview225"
      showgrid="false"
-     inkscape:zoom="1.1877381"
-     inkscape:cx="333.5"
-     inkscape:cy="281"
+     inkscape:zoom="1.5482824"
+     inkscape:cx="316.5"
+     inkscape:cy="278.04"
      inkscape:window-x="0"
      inkscape:window-y="15"
      inkscape:window-maximized="0"
@@ -77,119 +77,6 @@ Trilateration -&gt; Trilateration [label = &quot;trilateration\n(positions,dista
 Trilateration =&gt; DatabaseHandler [label = &quot;update_tag_position(tag_position)&quot;, leftnote = &quot;Update the\ntag position&quot;]
 }
 </desc>
-  <rect
-     fill="rgb(0,0,0)"
-     height="482"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="154"
-     y="75"
-     id="rect11" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="249"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="346"
-     y="153"
-     id="rect13" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="44"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="538"
-     y="75"
-     id="rect15" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="44"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="538"
-     y="196"
-     id="rect17" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="24"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="538"
-     y="343"
-     id="rect19" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="24"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="8"
-     x="538"
-     y="505"
-     id="rect21" />
-  <polygon
-     points="134,56 142,64 142,94 27,94 27,56 27,56 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
-     id="polygon23"
-     transform="translate(0,14)" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="47,134 134,134 142,142 142,172 47,172 47,134"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon25" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="229,177 326,177 334,185 334,215 229,215 229,177"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon27" />
-  <polygon
-     points="334,273 334,321 182,321 182,265 182,265 326,265 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
-     id="polygon29"
-     transform="translate(2,-2)" />
-  <polygon
-     points="200,324 326,324 334,332 334,362 200,362 200,324 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
-     id="polygon31"
-     transform="translate(-6,6)" />
-  <polygon
-     fill="rgb(0,0,0)"
-     points="55,436 134,436 142,444 142,474 55,474 55,436"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     id="polygon33" />
-  <polygon
-     points="61,486 134,486 142,494 142,524 61,524 61,486 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;filter:url(#filter_blur)"
-     id="polygon35"
-     transform="translate(-4,4)" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="40"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="128"
-     x="94"
-     y="11"
-     id="rect37" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="40"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="128"
-     x="286"
-     y="11"
-     id="rect39" />
-  <rect
-     fill="rgb(0,0,0)"
-     height="40"
-     stroke="rgb(0,0,0)"
-     style="filter:url(#filter_blur);opacity:0.69999999999999996;fill-opacity:1"
-     width="128"
-     x="478"
-     y="11"
-     id="rect41" />
   <path
      d="M 155 45 L 155 567"
      fill="none"

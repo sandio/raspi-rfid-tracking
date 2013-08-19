@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  14 AUG 2013 18:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.5.30)  15 AUG 2013 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -897,7 +897,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41 <./figures/seqdiag/serial.pdf>] [42]
-<figures/seqdiag/network.pdf, id=1138, 819.3491pt x 534.06729pt>
+<figures/seqdiag/network.pdf, id=973, 819.3491pt x 534.06729pt>
 File: figures/seqdiag/network.pdf Graphic file (type pdf)
 
 <use figures/seqdiag/network.pdf>
@@ -907,7 +907,7 @@ Package pdftex.def Info: figures/seqdiag/network.pdf used on input line 154.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43] <figures/seqdiag/trilat.pdf, id=1148, 535.60098pt x 451.28601pt>
+[43] <figures/seqdiag/trilat.pdf, id=982, 535.60098pt x 451.28601pt>
 File: figures/seqdiag/trilat.pdf Graphic file (type pdf)
 
 <use figures/seqdiag/trilat.pdf>
@@ -921,13 +921,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44 <./figures/seqdiag/network.pdf>] [45 <./figures/seqdiag/trilat.pdf>]
-<figures/sim.png, id=1581, 1216.545pt x 1042.89626pt>
+<figures/sim.png, id=1017, 1216.545pt x 1042.89626pt>
 File: figures/sim.png Graphic file (type png)
  <use figures/sim.png>
 Package pdftex.def Info: figures/sim.png used on input line 200.
 (pdftex.def)             Requested size: 330.05322pt x 282.93839pt.
 
-<figures/blockdiag/system.pdf, id=1582, 1027.84pt x 602.25pt>
+<figures/blockdiag/system.pdf, id=1018, 1027.84pt x 602.25pt>
 File: figures/blockdiag/system.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/system.pdf>
@@ -947,14 +947,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Chapter 5.
-[49] <figures/rssi_distance_13m.pdf, id=1613, 867.24pt x 361.35pt>
+[49] <figures/rssi_distance_13m.pdf, id=1049, 867.24pt x 361.35pt>
 File: figures/rssi_distance_13m.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_13m.pdf>
 Package pdftex.def Info: figures/rssi_distance_13m.pdf used on input line 20.
 (pdftex.def)             Requested size: 412.56497pt x 171.90218pt.
  [50 <./figures/rssi_distance_13m.pdf>]
-<figures/exp/orientation.pdf, id=1628, 318.98405pt x 307.12912pt>
+<figures/exp/orientation.pdf, id=1064, 318.98405pt x 307.12912pt>
 File: figures/exp/orientation.pdf Graphic file (type pdf)
 
 <use figures/exp/orientation.pdf>
@@ -964,7 +964,7 @@ Package pdftex.def Info: figures/exp/orientation.pdf used on input line 38.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/rssi_distance_3m_los_r1.pdf, id=1634, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_los_r1.pdf, id=1070, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r1.pdf>
@@ -975,7 +975,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_los_r1.pdf used on input line
 Underfull \vbox (badness 3460) has occurred while \output is active []
 
  [51]
-<figures/rssi_distance_3m_nlos_r1.pdf, id=1644, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r1.pdf, id=1080, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r1.pdf>
@@ -983,7 +983,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_nlos_r1.pdf used on input lin
 e 56.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
  [52 <./figures/exp/orientation.pdf> <./figures/rssi_distance_3m_los_r1.pdf>]
-<figures/rssi_distance_grid_r1.pdf, id=1675, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r1.pdf, id=1111, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r1.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r1.pdf>
@@ -996,28 +996,28 @@ LaTeX Font Info:    Try loading font information for TS1+phv on input line 71.
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 ) [53 <./figures/rssi_distance_3m_nlos_r1.pdf>] [54 <./figures/rssi_distance_gr
 id_r1.pdf>]
-<figures/exp/elevation.pdf, id=1700, 197.39618pt x 176.73546pt>
+<figures/exp/elevation.pdf, id=1136, 197.39618pt x 176.73546pt>
 File: figures/exp/elevation.pdf Graphic file (type pdf)
 
 <use figures/exp/elevation.pdf>
 Package pdftex.def Info: figures/exp/elevation.pdf used on input line 84.
 (pdftex.def)             Requested size: 165.02347pt x 147.7529pt.
 
-<figures/rssi_distance_4m.pdf, id=1702, 722.7pt x 361.35pt>
+<figures/rssi_distance_4m.pdf, id=1138, 722.7pt x 361.35pt>
 File: figures/rssi_distance_4m.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_4m.pdf>
 Package pdftex.def Info: figures/rssi_distance_4m.pdf used on input line 93.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
  [55 <./figures/exp/elevation.pdf>]
-<figures/exp/penetration.pdf, id=1717, 224.38222pt x 64.4049pt>
+<figures/exp/penetration.pdf, id=1153, 224.38222pt x 64.4049pt>
 File: figures/exp/penetration.pdf Graphic file (type pdf)
 
 <use figures/exp/penetration.pdf>
 Package pdftex.def Info: figures/exp/penetration.pdf used on input line 105.
 (pdftex.def)             Requested size: 247.54149pt x 71.05392pt.
  [56 <./figures/rssi_distance_4m.pdf>]
-<figures/error_distance_grid.pdf, id=1731, 722.7pt x 722.7pt>
+<figures/error_distance_grid.pdf, id=1167, 722.7pt x 722.7pt>
 File: figures/error_distance_grid.pdf Graphic file (type pdf)
 
 <use figures/error_distance_grid.pdf>
@@ -1025,7 +1025,7 @@ Package pdftex.def Info: figures/error_distance_grid.pdf used on input line 123
 .
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
  [57 <./figures/exp/penetration.pdf>]
-<figures/error_boxplot.pdf, id=1746, 722.7pt x 505.89pt>
+<figures/error_boxplot.pdf, id=1182, 722.7pt x 505.89pt>
 File: figures/error_boxplot.pdf Graphic file (type pdf)
 
 <use figures/error_boxplot.pdf>
@@ -1033,13 +1033,13 @@ Package pdftex.def Info: figures/error_boxplot.pdf used on input line 132.
 (pdftex.def)             Requested size: 330.05322pt x 231.03714pt.
  [58 <./figures/error_distance_grid.pdf>]
 [59 <./figures/error_boxplot.pdf>] [60]
-<figures/grid.pdf, id=1784, 687.78152pt x 443.53705pt>
+<figures/grid.pdf, id=1220, 687.78152pt x 443.53705pt>
 File: figures/grid.pdf Graphic file (type pdf)
  <use figures/grid.pdf>
 Package pdftex.def Info: figures/grid.pdf used on input line 154.
 (pdftex.def)             Requested size: 412.56497pt x 266.06337pt.
 
-<figures/intersect.png, id=1785, 348.30125pt x 250.9375pt>
+<figures/intersect.png, id=1221, 348.30125pt x 250.9375pt>
 File: figures/intersect.png Graphic file (type png)
 
 <use figures/intersect.png>
@@ -1052,14 +1052,14 @@ Underfull \hbox (badness 1210) in paragraph at lines 166--166
  []
 
 [61 <./figures/grid.pdf> <./figures/intersect.png>]
-<figures/error_boxplot_3d.pdf, id=1837, 722.7pt x 505.89pt>
+<figures/error_boxplot_3d.pdf, id=1273, 722.7pt x 505.89pt>
 File: figures/error_boxplot_3d.pdf Graphic file (type pdf)
 
 <use figures/error_boxplot_3d.pdf>
 Package pdftex.def Info: figures/error_boxplot_3d.pdf used on input line 171.
 (pdftex.def)             Requested size: 330.05322pt x 231.03714pt.
 
-<figures/tall2.pdf, id=1839, 722.7pt x 505.89pt>
+<figures/tall2.pdf, id=1275, 722.7pt x 505.89pt>
 File: figures/tall2.pdf Graphic file (type pdf)
  <use figures/tall2.pdf>
 Package pdftex.def Info: figures/tall2.pdf used on input line 179.
@@ -1080,7 +1080,7 @@ Chapter 6.
 
  (./appendix1.tex
 Appendix A.
-<figures/blockdiag/hardwaredesignwifi.pdf, id=1931, 642.4pt x 441.65pt>
+<figures/blockdiag/hardwaredesignwifi.pdf, id=1367, 642.4pt x 441.65pt>
 File: figures/blockdiag/hardwaredesignwifi.pdf Graphic file (type pdf)
 
 <use figures/blockdiag/hardwaredesignwifi.pdf>
@@ -1092,7 +1092,7 @@ Package pdftex.def Info: figures/blockdiag/hardwaredesignwifi.pdf used on input
 
 
  <./figures/blockdiag/hardwaredesignwifi.pdf>] [72]
-<figures/rssi_distance_3m_los_r2.pdf, id=1955, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_los_r2.pdf, id=1391, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r2.pdf>
@@ -1100,7 +1100,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_los_r2.pdf used on input line
  58.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
 
-<figures/rssi_distance_3m_nlos_r2.pdf, id=1956, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r2.pdf, id=1392, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r2.pdf>
@@ -1108,7 +1108,7 @@ Package pdftex.def Info: figures/rssi_distance_3m_nlos_r2.pdf used on input lin
 e 65.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
 
-<figures/rssi_distance_3m_los_r3.pdf, id=1957, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_los_r3.pdf, id=1393, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_los_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_los_r3.pdf>
@@ -1120,7 +1120,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73 <./figures/rssi_distance_3m_los_r2.pdf> <./figures/rssi_distance_3m_nlos_r
 2.pdf>]
-<figures/rssi_distance_3m_nlos_r3.pdf, id=1978, 722.7pt x 361.35pt>
+<figures/rssi_distance_3m_nlos_r3.pdf, id=1414, 722.7pt x 361.35pt>
 File: figures/rssi_distance_3m_nlos_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_3m_nlos_r3.pdf>
@@ -1129,7 +1129,7 @@ e 79.
 (pdftex.def)             Requested size: 412.56497pt x 206.28041pt.
  [74 <./figures/rssi_distance_3m_los_r3.pdf> <./figures/rssi_distance_3m_nlos_r
 3.pdf>]
-<figures/rssi_distance_grid_r2.pdf, id=1999, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r2.pdf, id=1435, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r2.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r2.pdf>
@@ -1137,7 +1137,7 @@ Package pdftex.def Info: figures/rssi_distance_grid_r2.pdf used on input line 9
 8.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
 
-<figures/rssi_distance_grid_r3.pdf, id=2000, 722.7pt x 722.7pt>
+<figures/rssi_distance_grid_r3.pdf, id=1436, 722.7pt x 722.7pt>
 File: figures/rssi_distance_grid_r3.pdf Graphic file (type pdf)
 
 <use figures/rssi_distance_grid_r3.pdf>
@@ -1195,10 +1195,10 @@ texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (89 pages, 12097032 bytes).
+Output written on thesis.pdf (89 pages, 11966798 bytes).
 PDF statistics:
- 2142 PDF objects out of 2487 (max. 8388607)
- 1644 compressed objects within 17 object streams
+ 1578 PDF objects out of 1728 (max. 8388607)
+ 1338 compressed objects within 14 object streams
  279 named destinations out of 1000 (max. 500000)
  857 words of extra memory for PDF output out of 10000 (max. 10000000)
 

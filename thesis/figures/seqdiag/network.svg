@@ -13,7 +13,7 @@
    inkscape:version="0.48.4 r9939"
    width="100%"
    height="100%"
-   sodipodi:docname="network.pdf">
+   sodipodi:docname="network.svg">
   <metadata
      id="metadata291">
     <rdf:RDF>
@@ -35,13 +35,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1054"
+     inkscape:window-width="1918"
      inkscape:window-height="1063"
      id="namedview289"
      showgrid="false"
-     inkscape:zoom="0.87089986"
-     inkscape:cx="531"
-     inkscape:cy="442.96638"
+     inkscape:zoom="1.3425077"
+     inkscape:cx="506.45056"
+     inkscape:cy="385.08996"
      inkscape:window-x="0"
      inkscape:window-y="15"
      inkscape:window-maximized="0"
@@ -94,126 +94,6 @@ NetworkServer =&gt; ReceiveThread [label = &quot;join(timeout)&quot;, return = &
 
 }
 </desc>
-  <rect
-     height="572"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="161"
-     y="84.089996"
-     id="rect11" />
-  <rect
-     height="270"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="165"
-     y="288.09"
-     id="rect13" />
-  <rect
-     height="272"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="637"
-     y="384.09"
-     id="rect15" />
-  <rect
-     height="124"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="641"
-     y="419.09"
-     id="rect17" />
-  <rect
-     height="35"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="641"
-     y="593.08997"
-     id="rect19" />
-  <rect
-     height="24"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;filter:url(#filter_blur)"
-     width="8"
-     x="875"
-     y="504.08997"
-     id="rect21" />
-  <polygon
-     points="153,57 161,65 161,95 57,95 57,57 57,57 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     id="polygon23"
-     transform="translate(-12,8.089998)" />
-  <polygon
-     points="391,108 399,116 399,146 295,146 295,108 295,108 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     id="polygon25"
-     transform="translate(-12,8.089998)" />
-  <polygon
-     points="153,159 161,167 161,197 56,197 56,159 56,159 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     id="polygon27"
-     transform="translate(-12,8.089998)" />
-  <polygon
-     points="44,210 44,210 153,210 161,218 161,248 44,248 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.9531886;filter:url(#filter_blur)"
-     id="polygon29"
-     transform="matrix(1.1006325,0,0,1,-29.216207,8.089998)" />
-  <polygon
-     points="431,270 431,270 535,270 543,278 543,290 431,290 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.95420188;filter:url(#filter_blur)"
-     id="polygon31"
-     transform="matrix(1.0982962,0,0,1,-53.374837,8.089998)" />
-  <polygon
-     points="153,295 161,303 161,351 47,351 47,295 47,295 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     id="polygon33"
-     transform="translate(-12,8.089998)" />
-  <polygon
-     points="669,401 817,401 825,409 825,421 669,421 669,401 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.92979735;filter:url(#filter_blur)"
-     id="polygon35"
-     transform="matrix(1.156707,0,0,1,-115.25738,8.089998)" />
-  <polygon
-     points="637,444 637,456 504,456 504,436 504,436 629,436 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.92464364;filter:url(#filter_blur)"
-     id="polygon37"
-     transform="matrix(1.1696373,0,0,1,-121.76892,8.089998)" />
-  <polygon
-     points="998,485 998,515 907,515 907,477 907,477 990,477 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.96536553;filter:url(#filter_blur)"
-     id="polygon39"
-     transform="matrix(1.0730413,0,0,1,-77.512165,8.089998)" />
-  <polygon
-     points="153,575 161,583 161,595 78,595 78,575 78,575 "
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     id="polygon41"
-     transform="translate(-12,8.089998)" />
-  <rect
-     height="40"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     width="128"
-     x="101"
-     y="19.089996"
-     id="rect43" />
-  <rect
-     height="40"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     width="128"
-     x="339"
-     y="19.089996"
-     id="rect45" />
-  <rect
-     height="40"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     width="128"
-     x="577"
-     y="19.089996"
-     id="rect47" />
-  <rect
-     height="40"
-     style="opacity:0.7;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;filter:url(#filter_blur)"
-     width="128"
-     x="815"
-     y="19.089996"
-     id="rect49" />
   <path
      d="m 162,53.09 0,613"
      id="path51"
